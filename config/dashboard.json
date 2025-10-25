@@ -1,0 +1,388 @@
+{
+  "title": "My Smart Home",
+  "desktop": {
+    "defaultRoom": "main-floor",
+    "chips": [
+      {
+        "type": "entity",
+        "entityId": "device_tracker.life360_andrew_calderbank_link",
+        "name": "Andy",
+        "icon": "User"
+      },
+      {
+        "type": "entity",
+        "entityId": "device_tracker.life360_alexia_calderbank_link",
+        "name": "Alexia",
+        "icon": "User"
+      },
+      {
+        "type": "entity",
+        "entityId": "device_tracker.life360_edison_calderbank_link",
+        "name": "Edison",
+        "icon": "User"
+      },
+      {
+        "type": "entity",
+        "entityId": "device_tracker.life360_jenny_calderbank_link",
+        "name": "Jenny",
+        "icon": "User"
+      },
+      {
+        "type": "entity",
+        "name": "Wind Direction",
+        "entityId": "sensor.meteobridge_wind_direction"
+      }
+    ],
+    "rooms": [
+      {
+        "id": "main-floor",
+        "name": "Main Floor",
+        "icon": "home",
+        "items": [
+          {
+            "type": "light-card",
+            "entityIds": [
+              "light.kitchen",
+              "light.dining_room",
+              "light.hallway",
+              "light.bathroom",
+              "light.office"
+            ],
+            "name": "Main Floor Lights",
+            "size": "lg",
+            "show_brightness_control": true,
+            "show_color_control": false,
+            "primary_info": "name",
+            "secondary_info": "state",
+            "gridColumn": 1,
+            "gridRow": 1
+          },
+          {
+            "type": "entity-card",
+            "entity": "weather.home",
+            "name": "Weather",
+            "size": "md",
+            "gridColumn": 3,
+            "gridRow": 1
+          },
+          {
+            "type": "entity-card",
+            "entity": "switch.front_door_lock",
+            "name": "Front Door",
+            "layout": "horizontal",
+            "primary_info": "name",
+            "secondary_info": "state",
+            "icon_color": "blue",
+            "tap_action": "toggle",
+            "size": "xs",
+            "gridColumn": 3,
+            "gridRow": 3
+          },
+          {
+            "type": "entity-card",
+            "entity": "switch.front_door_lock",
+            "name": "Front Door",
+            "layout": "horizontal",
+            "primary_info": "name",
+            "secondary_info": "state",
+            "icon_color": "blue",
+            "tap_action": "toggle",
+            "size": "xs",
+            "gridColumn": 4,
+            "gridRow": 3
+          },
+          {
+            "type": "entity-card",
+            "entity": "weather.home",
+            "name": "Weather",
+            "size": "md",
+            "gridColumn": 1,
+            "gridRow": 4
+          },
+          {
+            "type": "entity-card",
+            "entity": "switch.front_door_lock",
+            "name": "Front Door",
+            "layout": "horizontal",
+            "primary_info": "name",
+            "secondary_info": "state",
+            "icon_color": "blue",
+            "tap_action": "toggle",
+            "size": "xxs-v",
+            "gridColumn": 3,
+            "gridRow": 4
+          },
+          {
+            "type": "entity-card",
+            "entity": "switch.front_door_lock",
+            "name": "Front Door",
+            "layout": "horizontal",
+            "primary_info": "name",
+            "secondary_info": "state",
+            "icon_color": "blue",
+            "tap_action": "toggle",
+            "size": "xxs-v",
+            "gridColumn": 3.5,
+            "gridRow": 4
+          }
+        ]
+      },
+      {
+        "id": "living-room",
+        "name": "Living Room",
+        "icon": "sofa",
+        "items": [
+          {
+            "type": "light-card",
+            "entity": "light.office_1",
+            "name": "Office Light 1",
+            "layout": "default",
+            "primary_info": "name",
+            "secondary_info": "state",
+            "show_brightness_control": true,
+            "show_color_control": true,
+            "icon_color": "amber",
+            "tap_action": "toggle",
+            "size": "md-v",
+            "gridColumn": 1,
+            "gridRow": 1
+          },
+          {
+            "type": "entity-card",
+            "entity": "sensor.living_room_temperature",
+            "name": "Temperature",
+            "layout": "vertical",
+            "primary_info": "state",
+            "secondary_info": "none",
+            "size": "xs",
+            "gridColumn": 1,
+            "gridRow": 3
+          },
+          {
+            "type": "entity-card",
+            "entity": "sensor.living_room_humidity",
+            "name": "Humidity",
+            "layout": "vertical",
+            "primary_info": "state",
+            "secondary_info": "none",
+            "size": "xs",
+            "gridColumn": 1,
+            "gridRow": 4
+          }
+        ]
+      },
+      {
+        "id": "bedroom",
+        "name": "Bedroom",
+        "icon": "bed",
+        "items": [
+          {
+            "type": "light-card",
+            "entity": "light.bedroom",
+            "name": "Bedroom Light",
+            "layout": "default",
+            "primary_info": "name",
+            "secondary_info": "state",
+            "show_brightness_control": true,
+            "icon_color": "amber",
+            "tap_action": "toggle",
+            "size": "small"
+          },
+          {
+            "type": "climate-card",
+            "entity": "climate.thermostat",
+            "name": "Climate Control",
+            "layout": "default",
+            "primary_info": "name",
+            "secondary_info": "state",
+            "show_temperature_control": true,
+            "hvac_modes": ["off", "heat", "cool", "auto"],
+            "size": "large"
+          }
+        ]
+      }
+    ]
+  },
+  "tablet": {
+    "defaultRoom": "main-floor",
+    "chips": [
+      {
+        "type": "entity",
+        "entityId": "person.john",
+        "name": "John",
+        "icon": "User"
+      },
+      {
+        "type": "entity",
+        "entityId": "person.jane",
+        "name": "Jane",
+        "icon": "User"
+      },
+      {
+        "type": "weather",
+        "entityId": "weather.home"
+      },
+      {
+        "type": "entity",
+        "entityId": "switch.security_system",
+        "name": "Security",
+        "icon": "Shield"
+      }
+    ],
+    "rooms": [
+      {
+        "id": "main-floor",
+        "name": "Main Floor",
+        "icon": "home",
+        "items": [
+          {
+            "type": "light-card",
+            "entityIds": [
+              "light.kitchen",
+              "light.dining_room",
+              "light.hallway",
+              "light.bathroom",
+              "light.office"
+            ],
+            "name": "Main Floor Lights",
+            "size": "medium-h",
+            "show_brightness_control": true,
+            "show_color_control": false
+          },
+          {
+            "type": "weather",
+            "entityId": "weather.home",
+            "name": "Weather",
+            "size": "medium-h"
+          },
+          {
+            "type": "climate-card",
+            "entity": "climate.thermostat",
+            "name": "Thermostat",
+            "size": "small"
+          },
+          {
+            "type": "entity-card",
+            "entity": "switch.front_door_lock",
+            "name": "Front Door",
+            "tap_action": "toggle",
+            "size": "xs"
+          }
+        ]
+      },
+      {
+        "id": "living-room",
+        "name": "Living Room",
+        "icon": "sofa",
+        "items": [
+          {
+            "type": "light-card",
+            "entity": "light.living_room",
+            "name": "Living Room Light",
+            "show_brightness_control": true,
+            "size": "small"
+          },
+          {
+            "type": "entity-card",
+            "entity": "sensor.living_room_temperature",
+            "name": "Temperature",
+            "layout": "horizontal",
+            "primary_info": "state",
+            "size": "xs"
+          }
+        ]
+      }
+    ]
+  },
+  "mobile": {
+    "defaultRoom": "main-floor",
+    "chips": [
+      {
+        "type": "entity",
+        "entityId": "person.john",
+        "name": "John",
+        "icon": "User"
+      },
+      {
+        "type": "weather",
+        "entityId": "weather.home"
+      },
+      {
+        "type": "light",
+        "entityId": "light.kitchen"
+      },
+      {
+        "type": "entity",
+        "entityId": "switch.security_system",
+        "name": "Security",
+        "icon": "Shield"
+      }
+    ],
+    "rooms": [
+      {
+        "id": "main-floor",
+        "name": "Main Floor",
+        "icon": "home",
+        "items": [
+          {
+            "type": "light-card",
+            "entityIds": [
+              "light.kitchen",
+              "light.dining_room",
+              "light.hallway",
+              "light.bathroom",
+              "light.office"
+            ],
+            "name": "Lights",
+            "size": "medium-h",
+            "show_brightness_control": false,
+            "show_color_control": false,
+            "collapsible_controls": true
+          },
+          {
+            "type": "weather",
+            "entityId": "weather.home",
+            "name": "Weather",
+            "size": "medium-h"
+          },
+          {
+            "type": "climate-card",
+            "entity": "climate.thermostat",
+            "name": "Thermostat",
+            "size": "small"
+          },
+          {
+            "type": "entity-card",
+            "entity": "switch.front_door_lock",
+            "name": "Front Door",
+            "tap_action": "toggle",
+            "size": "small"
+          }
+        ]
+      },
+      {
+        "id": "sensors",
+        "name": "Sensors",
+        "icon": "gauge",
+        "items": [
+          {
+            "type": "entity-card",
+            "entity": "sensor.living_room_temperature",
+            "name": "Temperature",
+            "layout": "horizontal",
+            "primary_info": "state",
+            "size": "small"
+          },
+          {
+            "type": "entity-card",
+            "entity": "sensor.living_room_humidity",
+            "name": "Humidity",
+            "layout": "horizontal",
+            "primary_info": "state",
+            "size": "small"
+          }
+        ]
+      }
+    ]
+  }
+}
