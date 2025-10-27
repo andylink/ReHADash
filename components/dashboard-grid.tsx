@@ -118,16 +118,16 @@ export function DashboardGrid({ items, roomId }: DashboardGridProps) {
 
   const renderItem = (item: DashboardItem) => {
     if (item.type === "light-card") {
-      return <LightCard config={item as CardConfig} />;
+      return <LightCard config={item as any} />;
     }
     if (item.type === "climate-card") {
-      return <ClimateCard config={item as CardConfig} />;
+      return <ClimateCard config={item as any} />;
     }
     if (item.type === "entity-card") {
-      return <EntityCard config={item as CardConfig} />;
+      return <EntityCard config={item as any} />;
     }
     if (item.type === "graph-card") {
-      return <GraphCard config={item as CardConfig} />;
+      return <GraphCard config={item as any} />;
     }
     return null;
   };

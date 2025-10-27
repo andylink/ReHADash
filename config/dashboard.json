@@ -99,7 +99,7 @@
             "name": "Plant Sensors History",
             "entities": ["sensor.plant_monitor_plant_temperature"],
             "hours": 24,
-            "size": "lg",
+            "size": "lg-v",
             "gridColumn": 3,
             "gridRow": 1
           }

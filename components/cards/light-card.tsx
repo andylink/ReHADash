@@ -21,8 +21,12 @@ export function LightCard({ config }: LightCardProps) {
 
   const isGroup = config.entityIds && config.entityIds.length > 0;
   const entities = isGroup
-    ? config.entityIds!.map((id) => getEntity(id)).filter(Boolean)
-    : [getEntity(config.entity)].filter(Boolean);
+    ? config
+        .entityIds!.map((id) => getEntity(id))
+        .filter((e): e is NonNullable<typeof e> => Boolean(e))
+    : [getEntity(config.entity)].filter((e): e is NonNullable<typeof e> =>
+        Boolean(e)
+      );
 
   const [groupBrightness, setGroupBrightness] = useState(100);
   const [groupColor, setGroupColor] = useState({ h: 30, s: 80 });
