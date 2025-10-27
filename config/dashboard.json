@@ -93,6 +93,15 @@
             "size": "sm-v",
             "gridColumn": 2,
             "gridRow": 1
+          },
+          {
+            "type": "graph-card",
+            "name": "Plant Sensors History",
+            "entities": ["sensor.plant_monitor_plant_temperature"],
+            "hours": 24,
+            "size": "lg",
+            "gridColumn": 3,
+            "gridRow": 1
           }
         ]
       },

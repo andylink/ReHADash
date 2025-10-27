@@ -88,4 +88,16 @@ export interface EntityCardConfig extends BaseCardConfig {
   entities?: (string | EntityCardEntity)[]; // Accepts string or object
 }
 
-export type CardConfig = LightCardConfig | ClimateCardConfig | EntityCardConfig;
+export interface GraphCardConfig extends BaseCardConfig {
+  type: "graph-card";
+  entities: (string | EntityCardEntity)[];
+  name?: string;
+  hours?: number; // How many hours of history to show
+  // Add more config options as needed
+}
+
+export type CardConfig =
+  | LightCardConfig
+  | ClimateCardConfig
+  | EntityCardConfig
+  | GraphCardConfig;

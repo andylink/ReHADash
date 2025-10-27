@@ -25,6 +25,20 @@ export async function POST(request: NextRequest) {
         endpoint = `/api/services/${params.domain}/${params.service}`;
         requestBody = params.service_data || {};
         break;
+      case "get_history":
+        if (!params.entity_id || !params.start || !params.end) {
+          return Response.json(
+            { error: "Missing parameters" },
+            { status: 400 }
+          );
+        }
+        endpoint = `/api/history/period/${encodeURIComponent(
+          params.start
+        )}?filter_entity_id=${encodeURIComponent(
+          params.entity_id
+        )}&end_time=${encodeURIComponent(params.end)}`;
+        method = "GET";
+        break;
       default:
         return Response.json(
           { error: "Unknown request type" },

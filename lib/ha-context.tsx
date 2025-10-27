@@ -219,6 +219,11 @@ interface HAContextType {
     entityId: string,
     data?: Record<string, any>
   ) => Promise<void>;
+  getEntityHistory: (
+    entityId: string,
+    start: Date,
+    end: Date
+  ) => Promise<{ timestamp: string; state: string }[]>;
 }
 
 const HAContext = createContext<HAContextType>({
@@ -228,13 +233,39 @@ const HAContext = createContext<HAContextType>({
   updateEntity: () => {},
   getEntity: () => null,
   callService: async () => {},
+  getEntityHistory: async () => [],
 });
 
 export function HAProvider({ children }: { children: React.ReactNode }) {
   const [connected, setConnected] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [entities, setEntities] = useState<Record<string, HAEntity>>({});
-
+  const getEntityHistory = useCallback(
+    async (entityId: string, start: Date, end: Date) => {
+      const res = await fetch("/api/ha", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "get_history",
+          entity_id: entityId,
+          start: start.toISOString(),
+          end: end.toISOString(),
+        }),
+      });
+      const data = await res.json();
+      // Home Assistant returns an array of arrays
+      // Each array is the history for one entity
+      // Each item has .last_changed and .state
+      if (Array.isArray(data) && data.length > 0) {
+        return data[0].map((item: any) => ({
+          timestamp: item.last_changed,
+          state: item.state,
+        }));
+      }
+      return [];
+    },
+    []
+  );
   useEffect(() => {
     console.log(
       "[HA] HAProvider initializing - connecting to Home Assistant via SSE"
@@ -479,6 +510,7 @@ export function HAProvider({ children }: { children: React.ReactNode }) {
         updateEntity,
         getEntity,
         callService,
+        getEntityHistory,
       }}
     >
       {children}
