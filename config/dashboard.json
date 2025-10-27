@@ -51,8 +51,9 @@
             ],
             "name": "Main Office Lights",
             "size": "lg",
-            "show_brightness_control": true,
-            "show_color_control": true,
+            "icon_color": "text-orange-400",
+            "show_brightness_control": false,
+            "show_color_control": false,
             "primary_info": "name",
             "secondary_info": "state",
             "gridColumn": 1,
@@ -84,7 +85,7 @@
             "show_color_control": true,
             "icon_color": "amber",
             "tap_action": "toggle",
-            "size": "md-v",
+            "size": "sm-v",
             "gridColumn": 1,
             "gridRow": 1
           }

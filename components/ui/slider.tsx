@@ -4,13 +4,19 @@ import * as React from "react";
 import * as SliderPrimitive from "@radix-ui/react-slider";
 import { cn } from "@/lib/utils";
 
+interface SliderProps
+  extends React.ComponentProps<typeof SliderPrimitive.Root> {
+  hue?: boolean;
+}
+
 function Slider({
   className,
   value,
   min = 0,
   max = 100,
+  hue = false,
   ...props
-}: React.ComponentProps<typeof SliderPrimitive.Root>) {
+}: SliderProps) {
   return (
     <SliderPrimitive.Root
       data-slot="slider"
@@ -26,23 +32,44 @@ function Slider({
       <SliderPrimitive.Track
         data-slot="slider-track"
         className={
-          "bg-muted relative grow overflow-hidden rounded-full data-[orientation=horizontal]:h-1.5 data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-1.5"
+          "relative grow overflow-hidden rounded-full data-[orientation=horizontal]:h-8 data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-8"
+        }
+        style={
+          hue
+            ? {
+                background:
+                  "linear-gradient(90deg, hsl(0, 100%, 50%), hsl(60, 100%, 50%), hsl(120, 100%, 50%), hsl(180, 100%, 50%), hsl(240, 100%, 50%), hsl(300, 100%, 50%), hsl(360, 100%, 50%))",
+              }
+            : undefined
         }
       >
-        <SliderPrimitive.Range
-          data-slot="slider-range"
-          className={
-            "bg-primary absolute data-[orientation=horizontal]:h-full data-[orientation=vertical]:w-full"
-          }
-        />
+        {!hue && (
+          <SliderPrimitive.Range
+            data-slot="slider-range"
+            className={
+              "bg-primary absolute rounded-full data-[orientation=horizontal]:h-full data-[orientation=vertical]:w-full"
+            }
+          />
+        )}
       </SliderPrimitive.Track>
       {Array.isArray(value) &&
         value.map((_, index) => (
           <SliderPrimitive.Thumb
             data-slot="slider-thumb"
             key={index}
-            className="border-primary ring-ring/50 block size-4 shrink-0 rounded-full border bg-white shadow-sm transition-[color,box-shadow] hover:ring-4 focus-visible:ring-4 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-50"
-          />
+            className={cn(
+              hue
+                ? "block w-3 h-8 rounded bg-white border border-gray-300 shadow flex items-center justify-center"
+                : "block size-0 shrink-0 rounded-full opacity-0 focus-visible:outline-hidden disabled:pointer-events-none"
+            )}
+          >
+            {hue && (
+              <span
+                className="block w-0.5 h-3 bg-gray-500 rounded"
+                style={{ marginLeft: "auto", marginRight: "auto" }}
+              />
+            )}
+          </SliderPrimitive.Thumb>
         ))}
     </SliderPrimitive.Root>
   );

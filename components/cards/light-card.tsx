@@ -7,7 +7,7 @@ import { Slider } from "@/components/ui/slider";
 import { Lightbulb, Power } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface LightCardProps {
   config: LightCardConfig;
@@ -145,6 +145,28 @@ export function LightCard({ config }: LightCardProps) {
     }
   };
 
+  // Sync brightness and color with entity changes
+  useEffect(() => {
+    if (!isGroup && primaryEntity) {
+      // Brightness
+      const newBrightness = primaryEntity.attributes.brightness
+        ? Math.round((primaryEntity.attributes.brightness / 255) * 100)
+        : 100;
+      setGroupBrightness(newBrightness);
+
+      // Color
+      const hs = primaryEntity.attributes.hs_color;
+      if (hs && Array.isArray(hs)) {
+        setGroupColor({ h: Math.round(hs[0]), s: Math.round(hs[1]) });
+      }
+    }
+    // For groups, you may want to calculate average or representative values
+    // ...optional group sync logic...
+  }, [
+    primaryEntity?.attributes.brightness,
+    primaryEntity?.attributes.hs_color,
+    isGroup,
+  ]);
   // === RENDER ===
 
   return (
@@ -216,6 +238,7 @@ export function LightCard({ config }: LightCardProps) {
               <div className="flex-1">
                 <div className="text-xs text-muted-foreground mb-1">Hue</div>
                 <Slider
+                  hue
                   value={[groupColor.h]}
                   onValueChange={(v) =>
                     setGroupColor({ h: v[0], s: groupColor.s })
