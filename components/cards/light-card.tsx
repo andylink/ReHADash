@@ -7,7 +7,7 @@ import { Slider } from "@/components/ui/slider";
 import { Lightbulb, Power } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
 import { cn } from "@/lib/utils";
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 interface LightCardProps {
   config: LightCardConfig;
@@ -26,7 +26,7 @@ export function LightCard({ config }: LightCardProps) {
 
   if (entities.length === 0) return null;
 
-  // For groups, use the first entity's state as representative
+  // Use first entity as representative
   const primaryEntity = entities[0]!;
   const isOn = entities.some((e) => e.state === "on");
   const allOn = entities.every((e) => e.state === "on");
@@ -42,6 +42,7 @@ export function LightCard({ config }: LightCardProps) {
     (isGroup
       ? "Light Group"
       : primaryEntity.attributes.friendly_name || config.entity);
+
   const iconColor =
     config.use_light_color && isOn
       ? "text-amber-500"
@@ -100,32 +101,23 @@ export function LightCard({ config }: LightCardProps) {
       ? "flex-row items-center justify-between"
       : "flex-col";
 
-  const brightnessTimeout = useRef<NodeJS.Timeout | null>(null);
-  const colorTimeout = useRef<NodeJS.Timeout | null>(null);
+  // === HANDLERS ===
 
-  const handleBrightnessChange = (value: number[]) => {
-    const newBrightness = value[0];
-    setGroupBrightness(newBrightness);
-
-    if (brightnessTimeout.current) clearTimeout(brightnessTimeout.current);
-    brightnessTimeout.current = setTimeout(() => {
-      if (isGroup) {
-        entities.forEach((entity) => {
-          callService("light", "turn_on", entity.entity_id, {
-            brightness_pct: newBrightness,
-          });
-        });
-      } else {
-        callService("light", "turn_on", config.entity, {
+  const handleBrightnessCommit = (newBrightness: number) => {
+    if (isGroup) {
+      entities.forEach((entity) => {
+        callService("light", "turn_on", entity.entity_id, {
           brightness_pct: newBrightness,
         });
-      }
-    }, 300); // 300ms debounce
+      });
+    } else {
+      callService("light", "turn_on", config.entity, {
+        brightness_pct: newBrightness,
+      });
+    }
   };
 
-  const handleColorChange = (h: number, s: number) => {
-    setGroupColor({ h, s });
-
+  const handleColorCommit = (h: number, s: number) => {
     if (isGroup) {
       entities.forEach((entity) => {
         callService("light", "turn_on", entity.entity_id, { hs_color: [h, s] });
@@ -139,7 +131,6 @@ export function LightCard({ config }: LightCardProps) {
     const action = config.tap_action || "toggle";
     if (action === "toggle") {
       if (isGroup) {
-        // Toggle all lights in the group
         const targetState = !allOn;
         entities.forEach((entity) => {
           callService(
@@ -154,6 +145,8 @@ export function LightCard({ config }: LightCardProps) {
     }
   };
 
+  // === RENDER ===
+
   return (
     <Card
       className={cn(
@@ -163,6 +156,7 @@ export function LightCard({ config }: LightCardProps) {
       )}
     >
       <div className={cn("flex gap-4 flex-1", layoutClass)}>
+        {/* --- ICON + INFO + POWER --- */}
         <div className="flex items-center gap-3 flex-1">
           {config.icon_type !== "none" && (
             <button
@@ -196,6 +190,7 @@ export function LightCard({ config }: LightCardProps) {
           </button>
         </div>
 
+        {/* --- BRIGHTNESS CONTROL --- */}
         {showControls && config.show_brightness_control && (
           <div className="w-full space-y-2">
             <div className="flex items-center justify-between text-sm">
@@ -203,8 +198,9 @@ export function LightCard({ config }: LightCardProps) {
               <span className="text-foreground font-medium">{brightness}%</span>
             </div>
             <Slider
-              value={[brightness]}
-              onValueChange={handleBrightnessChange}
+              value={[groupBrightness]}
+              onValueChange={(v) => setGroupBrightness(v[0])}
+              onValueCommit={(v) => handleBrightnessCommit(v[0])}
               max={100}
               step={1}
               className="w-full"
@@ -212,6 +208,7 @@ export function LightCard({ config }: LightCardProps) {
           </div>
         )}
 
+        {/* --- COLOR CONTROL --- */}
         {showControls && config.show_color_control && (
           <div className="w-full space-y-2">
             <div className="text-sm text-muted-foreground">Color</div>
@@ -220,7 +217,10 @@ export function LightCard({ config }: LightCardProps) {
                 <div className="text-xs text-muted-foreground mb-1">Hue</div>
                 <Slider
                   value={[groupColor.h]}
-                  onValueChange={(v) => handleColorChange(v[0], groupColor.s)}
+                  onValueChange={(v) =>
+                    setGroupColor({ h: v[0], s: groupColor.s })
+                  }
+                  onValueCommit={(v) => handleColorCommit(v[0], groupColor.s)}
                   max={360}
                   step={1}
                 />
@@ -231,7 +231,10 @@ export function LightCard({ config }: LightCardProps) {
                 </div>
                 <Slider
                   value={[groupColor.s]}
-                  onValueChange={(v) => handleColorChange(groupColor.h, v[0])}
+                  onValueChange={(v) =>
+                    setGroupColor({ h: groupColor.h, s: v[0] })
+                  }
+                  onValueCommit={(v) => handleColorCommit(groupColor.h, v[0])}
                   max={100}
                   step={1}
                 />
