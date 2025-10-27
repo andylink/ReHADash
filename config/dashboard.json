@@ -51,6 +51,7 @@
             ],
             "name": "Office Lights",
             "size": "sm",
+            "layout": "default",
             "use_light_color": true,
             "icon_color": "text-orange-400",
             "show_brightness_control": true,
@@ -61,11 +62,36 @@
             "gridRow": 1
           },
           {
+            "type": "light-card",
+            "entityIds": ["light.elgato_left", "light.elgato_right"],
+            "name": "Video Lights",
+            "size": "sm",
+            "use_light_color": true,
+            "icon_color": "text-orange-400",
+            "show_brightness_control": true,
+            "show_color_control": true,
+            "primary_info": "name",
+            "secondary_info": "brightness",
+            "gridColumn": 1,
+            "gridRow": 3
+          },
+          {
             "type": "entity-card",
-            "entity": "sensor.plant_monitor_plant_humidity",
-            "name": "Humidity",
-            "size": "xxs-h",
-            "gridColumn": 3,
+            "name": "Plant Sensors",
+            "entities": [
+              {
+                "entity": "sensor.plant_monitor_plant_humidity",
+                "name": "Humidity",
+                "icon": "Droplet"
+              },
+              {
+                "entity": "sensor.plant_monitor_plant_temperature",
+                "name": "Temperature",
+                "icon": "Thermometer"
+              }
+            ],
+            "size": "sm-v",
+            "gridColumn": 2,
             "gridRow": 1
           }
         ]

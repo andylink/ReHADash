@@ -76,9 +76,16 @@ export interface ClimateCardConfig extends BaseCardConfig {
   collapsible_controls?: boolean;
 }
 
+export interface EntityCardEntity {
+  entity: string;
+  name?: string;
+  icon?: string;
+}
+
 export interface EntityCardConfig extends BaseCardConfig {
   type: "entity-card";
   icon_color?: string;
+  entities?: (string | EntityCardEntity)[]; // Accepts string or object
 }
 
 export type CardConfig = LightCardConfig | ClimateCardConfig | EntityCardConfig;

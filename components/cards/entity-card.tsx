@@ -1,89 +1,138 @@
-"use client"
+"use client";
 
-import { useHomeAssistant } from "@/lib/ha-context"
-import type { EntityCardConfig } from "@/types/card-types"
-import { Card } from "@/components/ui/card"
-import { Power } from "lucide-react"
-import { formatDistanceToNow } from "date-fns"
-import { cn } from "@/lib/utils"
+import { useHomeAssistant } from "@/lib/ha-context";
+import type { EntityCardConfig, EntityCardEntity } from "@/types/card-types";
+import { Card } from "@/components/ui/card";
+import { Power, Droplet, Thermometer } from "lucide-react";
+import { formatDistanceToNow } from "date-fns";
+import { cn } from "@/lib/utils";
 
 interface EntityCardProps {
-  config: EntityCardConfig
+  config: EntityCardConfig;
 }
 
+const iconMap: Record<string, any> = {
+  Power,
+  Droplet,
+  Thermometer,
+  // Add more icons as needed
+};
+
 export function EntityCard({ config }: EntityCardProps) {
-  const { getEntity, callService } = useHomeAssistant()
-  const entity = getEntity(config.entity)
+  const { getEntity, callService } = useHomeAssistant();
+  const entityConfigs = (
+    config.entities && config.entities.length > 0
+      ? config.entities
+      : [config.entity]
+  ).map((e) => (typeof e === "string" ? { entity: e } : e));
 
-  if (!entity) return null
+  const entities = entityConfigs
+    .map((e) => ({ ...e, data: getEntity(e.entity) }))
+    .filter((e) => e.data);
 
-  const isActive = entity.state === "on" || entity.state === "home" || entity.state === "open"
-  const name = config.name || entity.attributes.friendly_name || config.entity
-  const iconColor = isActive ? config.icon_color || "text-blue-500" : "text-muted-foreground"
+  if (entities.length === 0) return null;
 
-  const handleTap = () => {
-    const action = config.tap_action || "more-info"
+  const handleTap = (entityId: string, isActive: boolean) => {
+    const action = config.tap_action || "more-info";
     if (action === "toggle") {
-      const domain = config.entity.split(".")[0]
-      callService(domain, isActive ? "turn_off" : "turn_on", config.entity)
+      const domain = entityId.split(".")[0];
+      callService(domain, isActive ? "turn_off" : "turn_on", entityId);
     }
-  }
+  };
 
-  const getPrimaryInfo = () => {
+  const getPrimaryInfo = (entity: any, customName?: string) => {
+    const name =
+      customName || entity.attributes.friendly_name || entity.entity_id;
     switch (config.primary_info || "name") {
       case "name":
-        return name
+        return name;
       case "state":
-        return entity.state
+        return entity.state;
       case "last-changed":
-        return formatDistanceToNow(new Date(entity.last_changed), { addSuffix: true })
+        return formatDistanceToNow(new Date(entity.last_changed), {
+          addSuffix: true,
+        });
       case "last-updated":
-        return formatDistanceToNow(new Date(entity.last_updated), { addSuffix: true })
+        return formatDistanceToNow(new Date(entity.last_updated), {
+          addSuffix: true,
+        });
       case "none":
-        return null
+        return null;
     }
-  }
+  };
 
-  const getSecondaryInfo = () => {
+  const getSecondaryInfo = (entity: any, customName?: string) => {
+    const name =
+      customName || entity.attributes.friendly_name || entity.entity_id;
     switch (config.secondary_info || "state") {
       case "name":
-        return name
+        return name;
       case "state":
-        return entity.state
+        return entity.state;
       case "last-changed":
-        return formatDistanceToNow(new Date(entity.last_changed), { addSuffix: true })
+        return formatDistanceToNow(new Date(entity.last_changed), {
+          addSuffix: true,
+        });
       case "last-updated":
-        return formatDistanceToNow(new Date(entity.last_updated), { addSuffix: true })
+        return formatDistanceToNow(new Date(entity.last_updated), {
+          addSuffix: true,
+        });
       case "none":
-        return null
+        return null;
     }
-  }
+  };
 
   const layoutClass =
     config.layout === "vertical"
       ? "flex-col items-start"
       : config.layout === "horizontal"
-        ? "flex-row items-center justify-between"
-        : "flex-col"
+      ? "flex-row items-center justify-between"
+      : "flex-col";
 
   return (
-    <Card
-      className={cn("p-4 h-full flex flex-col cursor-pointer transition-all hover:bg-accent", isActive && "bg-card/80")}
-      onClick={handleTap}
-    >
+    <Card className={cn("p-4 h-full flex flex-col")}>
+      {config.name && (
+        <div className="font-semibold text-md">{config.name}</div>
+      )}
       <div className={cn("flex gap-4 flex-1", layoutClass)}>
-        <div className="flex items-center gap-3 flex-1">
-          {config.icon_type !== "none" && (
-            <div className={cn("p-3 rounded-lg transition-colors", isActive ? "bg-primary/10" : "bg-muted")}>
-              <Power className={cn("h-5 w-5", iconColor)} />
+        {entities.map(({ entity, name, icon, data }) => {
+          if (!data) return null;
+          const isActive =
+            data.state === "on" ||
+            data.state === "home" ||
+            data.state === "open";
+          const iconColor = isActive
+            ? config.icon_color || "text-blue-500"
+            : "text-muted-foreground";
+          const IconComponent = icon && iconMap[icon] ? iconMap[icon] : Power;
+          return (
+            <div
+              key={data.entity_id}
+              className="flex items-center gap-3 flex-1"
+              onClick={() => handleTap(data.entity_id, isActive)}
+              style={{ cursor: "pointer" }}
+            >
+              {config.icon_type !== "none" && (
+                <IconComponent className={cn("h-4 w-4", iconColor)} />
+              )}
+              <div className="flex-1">
+                <div className="flex items-center justify-between font-medium text-foreground">
+                  <span>{getPrimaryInfo(data, name)}</span>
+                  <span className="text-sm text-muted-foreground">
+                    {isNaN(parseFloat(data.state))
+                      ? data.state
+                      : parseFloat(data.state).toFixed(1)}
+                    {data.attributes.unit_of_measurement
+                      ? ` ${data.attributes.unit_of_measurement}`
+                      : ""}
+                  </span>
+                </div>
+                {/* Remove the old secondary_info state block if not needed */}
+              </div>
             </div>
-          )}
-          <div className="flex-1">
-            <div className="font-medium text-foreground">{getPrimaryInfo()}</div>
-            {getSecondaryInfo() && <div className="text-sm text-muted-foreground">{getSecondaryInfo()}</div>}
-          </div>
-        </div>
+          );
+        })}
       </div>
     </Card>
-  )
+  );
 }
