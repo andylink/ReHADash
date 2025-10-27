@@ -49,21 +49,22 @@
               "light.office_5",
               "light.office_6"
             ],
-            "name": "Main Office Lights",
-            "size": "lg",
+            "name": "Office Lights",
+            "size": "sm",
+            "use_light_color": true,
             "icon_color": "text-orange-400",
-            "show_brightness_control": false,
-            "show_color_control": false,
+            "show_brightness_control": true,
+            "show_color_control": true,
             "primary_info": "name",
-            "secondary_info": "state",
+            "secondary_info": "brightness",
             "gridColumn": 1,
             "gridRow": 1
           },
           {
             "type": "entity-card",
-            "entity": "weather.home",
-            "name": "Weather",
-            "size": "md",
+            "entity": "sensor.plant_monitor_plant_humidity",
+            "name": "Humidity",
+            "size": "xxs-h",
             "gridColumn": 3,
             "gridRow": 1
           }

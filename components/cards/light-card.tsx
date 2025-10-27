@@ -4,7 +4,7 @@ import { useHomeAssistant } from "@/lib/ha-context";
 import type { LightCardConfig } from "@/types/card-types";
 import { Card } from "@/components/ui/card";
 import { Slider } from "@/components/ui/slider";
-import { Lightbulb, Power } from "lucide-react";
+import { Lightbulb, Power, Sun, Droplet, Palette } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
 import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
@@ -15,6 +15,9 @@ interface LightCardProps {
 
 export function LightCard({ config }: LightCardProps) {
   const { getEntity, callService } = useHomeAssistant();
+  const [activeControl, setActiveControl] = useState<
+    "brightness" | "hue" | "saturation"
+  >("brightness");
 
   const isGroup = config.entityIds && config.entityIds.length > 0;
   const entities = isGroup
@@ -23,6 +26,29 @@ export function LightCard({ config }: LightCardProps) {
 
   const [groupBrightness, setGroupBrightness] = useState(100);
   const [groupColor, setGroupColor] = useState({ h: 30, s: 80 });
+
+  // Sync brightness and color with entity changes
+  useEffect(() => {
+    if (!isGroup && primaryEntity) {
+      // Brightness
+      const newBrightness = primaryEntity.attributes.brightness
+        ? Math.round((primaryEntity.attributes.brightness / 255) * 100)
+        : 100;
+      setGroupBrightness(newBrightness);
+
+      // Color
+      const hs = primaryEntity.attributes.hs_color;
+      if (hs && Array.isArray(hs)) {
+        setGroupColor({ h: Math.round(hs[0]), s: Math.round(hs[1]) });
+      }
+    }
+    // For groups, you may want to calculate average or representative values
+    // ...optional group sync logic...
+  }, [
+    isGroup,
+    entities.length > 0 ? entities[0]?.attributes.brightness : undefined,
+    entities.length > 0 ? entities[0]?.attributes.hs_color : undefined,
+  ]);
 
   if (entities.length === 0) return null;
 
@@ -89,6 +115,8 @@ export function LightCard({ config }: LightCardProps) {
         return formatDistanceToNow(new Date(primaryEntity.last_updated), {
           addSuffix: true,
         });
+      case "brightness":
+        return [groupBrightness + "%"];
       case "none":
         return null;
     }
@@ -145,29 +173,47 @@ export function LightCard({ config }: LightCardProps) {
     }
   };
 
-  // Sync brightness and color with entity changes
-  useEffect(() => {
-    if (!isGroup && primaryEntity) {
-      // Brightness
-      const newBrightness = primaryEntity.attributes.brightness
-        ? Math.round((primaryEntity.attributes.brightness / 255) * 100)
-        : 100;
-      setGroupBrightness(newBrightness);
-
-      // Color
-      const hs = primaryEntity.attributes.hs_color;
-      if (hs && Array.isArray(hs)) {
-        setGroupColor({ h: Math.round(hs[0]), s: Math.round(hs[1]) });
-      }
-    }
-    // For groups, you may want to calculate average or representative values
-    // ...optional group sync logic...
-  }, [
-    primaryEntity?.attributes.brightness,
-    primaryEntity?.attributes.hs_color,
-    isGroup,
-  ]);
   // === RENDER ===
+
+  // Determine slider props based on active control
+  let sliderValue = [groupBrightness];
+  let sliderMax = 100;
+  let sliderStep = 1;
+  let sliderProps: any = {};
+  let sliderLabel = "Brightness";
+
+  if (activeControl === "hue") {
+    sliderValue = [groupColor.h];
+    sliderMax = 360;
+    sliderLabel = "Hue";
+    sliderProps.hue = true;
+  } else if (activeControl === "saturation") {
+    sliderValue = [groupColor.s];
+    sliderMax = 100;
+    sliderLabel = "Saturation";
+  }
+
+  // Handler for slider value change
+  const handleSliderChange = (v: number[]) => {
+    if (activeControl === "brightness") {
+      setGroupBrightness(v[0]);
+    } else if (activeControl === "hue") {
+      setGroupColor({ h: v[0], s: groupColor.s });
+    } else if (activeControl === "saturation") {
+      setGroupColor({ h: groupColor.h, s: v[0] });
+    }
+  };
+
+  // Handler for slider commit
+  const handleSliderCommit = (v: number[]) => {
+    if (activeControl === "brightness") {
+      handleBrightnessCommit(v[0]);
+    } else if (activeControl === "hue") {
+      handleColorCommit(v[0], groupColor.s);
+    } else if (activeControl === "saturation") {
+      handleColorCommit(groupColor.h, v[0]);
+    }
+  };
 
   return (
     <Card
@@ -212,55 +258,68 @@ export function LightCard({ config }: LightCardProps) {
           </button>
         </div>
 
-        {/* --- BRIGHTNESS CONTROL --- */}
-        {showControls && config.show_brightness_control && (
-          <div className="w-full space-y-2">
-            <div className="flex items-center justify-between text-sm">
-              <span className="text-muted-foreground">Brightness</span>
-              <span className="text-foreground font-medium">{brightness}%</span>
-            </div>
-            <Slider
-              value={[groupBrightness]}
-              onValueChange={(v) => setGroupBrightness(v[0])}
-              onValueCommit={(v) => handleBrightnessCommit(v[0])}
-              max={100}
-              step={1}
-              className="w-full"
-            />
-          </div>
-        )}
-
-        {/* --- COLOR CONTROL --- */}
-        {showControls && config.show_color_control && (
-          <div className="w-full space-y-2">
-            <div className="text-sm text-muted-foreground">Color</div>
-            <div className="flex gap-2">
+        {/* --- SINGLE SLIDER WITH CONTROL ICONS --- */}
+        {showControls && (
+          <div className="w-full">
+            <div className="flex items-center gap-4">
+              {/* Slider and label */}
               <div className="flex-1">
-                <div className="text-xs text-muted-foreground mb-1">Hue</div>
-                <Slider
-                  hue
-                  value={[groupColor.h]}
-                  onValueChange={(v) =>
-                    setGroupColor({ h: v[0], s: groupColor.s })
-                  }
-                  onValueCommit={(v) => handleColorCommit(v[0], groupColor.s)}
-                  max={360}
-                  step={1}
-                />
-              </div>
-              <div className="flex-1">
-                <div className="text-xs text-muted-foreground mb-1">
-                  Saturation
+                <div className="flex items-center justify-between text-sm mb-1">
+                  {/* <span className="text-muted-foreground">{sliderLabel}</span> */}
+                  {/* <span className="text-foreground font-medium"> */}
+                  {/* {activeControl === "brightness" && `${groupBrightness}%`} */}
+                  {/* {activeControl === "hue" && `${groupColor.h}°`} */}
+                  {/* {activeControl === "saturation" && `${groupColor.s}%`} */}
+                  {/* </span> */}
                 </div>
                 <Slider
-                  value={[groupColor.s]}
-                  onValueChange={(v) =>
-                    setGroupColor({ h: groupColor.h, s: v[0] })
-                  }
-                  onValueCommit={(v) => handleColorCommit(groupColor.h, v[0])}
-                  max={100}
-                  step={1}
+                  value={sliderValue}
+                  onValueChange={handleSliderChange}
+                  onValueCommit={handleSliderCommit}
+                  max={sliderMax}
+                  step={sliderStep}
+                  className="w-full"
+                  {...sliderProps}
                 />
+              </div>
+              {/* Icons horizontally to the right of the slider */}
+              <div className="flex gap-2 pl-2">
+                <button
+                  className={cn(
+                    "p-2 rounded-full",
+                    activeControl === "brightness"
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-muted text-muted-foreground"
+                  )}
+                  onClick={() => setActiveControl("brightness")}
+                  aria-label="Brightness"
+                >
+                  <Sun className="w-5 h-5" />
+                </button>
+                <button
+                  className={cn(
+                    "p-2 rounded-full",
+                    activeControl === "hue"
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-muted text-muted-foreground"
+                  )}
+                  onClick={() => setActiveControl("hue")}
+                  aria-label="Hue"
+                >
+                  <Palette className="w-5 h-5" />
+                </button>
+                <button
+                  className={cn(
+                    "p-2 rounded-full",
+                    activeControl === "saturation"
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-muted text-muted-foreground"
+                  )}
+                  onClick={() => setActiveControl("saturation")}
+                  aria-label="Saturation"
+                >
+                  <Droplet className="w-5 h-5" />
+                </button>
               </div>
             </div>
           </div>
