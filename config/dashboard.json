@@ -147,12 +147,12 @@
                   {
                     "type": "person-card",
                     "entityId": "device_tracker.life360_alexia_calderbank_link",
-                    "size": "xs-v"
+                    "size": "xxs"
                   },
                   {
                     "type": "person-card",
                     "entityId": "device_tracker.life360_edison_calderbank_link",
-                    "size": "xs-v"
+                    "size": "xxs"
                   }
                 ]
               }

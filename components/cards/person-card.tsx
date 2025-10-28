@@ -63,6 +63,36 @@ export function PersonCard({ config, rounded = "default" }: PersonCardProps) {
       </Card>
     );
   }
+  // Responsive avatar/icon size based on config.size
+  const sizeMap = {
+    xxs: "h-16 w-16",
+    xs: "h-14 w-14",
+    sm: "h-18 w-18",
+    md: "h-24 w-24",
+    lg: "h-28 w-28",
+    xl: "h-32 w-32",
+    xxl: "h-36 w-36",
+  };
+  const avatarSize =
+    sizeMap[config.size as keyof typeof sizeMap] || "h-24 w-24";
+
+  const badgeSizeMap = {
+    xxs: "h-6 w-6 text-xs",
+    xs: "h-5 w-5 text-sm",
+    sm: "h-6 w-6 text-base",
+    md: "h-7 w-7 text-lg",
+    lg: "h-8 w-8 text-xl",
+    xl: "h-9 w-9 text-2xl",
+    xxl: "h-10 w-10 text-3xl",
+  };
+  const badgeSize =
+    badgeSizeMap[config.size as keyof typeof badgeSizeMap] || "h-7 w-7 text-lg";
+
+  // Optionally adjust badge position for very small cards
+  const badgePosition =
+    config.size === "xxs"
+      ? { top: "-4px", right: "-4px" }
+      : { top: "-4px", right: "-4px" };
 
   const isPersonLike =
     entity.entity_id.startsWith("person.") ||
@@ -105,17 +135,20 @@ export function PersonCard({ config, rounded = "default" }: PersonCardProps) {
             src={avatarUrl}
             alt={displayName}
             className={cn(
-              "h-24 w-24 rounded-full object-cover border-4 border-primary",
+              `${avatarSize} rounded-full object-cover border-4 border-primary`,
               status?.toLowerCase() !== "home" && "grayscale"
             )}
           />
         ) : (
-          <IconComponent className="h-22 w-22" />
+          <IconComponent className={avatarSize} />
         )}
         {status && (
           <span
-            className="absolute right-0 bg-white rounded-full shadow p-1 flex items-center justify-center border border-gray-200"
-            style={{ top: "-4px", right: "-4px" }} // Move badge slightly higher
+            className={cn(
+              "absolute bg-white rounded-full shadow flex items-center justify-center border border-gray-200",
+              badgeSize
+            )}
+            style={badgePosition}
           >
             {statusBadgeIcon(status)}
           </span>

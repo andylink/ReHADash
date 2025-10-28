@@ -17,7 +17,8 @@ import type { CardConfig } from "@/types/card-types";
 // Sizes use logical columns: xxs=0.5, xs=1, sm=1x2, md=2x2, lg=2x3, xl=3x3
 export const CARD_SIZES = {
   xxs: { colSpan: 0.25, rowSpan: 1 }, // XXS - Quarter-width cards
-  "xxs-v": { colSpan: 0.25, rowSpan: 2 }, // Vertical: 0.25 cols × 2 rows (double height)
+  "xxs-v": { colSpan: 0.25, rowSpan: 1 }, // Vertical: 0.25 cols × 2 rows (double height)
+  "xxs-h": { colSpan: 0.5, rowSpan: 1 }, // Horizontal: 0.5 cols × 1 row (double width)
   // XXS - Half-width cards
   xs: { colSpan: 0.5, rowSpan: 1 }, // Base: 0.5 cols × 1 row
   "xs-h": { colSpan: 1, rowSpan: 1 }, // Horizontal: 1 col × 1 row (double width)
