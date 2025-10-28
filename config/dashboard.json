@@ -57,7 +57,7 @@
               "light.office_6"
             ],
             "name": "Office Lights",
-            "size": "sm",
+            "size": "md",
             "layout": "default",
             "use_light_color": true,
             "icon_color": "text-orange-400",
@@ -72,7 +72,7 @@
             "type": "light-card",
             "entityIds": ["light.elgato_left", "light.elgato_right"],
             "name": "Video Lights",
-            "size": "sm",
+            "size": "md",
             "use_light_color": true,
             "icon_color": "text-orange-400",
             "show_brightness_control": true,
@@ -98,7 +98,7 @@
                 "icon": "Thermometer"
               }
             ],
-            "size": "sm",
+            "size": "md",
             "gridColumn": 2,
             "gridRow": 5
           },
@@ -107,7 +107,7 @@
             "name": "Plant Sensors History",
             "entities": ["sensor.plant_monitor_plant_temperature"],
             "hours": 24,
-            "size": "lg-v",
+            "size": "xl-v",
             "gridColumn": 3,
             "gridRow": 1
           },
@@ -131,12 +131,12 @@
                   {
                     "type": "person-card",
                     "entityId": "device_tracker.life360_andrew_calderbank_link",
-                    "size": "xxs-v"
+                    "size": "xs-v"
                   },
                   {
                     "type": "person-card",
                     "entityId": "device_tracker.life360_jenny_calderbank_link",
-                    "size": "xxs-v"
+                    "size": "xs-v"
                   }
                 ]
               },
@@ -147,12 +147,12 @@
                   {
                     "type": "person-card",
                     "entityId": "device_tracker.life360_alexia_calderbank_link",
-                    "size": "xxs-v"
+                    "size": "xs-v"
                   },
                   {
                     "type": "person-card",
                     "entityId": "device_tracker.life360_edison_calderbank_link",
-                    "size": "xxs-v"
+                    "size": "xs-v"
                   }
                 ]
               }

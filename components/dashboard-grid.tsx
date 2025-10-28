@@ -16,37 +16,37 @@ import type { CardConfig } from "@/types/card-types";
 // Each row is 67.5px tall (2 rows = 135px for standard cards)
 // Sizes use logical columns: xxs=0.5, xs=1, sm=1x2, md=2x2, lg=2x3, xl=3x3
 export const CARD_SIZES = {
-  xxxs: { colSpan: 0.25, rowSpan: 1 }, // XXS - Quarter-width cards
-  "xxxs-v": { colSpan: 0.25, rowSpan: 2 }, // Vertical: 0.25 cols × 2 rows (double height)
+  xxs: { colSpan: 0.25, rowSpan: 1 }, // XXS - Quarter-width cards
+  "xxs-v": { colSpan: 0.25, rowSpan: 2 }, // Vertical: 0.25 cols × 2 rows (double height)
   // XXS - Half-width cards
-  xxs: { colSpan: 0.5, rowSpan: 1 }, // Base: 0.5 cols × 1 row
-  "xxs-h": { colSpan: 1, rowSpan: 1 }, // Horizontal: 1 col × 1 row (double width)
-  "xxs-v": { colSpan: 0.5, rowSpan: 2 }, // Vertical: 0.5 cols × 2 rows (double height)
+  xs: { colSpan: 0.5, rowSpan: 1 }, // Base: 0.5 cols × 1 row
+  "xs-h": { colSpan: 1, rowSpan: 1 }, // Horizontal: 1 col × 1 row (double width)
+  "xs-v": { colSpan: 0.5, rowSpan: 2 }, // Vertical: 0.5 cols × 2 rows (double height)
 
   // XS - Extra small cards
-  xs: { colSpan: 1, rowSpan: 1 }, // Base: 1 col × 1 row
-  "xs-h": { colSpan: 2, rowSpan: 1 }, // Horizontal: 2 cols × 1 row (double width)
-  "xs-v": { colSpan: 1, rowSpan: 2 }, // Vertical: 1 col × 2 rows (double height)
+  sm: { colSpan: 1, rowSpan: 1 }, // Base: 1 col × 1 row
+  "sm-h": { colSpan: 2, rowSpan: 1 }, // Horizontal: 2 cols × 1 row (double width)
+  "sm-v": { colSpan: 1, rowSpan: 2 }, // Vertical: 1 col × 2 rows (double height)
 
   // SM - Small cards
-  sm: { colSpan: 1, rowSpan: 2 }, // Base: 1 col × 2 rows
-  "sm-h": { colSpan: 2, rowSpan: 1 }, // Horizontal: 2 cols × 1 row (wider, shorter)
-  "sm-v": { colSpan: 1, rowSpan: 3 }, // Vertical: 1 col × 3 rows (taller)
+  md: { colSpan: 1, rowSpan: 2 }, // Base: 1 col × 2 rows
+  "md-h": { colSpan: 2, rowSpan: 1 }, // Horizontal: 2 cols × 1 row (wider, shorter)
+  "md-v": { colSpan: 1, rowSpan: 3 }, // Vertical: 1 col × 3 rows (taller)
 
   // MD - Medium cards
-  md: { colSpan: 2, rowSpan: 2 }, // Base: 2 cols × 2 rows
-  "md-h": { colSpan: 3, rowSpan: 2 }, // Horizontal: 3 cols × 2 rows (wider)
-  "md-v": { colSpan: 2, rowSpan: 3 }, // Vertical: 2 cols × 3 rows (taller)
+  lg: { colSpan: 2, rowSpan: 2 }, // Base: 2 cols × 2 rows
+  "lg-h": { colSpan: 3, rowSpan: 2 }, // Horizontal: 3 cols × 2 rows (wider)
+  "lg-v": { colSpan: 2, rowSpan: 3 }, // Vertical: 2 cols × 3 rows (taller)
 
   // LG - Large cards
-  lg: { colSpan: 2, rowSpan: 3 }, // Base: 2 cols × 3 rows
-  "lg-h": { colSpan: 3, rowSpan: 2 }, // Horizontal: 3 cols × 2 rows (wider, shorter)
-  "lg-v": { colSpan: 2, rowSpan: 4 }, // Vertical: 2 cols × 4 rows (taller)
+  xl: { colSpan: 2, rowSpan: 3 }, // Base: 2 cols × 3 rows
+  "xl-h": { colSpan: 3, rowSpan: 2 }, // Horizontal: 3 cols × 2 rows (wider, shorter)
+  "xl-v": { colSpan: 2, rowSpan: 4 }, // Vertical: 2 cols × 4 rows (taller)
 
   // XL - Extra large cards
-  xl: { colSpan: 3, rowSpan: 3 }, // Base: 3 cols × 3 rows
-  "xl-h": { colSpan: 4, rowSpan: 2 }, // Horizontal: 4 cols × 2 rows (full width, shorter)
-  "xl-v": { colSpan: 3, rowSpan: 4 }, // Vertical: 3 cols × 4 rows (taller)
+  xxl: { colSpan: 3, rowSpan: 3 }, // Base: 3 cols × 3 rows
+  "xxl-h": { colSpan: 4, rowSpan: 2 }, // Horizontal: 4 cols × 2 rows (full width, shorter)
+  "xxl-v": { colSpan: 3, rowSpan: 4 }, // Vertical: 3 cols × 4 rows (taller)
 
   // Backward compatibility aliases
   small: { colSpan: 1, rowSpan: 2 },
