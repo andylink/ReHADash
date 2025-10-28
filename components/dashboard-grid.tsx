@@ -14,7 +14,7 @@ import type { CardConfig } from "@/types/card-types";
 // Grid: 8 columns on desktop (4 on mobile), each logical column = 2 actual grid columns
 // Each row is 67.5px tall (2 rows = 135px for standard cards)
 // Sizes use logical columns: xxs=0.5, xs=1, sm=1x2, md=2x2, lg=2x3, xl=3x3
-const CARD_SIZES = {
+export const CARD_SIZES = {
   // XXS - Half-width cards
   xxs: { colSpan: 0.5, rowSpan: 1 }, // Base: 0.5 cols × 1 row
   "xxs-h": { colSpan: 1, rowSpan: 1 }, // Horizontal: 1 col × 1 row (double width)
@@ -59,7 +59,8 @@ interface DashboardItem {
     | "climate-card"
     | "entity-card"
     | "graph-card"
-    | "stack-card";
+    | "stack-card"
+    | "custom-card";
   items?: CardConfig[];
   entityId?: string;
   entityIds?: string[];
@@ -140,6 +141,7 @@ export function DashboardGrid({ items, roomId }: DashboardGridProps) {
       return <GraphCard config={item as any} />;
     }
     if (item.type === "stack-card") {
+      // Pass CARD_SIZES to StackCard so it can size its children
       return <StackCard items={item.items ?? []} direction={item.direction} />;
     }
     if (item.type === "custom-card") {

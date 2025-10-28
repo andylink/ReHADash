@@ -21,11 +21,16 @@ const iconMap: Record<string, any> = {
 
 export function EntityCard({ config, rounded = "default" }: EntityCardProps) {
   const { getEntity, callService } = useHomeAssistant();
-  const entityConfigs = (
+  const rawEntities =
     config.entities && config.entities.length > 0
       ? config.entities
-      : [config.entity]
-  ).map((e) => (typeof e === "string" ? { entity: e } : e));
+      : [config.entity];
+
+  const entityConfigs = rawEntities
+    .filter(Boolean)
+    .map((e) =>
+      typeof e === "string" ? { entity: e } : (e as EntityCardEntity)
+    );
 
   const entities = entityConfigs
     .map((e) => ({ ...e, data: getEntity(e.entity) }))

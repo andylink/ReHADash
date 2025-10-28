@@ -1,4 +1,6 @@
 import React from "react";
+import type { CardConfig } from "@/types/card-types";
+import { CARD_SIZES } from "../dashboard-grid";
 import { EntityCard } from "./entity-card";
 import { CustomCard } from "./custom-card";
 // import other card types as needed
@@ -7,14 +9,14 @@ export function StackCard({
   items,
   direction = "vertical",
 }: {
-  items: any[];
+  items: CardConfig[];
   direction?: "vertical" | "horizontal";
 }) {
   return (
     <div
       className={`flex ${
         direction === "vertical" ? "flex-col" : "flex-row"
-      } gap-0`}
+      } gap-0 w-full h-full`}
     >
       {items.map((item, idx) => {
         let rounded: "default" | "top" | "bottom" | "left" | "right" | "none" =
@@ -28,12 +30,30 @@ export function StackCard({
           else if (idx === items.length - 1) rounded = "right";
           else rounded = "none";
         }
-        if (item.type === "entity-card")
-          return <EntityCard key={idx} config={item} rounded={rounded} />;
-        if (item.type === "custom-card")
-          return <CustomCard key={idx} config={item} rounded={rounded} />;
-        // Add other card types here as needed
-        return null;
+
+        // Get size from CARD_SIZES
+        const sizeObj =
+          item.size && CARD_SIZES[item.size]
+            ? CARD_SIZES[item.size]
+            : { colSpan: 1, rowSpan: 2 }; // default to sm
+
+        // Calculate height and width
+        const height = `${sizeObj.rowSpan * 67.5}px`;
+        // For vertical stack, width is % of parent (colSpan / 1 = 100%, 0.5 = 50%)
+        const width =
+          direction === "vertical" ? `${sizeObj.colSpan * 100}%` : "100%";
+
+        return (
+          <div key={idx} style={{ height, width }} className="flex-shrink-0">
+            {item.type === "entity-card" && (
+              <EntityCard config={item} rounded={rounded} />
+            )}
+            {item.type === "custom-card" && (
+              <CustomCard config={item} rounded={rounded} />
+            )}
+            {/* Add other card types here as needed */}
+          </div>
+        );
       })}
     </div>
   );

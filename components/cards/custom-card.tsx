@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, CardTitle, CardContent } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
 export function CustomCard({
   config,
@@ -12,13 +13,13 @@ export function CustomCard({
   const getRoundedClass = () => {
     switch (rounded) {
       case "top":
-        return "rounded-t-lg";
+        return "rounded-t-lg rounded-b-none";
       case "bottom":
-        return "rounded-b-lg";
+        return "rounded-b-lg rounded-t-none";
       case "left":
-        return "rounded-l-lg";
+        return "rounded-l-lg rounded-r-none";
       case "right":
-        return "rounded-r-lg";
+        return "rounded-r-lg rounded-l-none";
       case "none":
         return "rounded-none";
       default:
@@ -34,7 +35,7 @@ export function CustomCard({
       return () => clearInterval(interval);
     }, []);
     return (
-      <Card className={getRoundedClass()}>
+      <Card className={cn("h-full flex flex-col", getRoundedClass())}>
         {config.name && <CardTitle>{config.name}</CardTitle>}
         <CardContent>
           <div
@@ -71,7 +72,7 @@ export function CustomCard({
   }
   // Add more widgets or custom rendering logic here
   return (
-    <Card className={getRoundedClass()}>
+    <Card className={cn("h-full flex flex-col", getRoundedClass())}>
       {config.name && <CardTitle>{config.name}</CardTitle>}
       <CardContent>Custom Card</CardContent>
     </Card>

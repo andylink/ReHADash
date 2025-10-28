@@ -40,7 +40,7 @@ export type CardSize =
   | "xl-v";
 
 export interface BaseCardConfig {
-  entity: string;
+  entity?: string;
   icon?: string;
   name?: string;
   layout?: CardLayout;
@@ -96,8 +96,22 @@ export interface GraphCardConfig extends BaseCardConfig {
   // Add more config options as needed
 }
 
+export interface CustomCardConfig extends BaseCardConfig {
+  type: "custom-card";
+  widget: string;
+  options?: Record<string, any>;
+}
+
+export interface StackCardConfig extends BaseCardConfig {
+  type: "stack-card";
+  direction?: "vertical" | "horizontal";
+  items: CardConfig[];
+}
+
 export type CardConfig =
   | LightCardConfig
   | ClimateCardConfig
   | EntityCardConfig
-  | GraphCardConfig;
+  | GraphCardConfig
+  | StackCardConfig
+  | CustomCardConfig;

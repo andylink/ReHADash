@@ -130,7 +130,8 @@
                     "name": "Outside Temperature",
                     "icon": "Thermometer"
                   }
-                ]
+                ],
+                "size": "xxs-v"
               }
             ],
             "size": "sm",
