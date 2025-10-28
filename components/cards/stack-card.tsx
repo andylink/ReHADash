@@ -1,5 +1,6 @@
 import React from "react";
 import { EntityCard } from "./entity-card";
+import { CustomCard } from "./custom-card";
 // import other card types as needed
 
 export function StackCard({
@@ -29,6 +30,8 @@ export function StackCard({
         }
         if (item.type === "entity-card")
           return <EntityCard key={idx} config={item} rounded={rounded} />;
+        if (item.type === "custom-card")
+          return <CustomCard key={idx} config={item} rounded={rounded} />;
         // Add other card types here as needed
         return null;
       })}

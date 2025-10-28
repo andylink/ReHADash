@@ -63,7 +63,7 @@
             "show_color_control": true,
             "primary_info": "name",
             "secondary_info": "brightness",
-            "gridColumn": 1,
+            "gridColumn": 2,
             "gridRow": 1
           },
           {
@@ -77,9 +77,10 @@
             "show_color_control": true,
             "primary_info": "name",
             "secondary_info": "brightness",
-            "gridColumn": 1,
+            "gridColumn": 2,
             "gridRow": 3
           },
+
           {
             "type": "entity-card",
             "name": "Plant Sensors",
@@ -97,7 +98,7 @@
             ],
             "size": "sm",
             "gridColumn": 2,
-            "gridRow": 1
+            "gridRow": 5
           },
           {
             "type": "graph-card",
@@ -113,29 +114,28 @@
             "direction": "vertical",
             "items": [
               {
-                "type": "entity-card",
-                "name": "Humidity",
-                "entities": [
-                  {
-                    "entity": "sensor.plant_monitor_plant_humidity",
-                    "icon": "Droplet"
-                  }
-                ]
+                "type": "custom-card",
+                "widget": "clock",
+                "options": {
+                  "format": "HH:mm:ss",
+                  "color": "#ff6600",
+                  "fontSize": "2rem"
+                }
               },
               {
                 "type": "entity-card",
-                "name": "Temperature",
                 "entities": [
                   {
-                    "entity": "sensor.plant_monitor_plant_temperature",
+                    "entity": "sensor.meteobridge_air_temperature",
+                    "name": "Outside Temperature",
                     "icon": "Thermometer"
                   }
                 ]
               }
             ],
             "size": "sm",
-            "gridColumn": 2,
-            "gridRow": 3
+            "gridColumn": 1,
+            "gridRow": 1
           }
         ]
       },
@@ -145,17 +145,35 @@
         "icon": "sofa",
         "items": [
           {
-            "type": "light-card",
-            "entity": "light.office_1",
-            "name": "Office Light 1",
-            "layout": "default",
-            "primary_info": "name",
-            "secondary_info": "state",
-            "show_brightness_control": true,
-            "show_color_control": true,
-            "icon_color": "amber",
-            "tap_action": "toggle",
-            "size": "sm-v",
+            "type": "stack-card",
+            "direction": "vertical",
+            "items": [
+              {
+                "type": "custom-card",
+                "widget": "clock",
+                "options": {
+                  "format": "HH:mm:ss",
+                  "color": "#ff6600",
+                  "fontSize": "2rem"
+                },
+                "size": "sm",
+                "gridColumn": 1,
+                "gridRow": 5
+              },
+              {
+                "type": "custom-card",
+                "widget": "clock",
+                "options": {
+                  "format": "HH:mm:ss",
+                  "color": "#ff6600",
+                  "fontSize": "2rem"
+                },
+                "size": "sm",
+                "gridColumn": 1,
+                "gridRow": 5
+              }
+            ],
+            "size": "sm",
             "gridColumn": 1,
             "gridRow": 1
           }
