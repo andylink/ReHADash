@@ -27,7 +27,7 @@ export function LightCard({ config }: LightCardProps) {
     : [getEntity(config.entity)].filter((e): e is NonNullable<typeof e> =>
         Boolean(e)
       );
-
+  const primaryEntity = entities[0]!;
   const [groupBrightness, setGroupBrightness] = useState(100);
   const [groupColor, setGroupColor] = useState({ h: 30, s: 80 });
 
@@ -57,7 +57,7 @@ export function LightCard({ config }: LightCardProps) {
   if (entities.length === 0) return null;
 
   // Use first entity as representative
-  const primaryEntity = entities[0]!;
+
   const isOn = entities.some((e) => e.state === "on");
   const allOn = entities.every((e) => e.state === "on");
 

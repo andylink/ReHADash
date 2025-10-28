@@ -7,6 +7,7 @@ import { ClimateCard } from "./cards/climate-card";
 import { EntityCard } from "./cards/entity-card";
 import { useMobile } from "@/hooks/use-mobile";
 import { ensureUniqueIds } from "@/lib/config-utils";
+import { StackCard } from "./cards/stack-card";
 import type { CardConfig } from "@/types/card-types";
 
 // Grid: 8 columns on desktop (4 on mobile), each logical column = 2 actual grid columns
@@ -52,7 +53,13 @@ const CARD_SIZES = {
 
 interface DashboardItem {
   id?: string;
-  type: "light-card" | "climate-card" | "entity-card" | "graph-card";
+  type:
+    | "light-card"
+    | "climate-card"
+    | "entity-card"
+    | "graph-card"
+    | "stack-card";
+  items?: CardConfig[];
   entityId?: string;
   entityIds?: string[];
   name?: string;
@@ -85,6 +92,8 @@ interface DashboardItem {
   gridColumn?: number;
   gridRow?: number;
   compact?: boolean;
+  // Optional direction for stack-card
+  direction?: "vertical" | "horizontal";
   // Card-specific properties
   entity?: string;
   layout?: string;
@@ -128,6 +137,9 @@ export function DashboardGrid({ items, roomId }: DashboardGridProps) {
     }
     if (item.type === "graph-card") {
       return <GraphCard config={item as any} />;
+    }
+    if (item.type === "stack-card") {
+      return <StackCard items={item.items ?? []} direction={item.direction} />;
     }
     return null;
   };

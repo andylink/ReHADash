@@ -1,36 +1,41 @@
 {
-  "title": "My Smart Home",
+  "title": "The Clinks",
   "desktop": {
     "defaultRoom": "main-floor",
     "chips": [
       {
-        "type": "entity",
+        "type": "person",
         "entityId": "device_tracker.life360_andrew_calderbank_link",
         "name": "Andy",
-        "icon": "User"
+        "icon": "User",
+        "useAvatar": true
       },
       {
         "type": "entity",
         "entityId": "device_tracker.life360_alexia_calderbank_link",
         "name": "Alexia",
-        "icon": "User"
+        "icon": "User",
+        "useAvatar": true
       },
       {
         "type": "entity",
         "entityId": "device_tracker.life360_edison_calderbank_link",
         "name": "Edison",
-        "icon": "User"
+        "icon": "User",
+        "useAvatar": true
       },
       {
-        "type": "entity",
+        "type": "person",
         "entityId": "device_tracker.life360_jenny_calderbank_link",
         "name": "Jenny",
-        "icon": "User"
+        "icon": "User",
+        "useAvatar": true
       },
       {
         "type": "entity",
         "name": "Wind Direction",
-        "entityId": "sensor.meteobridge_wind_direction"
+        "entityId": "sensor.meteobridge_wind_direction",
+        "icon": "Compass"
       }
     ],
     "rooms": [
@@ -90,7 +95,7 @@
                 "icon": "Thermometer"
               }
             ],
-            "size": "sm-v",
+            "size": "sm",
             "gridColumn": 2,
             "gridRow": 1
           },
@@ -102,6 +107,35 @@
             "size": "lg-v",
             "gridColumn": 3,
             "gridRow": 1
+          },
+          {
+            "type": "stack-card",
+            "direction": "vertical",
+            "items": [
+              {
+                "type": "entity-card",
+                "name": "Humidity",
+                "entities": [
+                  {
+                    "entity": "sensor.plant_monitor_plant_humidity",
+                    "icon": "Droplet"
+                  }
+                ]
+              },
+              {
+                "type": "entity-card",
+                "name": "Temperature",
+                "entities": [
+                  {
+                    "entity": "sensor.plant_monitor_plant_temperature",
+                    "icon": "Thermometer"
+                  }
+                ]
+              }
+            ],
+            "size": "sm",
+            "gridColumn": 2,
+            "gridRow": 3
           }
         ]
       },

@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 
 interface EntityCardProps {
   config: EntityCardConfig;
+  rounded?: "default" | "top" | "bottom" | "left" | "right" | "none";
 }
 
 const iconMap: Record<string, any> = {
@@ -18,7 +19,7 @@ const iconMap: Record<string, any> = {
   // Add more icons as needed
 };
 
-export function EntityCard({ config }: EntityCardProps) {
+export function EntityCard({ config, rounded = "default" }: EntityCardProps) {
   const { getEntity, callService } = useHomeAssistant();
   const entityConfigs = (
     config.entities && config.entities.length > 0
@@ -89,8 +90,22 @@ export function EntityCard({ config }: EntityCardProps) {
       ? "flex-row items-center justify-between"
       : "flex-col";
 
+  // Border radius logic for stack cards
+  const roundedClass =
+    rounded === "top"
+      ? "rounded-t-lg rounded-b-none"
+      : rounded === "bottom"
+      ? "rounded-b-lg rounded-t-none"
+      : rounded === "left"
+      ? "rounded-l-lg rounded-r-none"
+      : rounded === "right"
+      ? "rounded-r-lg rounded-l-none"
+      : rounded === "none"
+      ? "rounded-none"
+      : "rounded-lg";
+
   return (
-    <Card className={cn("p-4 h-full flex flex-col")}>
+    <Card className={cn("p-4 h-full flex flex-col", roundedClass)}>
       {config.name && (
         <div className="font-semibold text-md">{config.name}</div>
       )}
@@ -127,7 +142,6 @@ export function EntityCard({ config }: EntityCardProps) {
                       : ""}
                   </span>
                 </div>
-                {/* Remove the old secondary_info state block if not needed */}
               </div>
             </div>
           );

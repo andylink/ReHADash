@@ -1,34 +1,34 @@
-"use client"
+"use client";
 
-import { useHomeAssistant } from "@/lib/ha-context"
-import { RoomTabs } from "@/components/room-tabs"
-import { SettingsDropdown } from "@/components/settings-dropdown"
-import { ThemeToggle } from "@/components/theme-toggle"
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { Home, AlertCircle, Loader2 } from "lucide-react"
-import dashboardConfig from "@/config/dashboard.json"
-import { useDeviceType } from "@/hooks/use-device-type"
-import { ChipRow } from "@/components/chip-row"
+import { useHomeAssistant } from "@/lib/ha-context";
+import { RoomTabs } from "@/components/room-tabs";
+import { SettingsDropdown } from "@/components/settings-dropdown";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Home, AlertCircle, Loader2 } from "lucide-react";
+import dashboardConfig from "@/config/dashboard.json";
+import { useDeviceType } from "@/hooks/use-device-type";
+import { ChipRow } from "@/components/chip-row";
 
 export default function Page() {
-  const { connected, error } = useHomeAssistant()
-  const deviceType = useDeviceType()
-  const config = dashboardConfig[deviceType]
+  const { connected, error } = useHomeAssistant();
+  const deviceType = useDeviceType();
+  const config = dashboardConfig[deviceType];
 
   const normalizedRooms = config.rooms.map((room: any) => {
     // If room already has items, use it
     if (room.items) {
-      return room
+      return room;
     }
 
     // Otherwise, merge cards and widgets into items
-    const items = [...(room.cards || []), ...(room.widgets || [])]
+    const items = [...(room.cards || []), ...(room.widgets || [])];
 
     return {
       ...room,
       items,
-    }
-  })
+    };
+  });
 
   if (error) {
     return (
@@ -39,7 +39,7 @@ export default function Page() {
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       </div>
-    )
+    );
   }
 
   if (!connected) {
@@ -47,10 +47,12 @@ export default function Page() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="flex flex-col items-center gap-4">
           <Loader2 className="h-8 w-8 animate-spin text-primary" />
-          <p className="text-muted-foreground">Connecting to Home Assistant...</p>
+          <p className="text-muted-foreground">
+            Connecting to Home Assistant...
+          </p>
         </div>
       </div>
-    )
+    );
   }
 
   return (
@@ -62,20 +64,27 @@ export default function Page() {
               <Home className="h-6 w-6" />
             </div>
             <div>
-              <h1 className="text-3xl font-bold text-foreground">{dashboardConfig.title}</h1>
-              <p className="text-muted-foreground">Real-time smart home control</p>
+              <h1 className="text-3xl font-bold text-foreground">
+                {dashboardConfig.title}
+              </h1>
+              <p className="text-muted-foreground">
+                Real-time smart home control
+              </p>
             </div>
           </div>
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <SettingsDropdown rooms={config.rooms} defaultRoom={config.defaultRoom} />
+            <SettingsDropdown
+              rooms={config.rooms}
+              defaultRoom={config.defaultRoom}
+            />
           </div>
         </header>
 
-        {config.chips && <ChipRow chips={config.chips} />}
+        {config.chips && <ChipRow chips={config.chips as any} />}
 
         <RoomTabs rooms={normalizedRooms} defaultRoom={config.defaultRoom} />
       </div>
     </div>
-  )
+  );
 }
