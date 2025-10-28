@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import * as Icons from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import type { PersonCardConfig } from "@/types/card-types";
+import { getDaysInMonth } from "date-fns";
 
 interface PersonCardProps {
   config: PersonCardConfig;
@@ -13,16 +14,20 @@ interface PersonCardProps {
 }
 
 const statusBadgeIcon = (status: string) => {
+  if (status && status.toLowerCase().includes("gym")) {
+    return <Icons.Dumbbell className="h-5 w-5 text-orange-600" />;
+  }
   switch (status.toLowerCase()) {
     case "home":
-      return <Icons.Home className="h-5 w-5 text-green-600" />;
+      return <Icons.Home className="h-5 w-5 text-primary" />;
     case "driving":
-      return <Icons.Car className="h-5 w-5 text-blue-600" />;
+      return <Icons.Car className="h-5 w-5 text-primary" />;
     case "work":
-      return <Icons.Building2 className="h-5 w-5 text-green-600" />;
+      return <Icons.Building2 className="h-5 w-5 text-primary" />;
     case "away":
     case "not_home":
-      return <Icons.Footprints className="h-5 w-5 text-yellow-600" />;
+      return <Icons.Footprints className="h-5 w-5 text-primary" />;
+
     default:
       return null;
   }
