@@ -9,6 +9,7 @@ import { Home, AlertCircle, Loader2 } from "lucide-react";
 import dashboardConfig from "@/config/dashboard.json";
 import { useDeviceType } from "@/hooks/use-device-type";
 import { ChipRow } from "@/components/chip-row";
+import { DashboardGrid } from "@/components/dashboard-grid";
 
 export default function Page() {
   const { connected, error } = useHomeAssistant();
@@ -81,9 +82,26 @@ export default function Page() {
           </div>
         </header>
 
-        {config.chips && <ChipRow chips={config.chips as any} />}
+        {"showChips" in config && config.showChips && config.chips ? (
+          <ChipRow chips={config.chips as any} />
+        ) : null}
 
-        <RoomTabs rooms={normalizedRooms} defaultRoom={config.defaultRoom} />
+        {"showRoomTabs" in config && config.showRoomTabs ? (
+          <RoomTabs rooms={normalizedRooms} defaultRoom={config.defaultRoom} />
+        ) : (
+          // Show cards for the default room if room tabs are hidden
+          (() => {
+            const defaultRoom = normalizedRooms.find(
+              (room: any) => room.id === config.defaultRoom
+            );
+            return defaultRoom ? (
+              <DashboardGrid
+                items={defaultRoom.items}
+                roomId={defaultRoom.id}
+              />
+            ) : null;
+          })()
+        )}
       </div>
     </div>
   );

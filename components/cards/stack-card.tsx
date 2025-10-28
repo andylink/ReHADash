@@ -39,11 +39,10 @@ export function StackCard({
             : { colSpan: 1, rowSpan: 2 }; // default to sm
 
         // Calculate height and width
-        const height = `${sizeObj.rowSpan * 67.5}px`;
-        // For vertical stack, width is % of parent (colSpan / 1 = 100%, 0.5 = 50%)
+        const height =
+          direction === "vertical" ? `${sizeObj.rowSpan * 67.5}px` : "100%";
         const width =
-          direction === "vertical" ? `${sizeObj.colSpan * 100}%` : "100%";
-
+          direction === "horizontal" ? `${sizeObj.colSpan * 100}%` : "100%";
         return (
           <div key={idx} style={{ height, width }} className="flex-shrink-0">
             {item.type === "entity-card" && (
@@ -54,6 +53,12 @@ export function StackCard({
             )}
             {item.type === "person-card" && (
               <PersonCard config={item} rounded={rounded} />
+            )}
+            {item.type === "stack-card" && (
+              <StackCard
+                items={(item as any).items}
+                direction={(item as any).direction}
+              />
             )}
             {/* Add other card types here as needed */}
           </div>

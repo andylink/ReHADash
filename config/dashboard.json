@@ -1,6 +1,8 @@
 {
   "title": "The Clinks",
   "desktop": {
+    "showChips": false,
+    "showRoomTabs": false,
     "defaultRoom": "main-floor",
     "chips": [
       {
@@ -123,20 +125,36 @@
                 }
               },
               {
-                "type": "person-card",
-                "entityId": "device_tracker.life360_andrew_calderbank_link",
-                "name": "Andy",
-                "icon": "User",
-                "useAvatar": true,
-                "size": "xxs-v"
+                "type": "stack-card",
+                "direction": "horizontal",
+                "items": [
+                  {
+                    "type": "person-card",
+                    "entityId": "device_tracker.life360_andrew_calderbank_link",
+                    "size": "xxs-v"
+                  },
+                  {
+                    "type": "person-card",
+                    "entityId": "device_tracker.life360_jenny_calderbank_link",
+                    "size": "xxs-v"
+                  }
+                ]
               },
               {
-                "type": "person-card",
-                "entityId": "device_tracker.life360_jenny_calderbank_link",
-                "name": "Jenny",
-                "icon": "User",
-                "useAvatar": true,
-                "size": "xxs-v"
+                "type": "stack-card",
+                "direction": "horizontal",
+                "items": [
+                  {
+                    "type": "person-card",
+                    "entityId": "device_tracker.life360_alexia_calderbank_link",
+                    "size": "xxs-v"
+                  },
+                  {
+                    "type": "person-card",
+                    "entityId": "device_tracker.life360_edison_calderbank_link",
+                    "size": "xxs-v"
+                  }
+                ]
               }
             ],
             "size": "sm",

@@ -18,6 +18,8 @@ const statusBadgeIcon = (status: string) => {
       return <Icons.Home className="h-5 w-5 text-green-600" />;
     case "driving":
       return <Icons.Car className="h-5 w-5 text-blue-600" />;
+    case "work":
+      return <Icons.Building2 className="h-5 w-5 text-green-600" />;
     case "away":
     case "not_home":
       return <Icons.Footprints className="h-5 w-5 text-yellow-600" />;
