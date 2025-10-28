@@ -9,6 +9,7 @@ import { useMobile } from "@/hooks/use-mobile";
 import { ensureUniqueIds } from "@/lib/config-utils";
 import { StackCard } from "./cards/stack-card";
 import { CustomCard } from "./cards/custom-card";
+import { PersonCard } from "./cards/person-card";
 import type { CardConfig } from "@/types/card-types";
 
 // Grid: 8 columns on desktop (4 on mobile), each logical column = 2 actual grid columns
@@ -146,6 +147,9 @@ export function DashboardGrid({ items, roomId }: DashboardGridProps) {
     }
     if (item.type === "custom-card") {
       return <CustomCard config={item as any} />;
+    }
+    if (item.type === "person-card") {
+      return <PersonCard config={item as any} />;
     }
     return null;
   };

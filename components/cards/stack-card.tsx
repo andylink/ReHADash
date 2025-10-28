@@ -3,6 +3,7 @@ import type { CardConfig } from "@/types/card-types";
 import { CARD_SIZES } from "../dashboard-grid";
 import { EntityCard } from "./entity-card";
 import { CustomCard } from "./custom-card";
+import { PersonCard } from "./person-card";
 // import other card types as needed
 
 export function StackCard({
@@ -50,6 +51,9 @@ export function StackCard({
             )}
             {item.type === "custom-card" && (
               <CustomCard config={item} rounded={rounded} />
+            )}
+            {item.type === "person-card" && (
+              <PersonCard config={item} rounded={rounded} />
             )}
             {/* Add other card types here as needed */}
           </div>

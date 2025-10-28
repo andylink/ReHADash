@@ -108,10 +108,17 @@ export interface StackCardConfig extends BaseCardConfig {
   items: CardConfig[];
 }
 
+export interface PersonCardConfig extends BaseCardConfig {
+  type: "person-card";
+  entityId: string;
+  useAvatar?: boolean;
+}
+
 export type CardConfig =
   | LightCardConfig
   | ClimateCardConfig
   | EntityCardConfig
   | GraphCardConfig
   | StackCardConfig
-  | CustomCardConfig;
+  | CustomCardConfig
+  | PersonCardConfig;

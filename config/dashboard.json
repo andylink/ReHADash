@@ -123,14 +123,19 @@
                 }
               },
               {
-                "type": "entity-card",
-                "entities": [
-                  {
-                    "entity": "sensor.meteobridge_air_temperature",
-                    "name": "Outside Temperature",
-                    "icon": "Thermometer"
-                  }
-                ],
+                "type": "person-card",
+                "entityId": "device_tracker.life360_andrew_calderbank_link",
+                "name": "Andy",
+                "icon": "User",
+                "useAvatar": true,
+                "size": "xxs-v"
+              },
+              {
+                "type": "person-card",
+                "entityId": "device_tracker.life360_jenny_calderbank_link",
+                "name": "Jenny",
+                "icon": "User",
+                "useAvatar": true,
                 "size": "xxs-v"
               }
             ],
@@ -184,7 +189,16 @@
         "id": "bedroom",
         "name": "Bedroom",
         "icon": "bed",
-        "items": []
+        "items": [
+          {
+            "type": "person-card",
+            "entityId": "device_tracker.life360_andrew_calderbank_link",
+            "name": "Andy",
+            "icon": "User",
+            "useAvatar": true,
+            "size": "xs"
+          }
+        ]
       }
     ]
   },
