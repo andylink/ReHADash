@@ -16,6 +16,8 @@ import type { CardConfig } from "@/types/card-types";
 // Each row is 67.5px tall (2 rows = 135px for standard cards)
 // Sizes use logical columns: xxs=0.5, xs=1, sm=1x2, md=2x2, lg=2x3, xl=3x3
 export const CARD_SIZES = {
+  xxxs: { colSpan: 0.25, rowSpan: 1 }, // XXS - Quarter-width cards
+  "xxxs-v": { colSpan: 0.25, rowSpan: 2 }, // Vertical: 0.25 cols × 2 rows (double height)
   // XXS - Half-width cards
   xxs: { colSpan: 0.5, rowSpan: 1 }, // Base: 0.5 cols × 1 row
   "xxs-h": { colSpan: 1, rowSpan: 1 }, // Horizontal: 1 col × 1 row (double width)
@@ -155,7 +157,7 @@ export function DashboardGrid({ items, roomId }: DashboardGridProps) {
   };
 
   return (
-    <div className="grid grid-cols-4 lg:grid-cols-8 gap-4 lg:gap-6 auto-rows-[67.5px]">
+    <div className="grid grid-cols-4 lg:grid-cols-16 gap-4 lg:gap-6 auto-rows-[67.5px]">
       {itemsWithIds.map((item) => {
         const size =
           item.size && CARD_SIZES[item.size as keyof typeof CARD_SIZES]
@@ -163,9 +165,9 @@ export function DashboardGrid({ items, roomId }: DashboardGridProps) {
             : { colSpan: item.colSpan || 1, rowSpan: item.rowSpan || 1 };
 
         // gridColumn works in logical 4-column grid, but we multiply by 2 for the 8-column CSS grid
-        const actualColSpan = size.colSpan * 2;
+        const actualColSpan = size.colSpan * 4;
         const gridColumnStyle = item.gridColumn
-          ? `${item.gridColumn * 2 - 1} / span ${actualColSpan}`
+          ? `${item.gridColumn * 4 - 3} / span ${actualColSpan}`
           : `span ${actualColSpan}`;
 
         const gridRowStyle = item.gridRow
