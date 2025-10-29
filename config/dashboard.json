@@ -4,122 +4,13 @@
     "showChips": false,
     "showRoomTabs": false,
     "defaultRoom": "main-floor",
-    "chips": [
-      {
-        "type": "person",
-        "entityId": "device_tracker.life360_andrew_calderbank_link",
-        "name": "Andy",
-        "icon": "User",
-        "useAvatar": true
-      },
-      {
-        "type": "entity",
-        "entityId": "device_tracker.life360_alexia_calderbank_link",
-        "name": "Alexia",
-        "icon": "User",
-        "useAvatar": true
-      },
-      {
-        "type": "entity",
-        "entityId": "device_tracker.life360_edison_calderbank_link",
-        "name": "Edison",
-        "icon": "User",
-        "useAvatar": true
-      },
-      {
-        "type": "person",
-        "entityId": "device_tracker.life360_jenny_calderbank_link",
-        "name": "Jenny",
-        "icon": "User",
-        "useAvatar": true
-      },
-      {
-        "type": "entity",
-        "name": "Wind Direction",
-        "entityId": "sensor.meteobridge_wind_direction",
-        "icon": "Compass"
-      }
-    ],
+
     "rooms": [
       {
         "id": "main-floor",
         "name": "Office",
         "icon": "home",
         "items": [
-          {
-            "type": "light-card",
-            "entityIds": [
-              "light.office_1",
-              "light.office_2",
-              "light.office_3",
-              "light.office_4",
-              "light.office_5",
-              "light.office_6"
-            ],
-            "name": "Office Lights",
-            "size": "md",
-            "layout": "default",
-            "use_light_color": true,
-            "icon_color": "text-orange-400",
-            "show_brightness_control": true,
-            "show_color_control": true,
-            "primary_info": "name",
-            "secondary_info": "brightness",
-            "gridColumn": 2,
-            "gridRow": 4
-          },
-          {
-            "type": "light-card",
-            "entityIds": ["light.elgato_left", "light.elgato_right"],
-            "name": "Video Lights",
-            "size": "md",
-            "use_light_color": true,
-            "icon_color": "text-orange-400",
-            "show_brightness_control": true,
-            "show_color_control": true,
-            "primary_info": "name",
-            "secondary_info": "brightness",
-            "gridColumn": 2,
-            "gridRow": 6
-          },
-          {
-            "type": "custom-card",
-            "widget": "bin-collection",
-            "name": "Bin Collection",
-            "entity": "sensor.01k8qnwwtbexdrsm6v3byfrwfn_raw_json",
-            "size": "md-v",
-            "gridColumn": 2,
-            "gridRow": 1
-          },
-
-          {
-            "type": "entity-card",
-            "name": "Plant Sensors",
-            "entities": [
-              {
-                "entity": "sensor.plant_monitor_plant_humidity",
-                "name": "Humidity",
-                "icon": "Droplet"
-              },
-              {
-                "entity": "sensor.plant_monitor_plant_temperature",
-                "name": "Temperature",
-                "icon": "Thermometer"
-              }
-            ],
-            "size": "md",
-            "gridColumn": 2,
-            "gridRow": 8
-          },
-          {
-            "type": "graph-card",
-            "name": "Plant Sensors History",
-            "entities": ["sensor.plant_monitor_plant_temperature"],
-            "hours": 24,
-            "size": "xl-v",
-            "gridColumn": 3,
-            "gridRow": 1
-          },
           {
             "type": "stack-card",
             "direction": "vertical",
@@ -133,40 +24,56 @@
                   "fontSize": "2rem"
                 }
               },
+
               {
                 "type": "stack-card",
-                "direction": "horizontal",
+                "direction": "vertical",
                 "items": [
                   {
-                    "type": "person-card",
-                    "entityId": "device_tracker.life360_andrew_calderbank_link",
-                    "size": "xs-v"
+                    "type": "custom-card",
+                    "widget": "bin-collection",
+                    "name": "Bin Collection",
+                    "entity": "sensor.01k8qnwwtbexdrsm6v3byfrwfn_raw_json",
+                    "size": "md-v"
                   },
                   {
-                    "type": "person-card",
-                    "entityId": "device_tracker.life360_jenny_calderbank_link",
-                    "size": "xs-v"
-                  }
-                ]
-              },
-              {
-                "type": "stack-card",
-                "direction": "horizontal",
-                "items": [
-                  {
-                    "type": "person-card",
-                    "entityId": "device_tracker.life360_alexia_calderbank_link",
-                    "size": "xs-v"
+                    "type": "stack-card",
+                    "direction": "horizontal",
+                    "items": [
+                      {
+                        "type": "person-card",
+                        "entityId": "device_tracker.life360_andrew_calderbank_link",
+                        "size": "xs-v"
+                      },
+                      {
+                        "type": "person-card",
+                        "entityId": "device_tracker.life360_jenny_calderbank_link",
+                        "size": "xs-v"
+                      }
+                    ]
                   },
                   {
-                    "type": "person-card",
-                    "entityId": "device_tracker.life360_edison_calderbank_link",
-                    "size": "xs-v"
+                    "type": "stack-card",
+                    "direction": "horizontal",
+                    "items": [
+                      {
+                        "type": "person-card",
+                        "entityId": "device_tracker.life360_alexia_calderbank_link",
+                        "size": "xs-v"
+                      },
+                      {
+                        "type": "person-card",
+                        "entityId": "device_tracker.life360_edison_calderbank_link",
+                        "size": "xs-v"
+                      }
+                    ]
                   }
-                ]
+                ],
+
+                "noGap": true
               }
             ],
-            "size": "sm",
+            "size": "md-v",
             "gridColumn": 1,
             "gridRow": 1
           }

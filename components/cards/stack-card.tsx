@@ -9,45 +9,84 @@ import { PersonCard } from "./person-card";
 export function StackCard({
   items,
   direction = "vertical",
+  size,
+  noGap = false,
 }: {
   items: CardConfig[];
   direction?: "vertical" | "horizontal";
+  size?: keyof typeof CARD_SIZES;
+  noGap?: boolean;
 }) {
+  // Use noGap prop directly
+  // Use size prop for parent card size, fallback to md
+  const parentSizeObj =
+    size && CARD_SIZES[size] ? CARD_SIZES[size] : { colSpan: 1, rowSpan: 2 };
+
+  // For stack-card itself, use its own size if available
+  // (for nested stack-cards, pass size prop down)
+  // If this StackCard is rendered by another StackCard, it will get its size from config
+
+  // For horizontal direction, calculate total colSpan of children
+  let totalColSpan = 0;
+  if (direction === "horizontal") {
+    totalColSpan = items.reduce((sum, item) => {
+      const sizeObj =
+        item.size && CARD_SIZES[item.size]
+          ? CARD_SIZES[item.size]
+          : { colSpan: 1, rowSpan: 2 };
+      return sum + sizeObj.colSpan;
+    }, 0);
+  }
+
   return (
     <div
-      className={`flex ${
-        direction === "vertical" ? "flex-col" : "flex-row"
-      } gap-0 w-full h-full`}
+      className={`flex ${direction === "vertical" ? "flex-col" : "flex-row"} ${
+        noGap ? "gap-0" : "gap-6"
+      } w-full h-full`}
+      style={{
+        height:
+          direction === "vertical"
+            ? `${
+                parentSizeObj.rowSpan * 67.5 +
+                (parentSizeObj.rowSpan - 1) * (noGap ? 0 : 24)
+              }px`
+            : "100%",
+        width: "100%",
+      }}
     >
       {items.map((item, idx) => {
         let rounded: "default" | "top" | "bottom" | "left" | "right" | "none" =
           "default";
-        if (direction === "vertical") {
-          if (idx === 0) rounded = "top";
-          else if (idx === items.length - 1) rounded = "bottom";
-          else rounded = "none";
-        } else {
-          if (idx === 0) rounded = "left";
-          else if (idx === items.length - 1) rounded = "right";
-          else rounded = "none";
+        if (noGap) {
+          if (direction === "vertical") {
+            if (idx === 0) rounded = "top";
+            else if (idx === items.length - 1) rounded = "bottom";
+            else rounded = "none";
+          } else {
+            if (idx === 0) rounded = "left";
+            else if (idx === items.length - 1) rounded = "right";
+            else rounded = "none";
+          }
         }
 
-        // Get size from CARD_SIZES
         const sizeObj =
           item.size && CARD_SIZES[item.size]
             ? CARD_SIZES[item.size]
-            : { colSpan: 1, rowSpan: 2 }; // default to sm
-
-        // Calculate height and width
-        // Use 24px gap to match exact card height of 159px (desktop grid gap-6)
-        const gapSize = 24;
+            : { colSpan: 1, rowSpan: 2 };
+        const gapSize = noGap ? 0 : 24;
         const gaps = sizeObj.rowSpan > 1 ? (sizeObj.rowSpan - 1) * gapSize : 0;
         const height =
           direction === "vertical"
-            ? `${sizeObj.rowSpan * 67.5 + gaps}px`
+            ? `${Math.round(sizeObj.rowSpan * 67.5 + gaps)}px`
             : "100%";
+        // For horizontal, width is proportional to colSpan/totalColSpan
         const width =
-          direction === "horizontal" ? `${sizeObj.colSpan * 100}%` : "100%";
+          direction === "horizontal" && totalColSpan > 0
+            ? `${(sizeObj.colSpan / totalColSpan) * 93}%`
+            : direction === "vertical"
+            ? "100%"
+            : `${sizeObj.colSpan * 100}%`;
+
         return (
           <div key={idx} style={{ height, width }} className="flex-shrink-0">
             {item.type === "entity-card" && (
@@ -63,6 +102,8 @@ export function StackCard({
               <StackCard
                 items={(item as any).items}
                 direction={(item as any).direction}
+                size={item.size}
+                noGap={item.noGap}
               />
             )}
             {/* Add other card types here as needed */}
