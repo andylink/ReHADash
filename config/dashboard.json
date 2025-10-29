@@ -50,7 +50,8 @@
                         "entityId": "device_tracker.life360_jenny_calderbank_link",
                         "size": "xs-v"
                       }
-                    ]
+                    ],
+                    "noGap": true
                   },
                   {
                     "type": "stack-card",
@@ -66,7 +67,8 @@
                         "entityId": "device_tracker.life360_edison_calderbank_link",
                         "size": "xs-v"
                       }
-                    ]
+                    ],
+                    "noGap": true
                   }
                 ],
 

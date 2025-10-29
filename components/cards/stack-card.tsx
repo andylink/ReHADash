@@ -41,7 +41,11 @@ export function StackCard({
   return (
     <div
       className={`flex ${direction === "vertical" ? "flex-col" : "flex-row"} ${
-        noGap ? "gap-0" : "gap-6"
+        noGap && direction === "horizontal"
+          ? "gap-0"
+          : noGap
+          ? "gap-0"
+          : "gap-6"
       } w-full h-full`}
       style={{
         height:
@@ -80,15 +84,30 @@ export function StackCard({
             ? `${Math.round(sizeObj.rowSpan * 67.5 + gaps)}px`
             : "100%";
         // For horizontal, width is proportional to colSpan/totalColSpan
-        const width =
-          direction === "horizontal" && totalColSpan > 0
-            ? `${(sizeObj.colSpan / totalColSpan) * 93}%`
-            : direction === "vertical"
-            ? "100%"
-            : `${sizeObj.colSpan * 100}%`;
+        let width;
+        if (direction === "horizontal" && totalColSpan > 0) {
+          if (noGap) {
+            // Remove gap and make cards fill container equally
+            width = `${(sizeObj.colSpan / totalColSpan) * 100}%`;
+          } else {
+            width = `${(sizeObj.colSpan / totalColSpan) * 93}%`;
+          }
+        } else if (direction === "vertical") {
+          width = "100%";
+        } else {
+          width = `${sizeObj.colSpan * 100}%`;
+        }
 
         return (
-          <div key={idx} style={{ height, width }} className="flex-shrink-0">
+          <div
+            key={idx}
+            style={{
+              height,
+              width,
+              flex: noGap && direction === "horizontal" ? "1 1 0" : undefined,
+            }}
+            className="flex-shrink-0"
+          >
             {item.type === "entity-card" && (
               <EntityCard config={item} rounded={rounded} />
             )}
