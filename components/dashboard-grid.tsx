@@ -12,9 +12,6 @@ import { CustomCard } from "./cards/custom-card";
 import { PersonCard } from "./cards/person-card";
 import type { CardConfig } from "@/types/card-types";
 
-// Grid: 8 columns on desktop (4 on mobile), each logical column = 2 actual grid columns
-// Each row is 67.5px tall (2 rows = 135px for standard cards)
-// Sizes use logical columns: xxs=0.5, xs=1, sm=1x2, md=2x2, lg=2x3, xl=3x3
 export const CARD_SIZES = {
   xxs: { colSpan: 0.25, rowSpan: 1 }, // XXS - Quarter-width cards
   "xxs-v": { colSpan: 0.25, rowSpan: 1 }, // Vertical: 0.25 cols × 2 rows (double height)

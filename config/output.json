@@ -1,0 +1,5726 @@
+{
+  "type": "result",
+  "id": 2,
+  "success": true,
+  "result": [
+    {
+      "entity_id": "conversation.home_assistant",
+      "state": "unknown",
+      "attributes": {
+        "friendly_name": "Home Assistant",
+        "supported_features": 1
+      },
+      "last_changed": "2025-10-29T09:32:44.198684+00:00",
+      "last_reported": "2025-10-29T09:32:44.198684+00:00",
+      "last_updated": "2025-10-29T09:32:44.198684+00:00",
+      "context": {
+        "id": "01K8QN00S6ZS3XQ7HCFKKQ0GC9",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "event.backup_automatic_backup",
+      "state": "unknown",
+      "attributes": {
+        "event_types": ["completed", "failed", "in_progress"],
+        "event_type": null,
+        "friendly_name": "Backup Automatic backup"
+      },
+      "last_changed": "2025-10-29T09:32:44.208790+00:00",
+      "last_reported": "2025-10-29T09:32:44.208790+00:00",
+      "last_updated": "2025-10-29T09:32:44.208790+00:00",
+      "context": {
+        "id": "01K8QN00SG8B3X2QQ93RCWBY7A",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.backup_backup_manager_state",
+      "state": "idle",
+      "attributes": {
+        "options": [
+          "idle",
+          "create_backup",
+          "blocked",
+          "receive_backup",
+          "restore_backup"
+        ],
+        "device_class": "enum",
+        "friendly_name": "Backup Backup Manager state"
+      },
+      "last_changed": "2025-10-29T09:32:52.172156+00:00",
+      "last_reported": "2025-10-29T09:32:52.172156+00:00",
+      "last_updated": "2025-10-29T09:32:52.172156+00:00",
+      "context": {
+        "id": "01K8QN08JC99B8037E1Y1RF195",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.backup_next_scheduled_automatic_backup",
+      "state": "unknown",
+      "attributes": {
+        "device_class": "timestamp",
+        "friendly_name": "Backup Next scheduled automatic backup"
+      },
+      "last_changed": "2025-10-29T09:32:44.209286+00:00",
+      "last_reported": "2025-10-29T09:32:52.172308+00:00",
+      "last_updated": "2025-10-29T09:32:44.209286+00:00",
+      "context": {
+        "id": "01K8QN00SHGD2K36E2280X27WN",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.backup_last_successful_automatic_backup",
+      "state": "unknown",
+      "attributes": {
+        "device_class": "timestamp",
+        "friendly_name": "Backup Last successful automatic backup"
+      },
+      "last_changed": "2025-10-29T09:32:44.209362+00:00",
+      "last_reported": "2025-10-29T09:32:52.172354+00:00",
+      "last_updated": "2025-10-29T09:32:44.209362+00:00",
+      "context": {
+        "id": "01K8QN00SHTM6JTPWPQF7G1K6Z",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.backup_last_attempted_automatic_backup",
+      "state": "unknown",
+      "attributes": {
+        "device_class": "timestamp",
+        "friendly_name": "Backup Last attempted automatic backup"
+      },
+      "last_changed": "2025-10-29T09:32:44.209432+00:00",
+      "last_reported": "2025-10-29T09:32:52.172387+00:00",
+      "last_updated": "2025-10-29T09:32:44.209432+00:00",
+      "context": {
+        "id": "01K8QN00SHR7F8JSX98WAAE6T9",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "zone.home",
+      "state": "1",
+      "attributes": {
+        "latitude": 52.6988428,
+        "longitude": 1.6754534,
+        "radius": 100,
+        "passive": false,
+        "persons": ["person.andy"],
+        "editable": true,
+        "icon": "mdi:home",
+        "friendly_name": "Home"
+      },
+      "last_changed": "2025-10-29T09:32:44.366407+00:00",
+      "last_reported": "2025-10-29T09:32:44.366407+00:00",
+      "last_updated": "2025-10-29T09:32:44.366407+00:00",
+      "context": {
+        "id": "01K8QN00YEPZNJH8GFW3ZH593G",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "person.andy",
+      "state": "home",
+      "attributes": {
+        "editable": true,
+        "id": "andy",
+        "device_trackers": ["device_tracker.andys_phone"],
+        "latitude": 52.69880644635174,
+        "longitude": 1.6750620438488932,
+        "gps_accuracy": 15,
+        "source": "device_tracker.andys_phone",
+        "user_id": "2ab5dc29dad2490ea0292188efcfc816",
+        "friendly_name": "andy"
+      },
+      "last_changed": "2025-10-29T09:32:44.366356+00:00",
+      "last_reported": "2025-10-29T09:32:51.498782+00:00",
+      "last_updated": "2025-10-29T09:32:51.498782+00:00",
+      "context": {
+        "id": "01K8QN07XARHSNW68GR4EK138T",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.wan_rx_rate_auto",
+      "state": "6.7",
+      "attributes": {
+        "state_class": "measurement",
+        "unit_of_measurement": "{% set bps = states('sensor.edgerouter_poe_5_port_interface_eth0_received_rate') | float(0) %} {% if bps >= 1_000_000 %}\n  Mbps\n{% elif bps >= 1_000 %}\n  kbps\n{% else %}\n  bps\n{% endif %}\n",
+        "device_class": "data_rate",
+        "friendly_name": "WAN RX Rate (auto)"
+      },
+      "last_changed": "2025-10-29T10:36:05.266710+00:00",
+      "last_reported": "2025-10-29T10:36:05.266710+00:00",
+      "last_updated": "2025-10-29T10:36:05.266710+00:00",
+      "context": {
+        "id": "01K8QRM0RFE0STWRF0FHTMQ161",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.wan_tx_rate_auto",
+      "state": "288",
+      "attributes": {
+        "state_class": "measurement",
+        "unit_of_measurement": "{% set bps = states('sensor.edgerouter_poe_5_port_interface_eth0_sent_rate') | float(0) %} {% if bps >= 1_000_000 %}\n  Mbps\n{% elif bps >= 1_000 %}\n  kbps\n{% else %}\n  bps\n{% endif %}\n",
+        "device_class": "data_rate",
+        "friendly_name": "WAN TX Rate (auto)"
+      },
+      "last_changed": "2025-10-29T10:36:05.267646+00:00",
+      "last_reported": "2025-10-29T10:36:05.267646+00:00",
+      "last_updated": "2025-10-29T10:36:05.267646+00:00",
+      "context": {
+        "id": "01K8QRM0RF8277VWN29BKAHQ8C",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.wan_total_throughput_auto",
+      "state": "7.0",
+      "attributes": {
+        "state_class": "measurement",
+        "unit_of_measurement": "{% set rx = states('sensor.edgerouter_poe_5_port_interface_eth0_received_rate') | float(0) %} {% set tx = states('sensor.edgerouter_poe_5_port_interface_eth0_sent_rate') | float(0) %} {% set total = rx + tx %} {% if total >= 1_000_000 %}\n  Mbps\n{% elif total >= 1_000 %}\n  kbps\n{% else %}\n  bps\n{% endif %}\n",
+        "device_class": "data_rate",
+        "friendly_name": "WAN Total Throughput (auto)"
+      },
+      "last_changed": "2025-10-29T10:36:05.267227+00:00",
+      "last_reported": "2025-10-29T10:36:05.267227+00:00",
+      "last_updated": "2025-10-29T10:36:05.267227+00:00",
+      "context": {
+        "id": "01K8QRM0RFE0STWRF0FHTMQ161",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sun.sun",
+      "state": "above_horizon",
+      "attributes": {
+        "next_dawn": "2025-10-30T06:10:14.601851+00:00",
+        "next_dusk": "2025-10-29T17:04:34.456862+00:00",
+        "next_midnight": "2025-10-29T23:36:54+00:00",
+        "next_noon": "2025-10-29T11:36:58+00:00",
+        "next_rising": "2025-10-30T06:46:59.521762+00:00",
+        "next_setting": "2025-10-29T16:28:00.305193+00:00",
+        "elevation": 22.3,
+        "azimuth": 163.12,
+        "rising": true,
+        "friendly_name": "Sun"
+      },
+      "last_changed": "2025-10-29T09:32:45.141615+00:00",
+      "last_reported": "2025-10-29T10:32:45.153729+00:00",
+      "last_updated": "2025-10-29T10:32:45.153729+00:00",
+      "context": {
+        "id": "01K8QRDXB1135KC0GB1866E8QS",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.sun_next_dawn",
+      "state": "2025-10-30T06:10:14+00:00",
+      "attributes": {
+        "device_class": "timestamp",
+        "friendly_name": "Sun Next dawn"
+      },
+      "last_changed": "2025-10-29T09:32:45.142178+00:00",
+      "last_reported": "2025-10-29T09:32:45.142178+00:00",
+      "last_updated": "2025-10-29T09:32:45.142178+00:00",
+      "context": {
+        "id": "01K8QN01PP87APM31WX9K7Q5NJ",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.sun_next_dusk",
+      "state": "2025-10-29T17:04:34+00:00",
+      "attributes": {
+        "device_class": "timestamp",
+        "friendly_name": "Sun Next dusk"
+      },
+      "last_changed": "2025-10-29T09:32:45.142280+00:00",
+      "last_reported": "2025-10-29T09:32:45.142280+00:00",
+      "last_updated": "2025-10-29T09:32:45.142280+00:00",
+      "context": {
+        "id": "01K8QN01PPD884BS5DXF5WXM8P",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.sun_next_midnight",
+      "state": "2025-10-29T23:36:54+00:00",
+      "attributes": {
+        "device_class": "timestamp",
+        "friendly_name": "Sun Next midnight"
+      },
+      "last_changed": "2025-10-29T09:32:45.142368+00:00",
+      "last_reported": "2025-10-29T09:32:45.142368+00:00",
+      "last_updated": "2025-10-29T09:32:45.142368+00:00",
+      "context": {
+        "id": "01K8QN01PPQSKHME0AHK6H4F3V",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.sun_next_noon",
+      "state": "2025-10-29T11:36:58+00:00",
+      "attributes": {
+        "device_class": "timestamp",
+        "friendly_name": "Sun Next noon"
+      },
+      "last_changed": "2025-10-29T09:32:45.142448+00:00",
+      "last_reported": "2025-10-29T09:32:45.142448+00:00",
+      "last_updated": "2025-10-29T09:32:45.142448+00:00",
+      "context": {
+        "id": "01K8QN01PPY280SG6PC04HZDND",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.sun_next_rising",
+      "state": "2025-10-30T06:46:59+00:00",
+      "attributes": {
+        "device_class": "timestamp",
+        "friendly_name": "Sun Next rising"
+      },
+      "last_changed": "2025-10-29T09:32:45.142544+00:00",
+      "last_reported": "2025-10-29T09:32:45.142544+00:00",
+      "last_updated": "2025-10-29T09:32:45.142544+00:00",
+      "context": {
+        "id": "01K8QN01PPZWQ0RYPP46KPH7P2",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.sun_next_setting",
+      "state": "2025-10-29T16:28:00+00:00",
+      "attributes": {
+        "device_class": "timestamp",
+        "friendly_name": "Sun Next setting"
+      },
+      "last_changed": "2025-10-29T09:32:45.142620+00:00",
+      "last_reported": "2025-10-29T09:32:45.142620+00:00",
+      "last_updated": "2025-10-29T09:32:45.142620+00:00",
+      "context": {
+        "id": "01K8QN01PPR3CFQMSZF588GCT7",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "device_tracker.andys_phone",
+      "state": "home",
+      "attributes": {
+        "source_type": "gps",
+        "battery_level": 85,
+        "latitude": 52.69880644635174,
+        "longitude": 1.6750620438488932,
+        "gps_accuracy": 15,
+        "altitude": 11.12186026896564,
+        "vertical_accuracy": 15,
+        "friendly_name": "Andy’s phone"
+      },
+      "last_changed": "2025-10-29T09:32:45.203955+00:00",
+      "last_reported": "2025-10-29T09:32:45.203955+00:00",
+      "last_updated": "2025-10-29T09:32:45.203955+00:00",
+      "context": {
+        "id": "01K8QN01RK0BVTHDMQM84SP26A",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.andys_phone_activity",
+      "state": "unavailable",
+      "attributes": {
+        "icon": "mdi:dots-square",
+        "friendly_name": "Andy’s phone Activity"
+      },
+      "last_changed": "2025-10-29T09:32:45.204256+00:00",
+      "last_reported": "2025-10-29T09:32:45.204256+00:00",
+      "last_updated": "2025-10-29T09:32:45.204256+00:00",
+      "context": {
+        "id": "01K8QN01RM79FF0J77RSCWQ9MV",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.andys_phone_distance",
+      "state": "unavailable",
+      "attributes": {
+        "icon": "mdi:dots-square",
+        "friendly_name": "Andy’s phone Distance"
+      },
+      "last_changed": "2025-10-29T09:32:45.204351+00:00",
+      "last_reported": "2025-10-29T09:32:45.204351+00:00",
+      "last_updated": "2025-10-29T09:32:45.204351+00:00",
+      "context": {
+        "id": "01K8QN01RM3NHCHKY11K8TT0W3",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.andys_phone_battery_state",
+      "state": "Charging",
+      "attributes": {
+        "Low Power Mode": false,
+        "icon": "mdi:battery-charging-80",
+        "friendly_name": "Andy’s phone Battery State"
+      },
+      "last_changed": "2025-10-29T09:32:45.204597+00:00",
+      "last_reported": "2025-10-29T09:32:45.204597+00:00",
+      "last_updated": "2025-10-29T09:32:45.204597+00:00",
+      "context": {
+        "id": "01K8QN01RMJHJP954GAVTXHQSD",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.andys_phone_storage",
+      "state": "unavailable",
+      "attributes": {
+        "icon": "mdi:dots-square",
+        "friendly_name": "Andy’s phone Storage"
+      },
+      "last_changed": "2025-10-29T09:32:45.204678+00:00",
+      "last_reported": "2025-10-29T09:32:45.204678+00:00",
+      "last_updated": "2025-10-29T09:32:45.204678+00:00",
+      "context": {
+        "id": "01K8QN01RMB0F1NV2DRD7F8RWA",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.andys_phone_ssid",
+      "state": "TheClinks_WiFi",
+      "attributes": {
+        "icon": "mdi:wifi",
+        "friendly_name": "Andy’s phone SSID"
+      },
+      "last_changed": "2025-10-29T09:32:45.204751+00:00",
+      "last_reported": "2025-10-29T09:32:45.204751+00:00",
+      "last_updated": "2025-10-29T09:32:45.204751+00:00",
+      "context": {
+        "id": "01K8QN01RMTS74KJ27501V2EM9",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.andys_phone_bssid",
+      "state": "f4:92:bf:62:99:b8",
+      "attributes": {
+        "icon": "mdi:wifi-star",
+        "friendly_name": "Andy’s phone BSSID"
+      },
+      "last_changed": "2025-10-29T09:32:45.204815+00:00",
+      "last_reported": "2025-10-29T09:32:45.204815+00:00",
+      "last_updated": "2025-10-29T09:32:45.204815+00:00",
+      "context": {
+        "id": "01K8QN01RMDC1J33SDZSQXD91Q",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.andys_phone_connection_type",
+      "state": "unavailable",
+      "attributes": {
+        "icon": "mdi:dots-square",
+        "friendly_name": "Andy’s phone Connection Type"
+      },
+      "last_changed": "2025-10-29T09:32:45.204872+00:00",
+      "last_reported": "2025-10-29T09:32:45.204872+00:00",
+      "last_updated": "2025-10-29T09:32:45.204872+00:00",
+      "context": {
+        "id": "01K8QN01RM2DGZ2V6T5R2Y683B",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.andys_phone_sim_2",
+      "state": "unavailable",
+      "attributes": {
+        "icon": "mdi:dots-square",
+        "friendly_name": "Andy’s phone SIM 2"
+      },
+      "last_changed": "2025-10-29T09:32:45.204931+00:00",
+      "last_reported": "2025-10-29T09:32:45.204931+00:00",
+      "last_updated": "2025-10-29T09:32:45.204931+00:00",
+      "context": {
+        "id": "01K8QN01RMCBBWMBWT8JS0Y4DA",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.andys_phone_sim_1",
+      "state": "unavailable",
+      "attributes": {
+        "icon": "mdi:dots-square",
+        "friendly_name": "Andy’s phone SIM 1"
+      },
+      "last_changed": "2025-10-29T09:32:45.204986+00:00",
+      "last_reported": "2025-10-29T09:32:45.204986+00:00",
+      "last_updated": "2025-10-29T09:32:45.204986+00:00",
+      "context": {
+        "id": "01K8QN01RM80TB4WQ8WDKZR7GG",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.andys_phone_geocoded_location",
+      "state": "Mill House, 21 Mill Road\nGreat Yarmouth\nEngland\nNR29 4ND\nUnited Kingdom",
+      "attributes": {
+        "Administrative Area": "England",
+        "Areas Of Interest": "N/A",
+        "Country": "United Kingdom",
+        "Inland Water": "N/A",
+        "ISO Country Code": "GB",
+        "Locality": "Great Yarmouth",
+        "Location": [52.69880644635174, 1.6750620438488932],
+        "Name": "Mill House, 21 Mill Road",
+        "Ocean": "N/A",
+        "Postal Code": "NR29 4ND",
+        "Sub Administrative Area": "Norfolk",
+        "Sub Locality": "Hemsby",
+        "Sub Thoroughfare": "21",
+        "Thoroughfare": "Mill Road",
+        "Time Zone": "Europe/London",
+        "Zones": ["Home", "Home"],
+        "icon": "mdi:map",
+        "friendly_name": "Andy’s phone Geocoded Location"
+      },
+      "last_changed": "2025-10-29T09:32:45.205043+00:00",
+      "last_reported": "2025-10-29T09:32:45.205043+00:00",
+      "last_updated": "2025-10-29T09:32:45.205043+00:00",
+      "context": {
+        "id": "01K8QN01RNYYWGDGTGP7FDVAMA",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.andys_phone_last_update_trigger",
+      "state": "unavailable",
+      "attributes": {
+        "icon": "mdi:dots-square",
+        "friendly_name": "Andy’s phone Last Update Trigger"
+      },
+      "last_changed": "2025-10-29T09:32:45.205107+00:00",
+      "last_reported": "2025-10-29T09:32:45.205107+00:00",
+      "last_updated": "2025-10-29T09:32:45.205107+00:00",
+      "context": {
+        "id": "01K8QN01RNVSAAFMR6YYETW0GG",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.andys_phone_app_version",
+      "state": "2025.10.0",
+      "attributes": {
+        "icon": "mdi:cellphone",
+        "friendly_name": "Andy’s phone App Version"
+      },
+      "last_changed": "2025-10-29T09:32:45.205167+00:00",
+      "last_reported": "2025-10-29T09:32:45.205167+00:00",
+      "last_updated": "2025-10-29T09:32:45.205167+00:00",
+      "context": {
+        "id": "01K8QN01RN9H7WH10S6W1MW82J",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.andys_phone_location_permission",
+      "state": "Authorized Always",
+      "attributes": {
+        "icon": "mdi:map",
+        "friendly_name": "Andy’s phone Location permission"
+      },
+      "last_changed": "2025-10-29T09:32:45.205224+00:00",
+      "last_reported": "2025-10-29T09:32:45.205224+00:00",
+      "last_updated": "2025-10-29T09:32:45.205224+00:00",
+      "context": {
+        "id": "01K8QN01RNN2N370S2DVZ6CNAN",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.andys_phone_audio_output",
+      "state": "unavailable",
+      "attributes": {
+        "icon": "mdi:dots-square",
+        "friendly_name": "Andy’s phone Audio Output"
+      },
+      "last_changed": "2025-10-29T09:32:45.205279+00:00",
+      "last_reported": "2025-10-29T09:32:45.205279+00:00",
+      "last_updated": "2025-10-29T09:32:45.205279+00:00",
+      "context": {
+        "id": "01K8QN01RN323467RY45B0NWK6",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.andys_phone_floors_ascended",
+      "state": "unavailable",
+      "attributes": {
+        "icon": "mdi:dots-square",
+        "friendly_name": "Andy’s phone Floors Ascended"
+      },
+      "last_changed": "2025-10-29T09:32:45.205333+00:00",
+      "last_reported": "2025-10-29T09:32:45.205333+00:00",
+      "last_updated": "2025-10-29T09:32:45.205333+00:00",
+      "context": {
+        "id": "01K8QN01RNGGHPPT1D2V6BG7FY",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.andys_phone_steps",
+      "state": "unavailable",
+      "attributes": {
+        "icon": "mdi:dots-square",
+        "friendly_name": "Andy’s phone Steps"
+      },
+      "last_changed": "2025-10-29T09:32:45.205386+00:00",
+      "last_reported": "2025-10-29T09:32:45.205386+00:00",
+      "last_updated": "2025-10-29T09:32:45.205386+00:00",
+      "context": {
+        "id": "01K8QN01RN2PA3ZV4CQ5K0HDR0",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.andys_phone_battery_level",
+      "state": "85",
+      "attributes": {
+        "unit_of_measurement": "%",
+        "device_class": "battery",
+        "icon": "mdi:battery-charging-80",
+        "friendly_name": "Andy’s phone Battery Level"
+      },
+      "last_changed": "2025-10-29T09:32:45.205461+00:00",
+      "last_reported": "2025-10-29T09:32:45.205461+00:00",
+      "last_updated": "2025-10-29T09:32:45.205461+00:00",
+      "context": {
+        "id": "01K8QN01RNG0P9YJ47W5Y0A3B4",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.andys_phone_floors_descended",
+      "state": "unavailable",
+      "attributes": {
+        "icon": "mdi:dots-square",
+        "friendly_name": "Andy’s phone Floors Descended"
+      },
+      "last_changed": "2025-10-29T09:32:45.205543+00:00",
+      "last_reported": "2025-10-29T09:32:45.205543+00:00",
+      "last_updated": "2025-10-29T09:32:45.205543+00:00",
+      "context": {
+        "id": "01K8QN01RN6TPKXNG0ZEN4ZD2A",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.andys_phone_average_active_pace",
+      "state": "unavailable",
+      "attributes": {
+        "icon": "mdi:dots-square",
+        "friendly_name": "Andy’s phone Average Active Pace"
+      },
+      "last_changed": "2025-10-29T09:32:45.205607+00:00",
+      "last_reported": "2025-10-29T09:32:45.205607+00:00",
+      "last_updated": "2025-10-29T09:32:45.205607+00:00",
+      "context": {
+        "id": "01K8QN01RNHVVECCZV8HKPNXVJ",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "update.uk_bin_collection_data_update",
+      "state": "off",
+      "attributes": {
+        "auto_update": false,
+        "display_precision": 0,
+        "installed_version": "0.160.1",
+        "in_progress": false,
+        "latest_version": "0.160.1",
+        "release_summary": null,
+        "release_url": "https://github.com/robbrad/UKBinCollectionData/releases/0.160.1",
+        "skipped_version": null,
+        "title": null,
+        "update_percentage": null,
+        "entity_picture": "https://brands.home-assistant.io/_/uk_bin_collection/icon.png",
+        "friendly_name": "UK Bin Collection Data update",
+        "supported_features": 23
+      },
+      "last_changed": "2025-10-29T09:32:45.314672+00:00",
+      "last_reported": "2025-10-29T09:32:45.314672+00:00",
+      "last_updated": "2025-10-29T09:32:45.314672+00:00",
+      "context": {
+        "id": "01K8QN01W2TV8A1H69PGGCNVX9",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "update.sureha_update",
+      "state": "off",
+      "attributes": {
+        "auto_update": false,
+        "display_precision": 0,
+        "installed_version": "v0.5.2",
+        "in_progress": false,
+        "latest_version": "v0.5.2",
+        "release_summary": null,
+        "release_url": "https://github.com/benleb/sureha/releases/v0.5.2",
+        "skipped_version": null,
+        "title": null,
+        "update_percentage": null,
+        "entity_picture": "https://brands.home-assistant.io/_/sureha/icon.png",
+        "friendly_name": "SureHA update",
+        "supported_features": 23
+      },
+      "last_changed": "2025-10-29T09:32:45.314782+00:00",
+      "last_reported": "2025-10-29T09:32:45.314782+00:00",
+      "last_updated": "2025-10-29T09:32:45.314782+00:00",
+      "context": {
+        "id": "01K8QN01W2TEXNEN13JZD75Y2A",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "update.mushroom_update",
+      "state": "off",
+      "attributes": {
+        "auto_update": false,
+        "display_precision": 0,
+        "installed_version": "v5.0.8",
+        "in_progress": false,
+        "latest_version": "v5.0.8",
+        "release_summary": null,
+        "release_url": "https://github.com/piitaya/lovelace-mushroom/releases/v5.0.8",
+        "skipped_version": null,
+        "title": null,
+        "update_percentage": null,
+        "friendly_name": "Mushroom update",
+        "supported_features": 23
+      },
+      "last_changed": "2025-10-29T09:32:45.314860+00:00",
+      "last_reported": "2025-10-29T09:32:45.314860+00:00",
+      "last_updated": "2025-10-29T09:32:45.314860+00:00",
+      "context": {
+        "id": "01K8QN01W21DT41MTF9KND0WKZ",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "update.nordic_theme_update",
+      "state": "off",
+      "attributes": {
+        "auto_update": false,
+        "display_precision": 0,
+        "installed_version": "v2.1.0",
+        "in_progress": false,
+        "latest_version": "v2.1.0",
+        "release_summary": null,
+        "release_url": "https://github.com/coltondick/nordic-theme-main/releases/v2.1.0",
+        "skipped_version": null,
+        "title": null,
+        "update_percentage": null,
+        "friendly_name": "Nordic Theme update",
+        "supported_features": 23
+      },
+      "last_changed": "2025-10-29T09:32:45.314926+00:00",
+      "last_reported": "2025-10-29T09:32:45.314926+00:00",
+      "last_updated": "2025-10-29T09:32:45.314926+00:00",
+      "context": {
+        "id": "01K8QN01W2ZK9KD6D5AQDVT8QD",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "update.life360_update",
+      "state": "off",
+      "attributes": {
+        "auto_update": false,
+        "display_precision": 0,
+        "installed_version": "0.6.0",
+        "in_progress": false,
+        "latest_version": "0.6.0",
+        "release_summary": null,
+        "release_url": "https://github.com/pnbruckner/ha-life360/releases/0.6.0",
+        "skipped_version": null,
+        "title": null,
+        "update_percentage": null,
+        "entity_picture": "https://brands.home-assistant.io/_/life360/icon.png",
+        "friendly_name": "Life360 update",
+        "supported_features": 23
+      },
+      "last_changed": "2025-10-29T09:32:45.314995+00:00",
+      "last_reported": "2025-10-29T09:32:45.314995+00:00",
+      "last_updated": "2025-10-29T09:32:45.314995+00:00",
+      "context": {
+        "id": "01K8QN01W2K0K9HJHZ3ABR5JRZ",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "update.edgeos_ubiquiti_update",
+      "state": "off",
+      "attributes": {
+        "auto_update": false,
+        "display_precision": 0,
+        "installed_version": "v2.1.9",
+        "in_progress": false,
+        "latest_version": "v2.1.9",
+        "release_summary": null,
+        "release_url": "https://github.com/elad-bar/ha-edgeos/releases/v2.1.9",
+        "skipped_version": null,
+        "title": null,
+        "update_percentage": null,
+        "entity_picture": "https://brands.home-assistant.io/_/edgeos/icon.png",
+        "friendly_name": "EdgeOS (Ubiquiti) update",
+        "supported_features": 23
+      },
+      "last_changed": "2025-10-29T09:32:45.315059+00:00",
+      "last_reported": "2025-10-29T09:32:45.315059+00:00",
+      "last_updated": "2025-10-29T09:32:45.315059+00:00",
+      "context": {
+        "id": "01K8QN01W3NAB5DA1G5B82G8VK",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "update.hacs_update",
+      "state": "off",
+      "attributes": {
+        "auto_update": false,
+        "display_precision": 0,
+        "installed_version": "2.0.5",
+        "in_progress": false,
+        "latest_version": "2.0.5",
+        "release_summary": null,
+        "release_url": "https://github.com/hacs/integration/releases/2.0.5",
+        "skipped_version": null,
+        "title": null,
+        "update_percentage": null,
+        "entity_picture": "https://brands.home-assistant.io/_/hacs/icon.png",
+        "friendly_name": "HACS update",
+        "supported_features": 23
+      },
+      "last_changed": "2025-10-29T09:32:45.315125+00:00",
+      "last_reported": "2025-10-29T09:32:45.315125+00:00",
+      "last_updated": "2025-10-29T09:32:45.315125+00:00",
+      "context": {
+        "id": "01K8QN01W363NX2CX0A5KRSR60",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "update.stack_in_card_update",
+      "state": "off",
+      "attributes": {
+        "auto_update": false,
+        "display_precision": 0,
+        "installed_version": "0.2.0",
+        "in_progress": false,
+        "latest_version": "0.2.0",
+        "release_summary": null,
+        "release_url": "https://github.com/custom-cards/stack-in-card/releases/0.2.0",
+        "skipped_version": null,
+        "title": null,
+        "update_percentage": null,
+        "friendly_name": "Stack In Card update",
+        "supported_features": 23
+      },
+      "last_changed": "2025-10-29T09:32:45.315183+00:00",
+      "last_reported": "2025-10-29T09:32:45.315183+00:00",
+      "last_updated": "2025-10-29T09:32:45.315183+00:00",
+      "context": {
+        "id": "01K8QN01W3S4KC3E1FDHY1A5Y3",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "update.mini_graph_card_update",
+      "state": "off",
+      "attributes": {
+        "auto_update": false,
+        "display_precision": 0,
+        "installed_version": "v0.13.0",
+        "in_progress": false,
+        "latest_version": "v0.13.0",
+        "release_summary": null,
+        "release_url": "https://github.com/kalkih/mini-graph-card/releases/v0.13.0",
+        "skipped_version": null,
+        "title": null,
+        "update_percentage": null,
+        "friendly_name": "mini-graph-card update",
+        "supported_features": 23
+      },
+      "last_changed": "2025-10-29T09:32:45.315243+00:00",
+      "last_reported": "2025-10-29T09:32:45.315243+00:00",
+      "last_updated": "2025-10-29T09:32:45.315243+00:00",
+      "context": {
+        "id": "01K8QN01W36WGSWRHB590HTYAP",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "update.hildebrand_glow_dcc_update",
+      "state": "off",
+      "attributes": {
+        "auto_update": false,
+        "display_precision": 0,
+        "installed_version": "v1.4.1",
+        "in_progress": false,
+        "latest_version": "v1.4.1",
+        "release_summary": null,
+        "release_url": "https://github.com/jonandel/ha-hildebrandglow-dcc/releases/v1.4.1",
+        "skipped_version": null,
+        "title": null,
+        "update_percentage": null,
+        "entity_picture": "https://brands.home-assistant.io/_/hildebrandglow_dcc/icon.png",
+        "friendly_name": "Hildebrand Glow (DCC) update",
+        "supported_features": 23
+      },
+      "last_changed": "2025-10-29T09:32:45.315308+00:00",
+      "last_reported": "2025-10-29T09:32:45.315308+00:00",
+      "last_updated": "2025-10-29T09:32:45.315308+00:00",
+      "context": {
+        "id": "01K8QN01W3YJSYJKJRGP2F4RQP",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "event.alexias_bedroom_switch_button_1",
+      "state": "2025-10-28T22:38:32.323+00:00",
+      "attributes": {
+        "event_types": [
+          "initial_press",
+          "repeat",
+          "short_release",
+          "long_press",
+          "long_release"
+        ],
+        "event_type": "short_release",
+        "device_class": "button",
+        "friendly_name": "Alexia’s bedroom switch Button 1"
+      },
+      "last_changed": "2025-10-29T09:32:45.570472+00:00",
+      "last_reported": "2025-10-29T09:32:45.570472+00:00",
+      "last_updated": "2025-10-29T09:32:45.570472+00:00",
+      "context": {
+        "id": "01K8QN0242HSNQTPA7Y6TNVQHW",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "event.alexias_bedroom_switch_button_3",
+      "state": "unknown",
+      "attributes": {
+        "event_types": [
+          "initial_press",
+          "repeat",
+          "short_release",
+          "long_press",
+          "long_release"
+        ],
+        "event_type": null,
+        "device_class": "button",
+        "friendly_name": "Alexia’s bedroom switch Button 3"
+      },
+      "last_changed": "2025-10-29T09:32:45.570630+00:00",
+      "last_reported": "2025-10-29T09:32:45.570630+00:00",
+      "last_updated": "2025-10-29T09:32:45.570630+00:00",
+      "context": {
+        "id": "01K8QN0242BKQZ78BYPEHM2XEG",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "event.alexias_bedroom_switch_button_4",
+      "state": "2025-10-29T01:00:01.752+00:00",
+      "attributes": {
+        "event_types": [
+          "initial_press",
+          "repeat",
+          "short_release",
+          "long_press",
+          "long_release"
+        ],
+        "event_type": "short_release",
+        "device_class": "button",
+        "friendly_name": "Alexia’s bedroom switch Button 4"
+      },
+      "last_changed": "2025-10-29T09:32:45.570743+00:00",
+      "last_reported": "2025-10-29T09:32:45.570743+00:00",
+      "last_updated": "2025-10-29T09:32:45.570743+00:00",
+      "context": {
+        "id": "01K8QN02423ASGWEPV8RBZK2XT",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "event.alexias_bedroom_switch_button_2",
+      "state": "unknown",
+      "attributes": {
+        "event_types": [
+          "initial_press",
+          "repeat",
+          "short_release",
+          "long_press",
+          "long_release"
+        ],
+        "event_type": null,
+        "device_class": "button",
+        "friendly_name": "Alexia’s bedroom switch Button 2"
+      },
+      "last_changed": "2025-10-29T09:32:45.570843+00:00",
+      "last_reported": "2025-10-29T09:32:45.570843+00:00",
+      "last_updated": "2025-10-29T09:32:45.570843+00:00",
+      "context": {
+        "id": "01K8QN0242N48NR97KG5NY186Q",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "light.alexia_middle_light",
+      "state": "off",
+      "attributes": {
+        "min_color_temp_kelvin": 2202,
+        "max_color_temp_kelvin": 6535,
+        "min_mireds": 153,
+        "max_mireds": 454,
+        "effect_list": ["off", "candle", "sparkle", "glisten"],
+        "supported_color_modes": ["color_temp"],
+        "effect": null,
+        "color_mode": null,
+        "brightness": null,
+        "color_temp_kelvin": null,
+        "color_temp": null,
+        "hs_color": null,
+        "rgb_color": null,
+        "xy_color": null,
+        "mode": "normal",
+        "dynamics": "none",
+        "friendly_name": "Alexia middle light",
+        "supported_features": 44
+      },
+      "last_changed": "2025-10-29T09:32:45.571974+00:00",
+      "last_reported": "2025-10-29T09:32:45.571974+00:00",
+      "last_updated": "2025-10-29T09:32:45.571974+00:00",
+      "context": {
+        "id": "01K8QN0243NJKD0HSPGDSSTPT9",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "light.alexia_3",
+      "state": "off",
+      "attributes": {
+        "min_color_temp_kelvin": 2202,
+        "max_color_temp_kelvin": 6535,
+        "min_mireds": 153,
+        "max_mireds": 454,
+        "effect_list": ["off", "candle", "sparkle", "glisten"],
+        "supported_color_modes": ["color_temp"],
+        "effect": null,
+        "color_mode": null,
+        "brightness": null,
+        "color_temp_kelvin": null,
+        "color_temp": null,
+        "hs_color": null,
+        "rgb_color": null,
+        "xy_color": null,
+        "mode": "normal",
+        "dynamics": "none",
+        "friendly_name": "Alexia 3",
+        "supported_features": 44
+      },
+      "last_changed": "2025-10-29T10:03:14.117683+00:00",
+      "last_reported": "2025-10-29T10:03:14.117683+00:00",
+      "last_updated": "2025-10-29T10:03:14.117683+00:00",
+      "context": {
+        "id": "01K8QPQVT5VK1JAQPF8JM1CJDC",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "light.alexia_1",
+      "state": "off",
+      "attributes": {
+        "min_color_temp_kelvin": 2202,
+        "max_color_temp_kelvin": 6535,
+        "min_mireds": 153,
+        "max_mireds": 454,
+        "effect_list": ["off", "candle", "sparkle", "glisten"],
+        "supported_color_modes": ["color_temp"],
+        "effect": null,
+        "color_mode": null,
+        "brightness": null,
+        "color_temp_kelvin": null,
+        "color_temp": null,
+        "hs_color": null,
+        "rgb_color": null,
+        "xy_color": null,
+        "mode": "normal",
+        "dynamics": "none",
+        "friendly_name": "Alexia 1",
+        "supported_features": 44
+      },
+      "last_changed": "2025-10-29T09:55:50.537003+00:00",
+      "last_reported": "2025-10-29T09:55:50.537003+00:00",
+      "last_updated": "2025-10-29T09:55:50.537003+00:00",
+      "context": {
+        "id": "01K8QPAAM9VJPNQBT3CYS56DZW",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "light.alexia_2",
+      "state": "off",
+      "attributes": {
+        "min_color_temp_kelvin": 2202,
+        "max_color_temp_kelvin": 6535,
+        "min_mireds": 153,
+        "max_mireds": 454,
+        "effect_list": ["off", "candle", "sparkle", "glisten"],
+        "supported_color_modes": ["color_temp"],
+        "effect": null,
+        "color_mode": null,
+        "brightness": null,
+        "color_temp_kelvin": null,
+        "color_temp": null,
+        "hs_color": null,
+        "rgb_color": null,
+        "xy_color": null,
+        "mode": "normal",
+        "dynamics": "none",
+        "friendly_name": "Alexia 2",
+        "supported_features": 44
+      },
+      "last_changed": "2025-10-29T09:32:45.574341+00:00",
+      "last_reported": "2025-10-29T09:32:45.574341+00:00",
+      "last_updated": "2025-10-29T09:32:45.574341+00:00",
+      "context": {
+        "id": "01K8QN0246WP0HGMHWBS7THZVA",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "light.alexias_bedroom",
+      "state": "off",
+      "attributes": {
+        "min_color_temp_kelvin": 2202,
+        "max_color_temp_kelvin": 6535,
+        "min_mireds": 153,
+        "max_mireds": 454,
+        "supported_color_modes": ["color_temp"],
+        "color_mode": null,
+        "brightness": null,
+        "color_temp_kelvin": null,
+        "color_temp": null,
+        "hs_color": null,
+        "rgb_color": null,
+        "xy_color": null,
+        "is_hue_group": true,
+        "hue_scenes": [
+          "Arctic aurora",
+          "Relax",
+          "Savanna sunset",
+          "Energize",
+          "Concentrate",
+          "Nightlight",
+          "Read",
+          "Bright",
+          "Spring blossom",
+          "Tropical twilight",
+          "Dimmed"
+        ],
+        "hue_type": "room",
+        "lights": ["Alexia 2", "Alexia middle light", "Alexia 1", "Alexia 3"],
+        "entity_id": [
+          "light.alexia_1",
+          "light.alexia_middle_light",
+          "light.alexia_3",
+          "light.alexia_2"
+        ],
+        "dynamics": false,
+        "icon": "mdi:lightbulb-group",
+        "friendly_name": "Alexia’s bedroom",
+        "supported_features": 40
+      },
+      "last_changed": "2025-10-29T09:32:45.574608+00:00",
+      "last_reported": "2025-10-29T09:32:45.574608+00:00",
+      "last_updated": "2025-10-29T09:32:45.574608+00:00",
+      "context": {
+        "id": "01K8QN0246HDQZ8347JPQEGS8Y",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "scene.alexias_bedroom_read",
+      "state": "unknown",
+      "attributes": {
+        "group_name": "Alexia’s bedroom",
+        "group_type": "room",
+        "name": "Read",
+        "speed": 0.5,
+        "brightness": 255,
+        "is_dynamic": false,
+        "friendly_name": "Alexia’s bedroom Read"
+      },
+      "last_changed": "2025-10-29T09:32:45.574833+00:00",
+      "last_reported": "2025-10-29T09:32:45.574833+00:00",
+      "last_updated": "2025-10-29T09:32:45.574833+00:00",
+      "context": {
+        "id": "01K8QN0246QS52PYCWV0R24MYY",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "scene.alexias_bedroom_spring_blossom",
+      "state": "unknown",
+      "attributes": {
+        "group_name": "Alexia’s bedroom",
+        "group_type": "room",
+        "name": "Spring blossom",
+        "speed": 0.5595238095238095,
+        "brightness": 207,
+        "is_dynamic": true,
+        "friendly_name": "Alexia’s bedroom Spring blossom"
+      },
+      "last_changed": "2025-10-29T09:32:45.574949+00:00",
+      "last_reported": "2025-10-29T09:32:45.574949+00:00",
+      "last_updated": "2025-10-29T09:32:45.574949+00:00",
+      "context": {
+        "id": "01K8QN0246RCP8F3PQG3TMYPYG",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "scene.alexias_bedroom_energize",
+      "state": "unknown",
+      "attributes": {
+        "group_name": "Alexia’s bedroom",
+        "group_type": "room",
+        "name": "Energize",
+        "speed": 0.5,
+        "brightness": 255,
+        "is_dynamic": false,
+        "friendly_name": "Alexia’s bedroom Energize"
+      },
+      "last_changed": "2025-10-29T09:32:45.575037+00:00",
+      "last_reported": "2025-10-29T09:32:45.575037+00:00",
+      "last_updated": "2025-10-29T09:32:45.575037+00:00",
+      "context": {
+        "id": "01K8QN0247Z06EDVBYD87H77ZV",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "scene.alexias_bedroom_bright",
+      "state": "unknown",
+      "attributes": {
+        "group_name": "Alexia’s bedroom",
+        "group_type": "room",
+        "name": "Bright",
+        "speed": 0.5,
+        "brightness": 255,
+        "is_dynamic": false,
+        "friendly_name": "Alexia’s bedroom Bright"
+      },
+      "last_changed": "2025-10-29T09:32:45.575120+00:00",
+      "last_reported": "2025-10-29T09:32:45.575120+00:00",
+      "last_updated": "2025-10-29T09:32:45.575120+00:00",
+      "context": {
+        "id": "01K8QN024774PE4HD9DJSEBNGC",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "scene.alexias_bedroom_dimmed",
+      "state": "unknown",
+      "attributes": {
+        "group_name": "Alexia’s bedroom",
+        "group_type": "room",
+        "name": "Dimmed",
+        "speed": 0.5,
+        "brightness": 77,
+        "is_dynamic": false,
+        "friendly_name": "Alexia’s bedroom Dimmed"
+      },
+      "last_changed": "2025-10-29T09:32:45.575197+00:00",
+      "last_reported": "2025-10-29T09:32:45.575197+00:00",
+      "last_updated": "2025-10-29T09:32:45.575197+00:00",
+      "context": {
+        "id": "01K8QN0247ZWYEZYSQ3JZVER2B",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "scene.alexias_bedroom_savanna_sunset",
+      "state": "unknown",
+      "attributes": {
+        "group_name": "Alexia’s bedroom",
+        "group_type": "room",
+        "name": "Savanna sunset",
+        "speed": 0.6190476190476191,
+        "brightness": 206,
+        "is_dynamic": true,
+        "friendly_name": "Alexia’s bedroom Savanna sunset"
+      },
+      "last_changed": "2025-10-29T09:32:45.575295+00:00",
+      "last_reported": "2025-10-29T09:32:45.575295+00:00",
+      "last_updated": "2025-10-29T09:32:45.575295+00:00",
+      "context": {
+        "id": "01K8QN0247AS7XXNTHV2GZ84CA",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "scene.alexias_bedroom_arctic_aurora",
+      "state": "unknown",
+      "attributes": {
+        "group_name": "Alexia’s bedroom",
+        "group_type": "room",
+        "name": "Arctic aurora",
+        "speed": 0.6388888888888888,
+        "brightness": 78,
+        "is_dynamic": true,
+        "friendly_name": "Alexia’s bedroom Arctic aurora"
+      },
+      "last_changed": "2025-10-29T09:32:45.575372+00:00",
+      "last_reported": "2025-10-29T09:32:45.575372+00:00",
+      "last_updated": "2025-10-29T09:32:45.575372+00:00",
+      "context": {
+        "id": "01K8QN02476T93QAG8D7QG8ZRJ",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "scene.alexias_bedroom_tropical_twilight",
+      "state": "unknown",
+      "attributes": {
+        "group_name": "Alexia’s bedroom",
+        "group_type": "room",
+        "name": "Tropical twilight",
+        "speed": 0.6388888888888888,
+        "brightness": 111,
+        "is_dynamic": true,
+        "friendly_name": "Alexia’s bedroom Tropical twilight"
+      },
+      "last_changed": "2025-10-29T09:32:45.575447+00:00",
+      "last_reported": "2025-10-29T09:32:45.575447+00:00",
+      "last_updated": "2025-10-29T09:32:45.575447+00:00",
+      "context": {
+        "id": "01K8QN0247JFV94GRRF54XZ50K",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "scene.alexias_bedroom_nightlight",
+      "state": "unknown",
+      "attributes": {
+        "group_name": "Alexia’s bedroom",
+        "group_type": "room",
+        "name": "Nightlight",
+        "speed": 0.5,
+        "brightness": 0,
+        "is_dynamic": false,
+        "friendly_name": "Alexia’s bedroom Nightlight"
+      },
+      "last_changed": "2025-10-29T09:32:45.575528+00:00",
+      "last_reported": "2025-10-29T09:32:45.575528+00:00",
+      "last_updated": "2025-10-29T09:32:45.575528+00:00",
+      "context": {
+        "id": "01K8QN0247Q4HN60DBWNMTHRW5",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "scene.alexias_bedroom_relax",
+      "state": "unknown",
+      "attributes": {
+        "group_name": "Alexia’s bedroom",
+        "group_type": "room",
+        "name": "Relax",
+        "speed": 0.5,
+        "brightness": 144,
+        "is_dynamic": false,
+        "friendly_name": "Alexia’s bedroom Relax"
+      },
+      "last_changed": "2025-10-29T09:32:45.575605+00:00",
+      "last_reported": "2025-10-29T09:32:45.575605+00:00",
+      "last_updated": "2025-10-29T09:32:45.575605+00:00",
+      "context": {
+        "id": "01K8QN0247CKN2MBA0KZFHCKJS",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "scene.alexias_bedroom_concentrate",
+      "state": "unknown",
+      "attributes": {
+        "group_name": "Alexia’s bedroom",
+        "group_type": "room",
+        "name": "Concentrate",
+        "speed": 0.5,
+        "brightness": 255,
+        "is_dynamic": false,
+        "friendly_name": "Alexia’s bedroom Concentrate"
+      },
+      "last_changed": "2025-10-29T09:32:45.575683+00:00",
+      "last_reported": "2025-10-29T09:32:45.575683+00:00",
+      "last_updated": "2025-10-29T09:32:45.575683+00:00",
+      "context": {
+        "id": "01K8QN0247PQGCZGM5ZXXBHF9F",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.alexias_bedroom_switch_battery",
+      "state": "2",
+      "attributes": {
+        "state_class": "measurement",
+        "battery_state": "low",
+        "unit_of_measurement": "%",
+        "device_class": "battery",
+        "friendly_name": "Alexia’s bedroom switch Battery"
+      },
+      "last_changed": "2025-10-29T09:32:45.576067+00:00",
+      "last_reported": "2025-10-29T09:32:45.576067+00:00",
+      "last_updated": "2025-10-29T09:32:45.576067+00:00",
+      "context": {
+        "id": "01K8QN02487GMFQ40RFA2TFDVP",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "weather.forecast_home",
+      "state": "cloudy",
+      "attributes": {
+        "temperature": 11.7,
+        "dew_point": 9.4,
+        "temperature_unit": "°C",
+        "humidity": 85,
+        "cloud_coverage": 100,
+        "uv_index": 1.1,
+        "pressure": 1000.1,
+        "pressure_unit": "hPa",
+        "wind_bearing": 210.6,
+        "wind_speed": 19.4,
+        "wind_speed_unit": "km/h",
+        "visibility_unit": "km",
+        "precipitation_unit": "mm",
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "friendly_name": "Forecast Home",
+        "supported_features": 3
+      },
+      "last_changed": "2025-10-29T09:32:45.577747+00:00",
+      "last_reported": "2025-10-29T10:32:45.699098+00:00",
+      "last_updated": "2025-10-29T10:32:45.699098+00:00",
+      "context": {
+        "id": "01K8QRDXW3YRYMCZ69SBPP0PW5",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "tts.google_translate_en_com",
+      "state": "unknown",
+      "attributes": { "friendly_name": "Google Translate en com" },
+      "last_changed": "2025-10-29T09:32:45.582548+00:00",
+      "last_reported": "2025-10-29T09:32:45.582548+00:00",
+      "last_updated": "2025-10-29T09:32:45.582548+00:00",
+      "context": {
+        "id": "01K8QN024ECWMGWY7CHRD429DV",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "todo.shopping_list",
+      "state": "0",
+      "attributes": {
+        "friendly_name": "Shopping List",
+        "supported_features": 15
+      },
+      "last_changed": "2025-10-29T09:32:45.584346+00:00",
+      "last_reported": "2025-10-29T09:32:45.584346+00:00",
+      "last_updated": "2025-10-29T09:32:45.584346+00:00",
+      "context": {
+        "id": "01K8QN024G677AQ39KTV9GGWNC",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "button.elgato_left_identify",
+      "state": "unknown",
+      "attributes": {
+        "device_class": "identify",
+        "friendly_name": "Elgato Left Identify"
+      },
+      "last_changed": "2025-10-29T09:32:45.593551+00:00",
+      "last_reported": "2025-10-29T09:32:45.593551+00:00",
+      "last_updated": "2025-10-29T09:32:45.593551+00:00",
+      "context": {
+        "id": "01K8QN024SV944SSMP4RFVKDR1",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "button.elgato_left_restart",
+      "state": "unknown",
+      "attributes": {
+        "device_class": "restart",
+        "friendly_name": "Elgato Left Restart"
+      },
+      "last_changed": "2025-10-29T09:32:45.593646+00:00",
+      "last_reported": "2025-10-29T09:32:45.593646+00:00",
+      "last_updated": "2025-10-29T09:32:45.593646+00:00",
+      "context": {
+        "id": "01K8QN024SHN34TFPCRYAPNV2B",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "light.elgato_left",
+      "state": "off",
+      "attributes": {
+        "min_color_temp_kelvin": 2900,
+        "max_color_temp_kelvin": 7000,
+        "min_mireds": 142,
+        "max_mireds": 344,
+        "supported_color_modes": ["color_temp"],
+        "color_mode": null,
+        "brightness": null,
+        "color_temp_kelvin": null,
+        "color_temp": null,
+        "hs_color": null,
+        "rgb_color": null,
+        "xy_color": null,
+        "friendly_name": "Elgato Left",
+        "supported_features": 0
+      },
+      "last_changed": "2025-10-29T09:32:45.593852+00:00",
+      "last_reported": "2025-10-29T09:59:15.493545+00:00",
+      "last_updated": "2025-10-29T09:32:45.593852+00:00",
+      "context": {
+        "id": "01K8QN024SAZ9WV8TTKM1ZNCDF",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "button.elgato_right_identify",
+      "state": "unknown",
+      "attributes": {
+        "device_class": "identify",
+        "friendly_name": "Elgato Right Identify"
+      },
+      "last_changed": "2025-10-29T09:32:45.594162+00:00",
+      "last_reported": "2025-10-29T09:32:45.594162+00:00",
+      "last_updated": "2025-10-29T09:32:45.594162+00:00",
+      "context": {
+        "id": "01K8QN024T2GQSWKF6X174CHYJ",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "button.elgato_right_restart",
+      "state": "unknown",
+      "attributes": {
+        "device_class": "restart",
+        "friendly_name": "Elgato Right Restart"
+      },
+      "last_changed": "2025-10-29T09:32:45.594248+00:00",
+      "last_reported": "2025-10-29T09:32:45.594248+00:00",
+      "last_updated": "2025-10-29T09:32:45.594248+00:00",
+      "context": {
+        "id": "01K8QN024T1DQ31TCCK3F1AY4D",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "light.elgato_right",
+      "state": "off",
+      "attributes": {
+        "min_color_temp_kelvin": 2900,
+        "max_color_temp_kelvin": 7000,
+        "min_mireds": 142,
+        "max_mireds": 344,
+        "supported_color_modes": ["color_temp"],
+        "color_mode": null,
+        "brightness": null,
+        "color_temp_kelvin": null,
+        "color_temp": null,
+        "hs_color": null,
+        "rgb_color": null,
+        "xy_color": null,
+        "friendly_name": "Elgato Right",
+        "supported_features": 0
+      },
+      "last_changed": "2025-10-29T09:32:45.594414+00:00",
+      "last_reported": "2025-10-29T09:59:15.309577+00:00",
+      "last_updated": "2025-10-29T09:32:45.594414+00:00",
+      "context": {
+        "id": "01K8QN024T349BQBG94MK74B5C",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.plant_monitor_plant_temperature",
+      "state": "19.2000007629395",
+      "attributes": {
+        "state_class": "measurement",
+        "unit_of_measurement": "°C",
+        "device_class": "temperature",
+        "friendly_name": "Plant Monitor Plant Temperature"
+      },
+      "last_changed": "2025-10-29T10:09:29.237865+00:00",
+      "last_reported": "2025-10-29T10:09:29.237865+00:00",
+      "last_updated": "2025-10-29T10:09:29.237865+00:00",
+      "context": {
+        "id": "01K8QQ3A4NSBHREJMXVVPD7GWY",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.plant_monitor_plant_humidity",
+      "state": "74.8000030517578",
+      "attributes": {
+        "state_class": "measurement",
+        "unit_of_measurement": "%",
+        "device_class": "humidity",
+        "friendly_name": "Plant Monitor Plant Humidity"
+      },
+      "last_changed": "2025-10-29T10:35:59.298818+00:00",
+      "last_reported": "2025-10-29T10:35:59.298818+00:00",
+      "last_updated": "2025-10-29T10:35:59.298818+00:00",
+      "context": {
+        "id": "01K8QRKTY20C43HP96WEP90Q6H",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "media_player.kd_65x8509c",
+      "state": "off",
+      "attributes": {
+        "friendly_name": "KD-65X8509C",
+        "supported_features": 152461
+      },
+      "last_changed": "2025-10-29T09:32:45.653938+00:00",
+      "last_reported": "2025-10-29T09:32:45.725445+00:00",
+      "last_updated": "2025-10-29T09:32:45.725913+00:00",
+      "context": {
+        "id": "01K8QN028X6A9810FVYY4XSBBB",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.life360_online_andyclink_gmail_com",
+      "state": "on",
+      "attributes": {
+        "attribution": "Data provided by life360.com",
+        "device_class": "connectivity",
+        "friendly_name": "Life360 online (andyclink@gmail.com)"
+      },
+      "last_changed": "2025-10-29T09:32:45.615887+00:00",
+      "last_reported": "2025-10-29T09:32:45.615887+00:00",
+      "last_updated": "2025-10-29T09:32:45.615887+00:00",
+      "context": {
+        "id": "01K8QN025FD0K8MCB5E0TP8BXR",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "device_tracker.life360_edison_calderbank_link",
+      "state": "home",
+      "attributes": {
+        "source_type": "gps",
+        "battery_level": 25,
+        "latitude": 52.698824,
+        "longitude": 1.675012,
+        "gps_accuracy": 15,
+        "address": "Mill Road, England",
+        "at_loc_since": "2025-10-28T18:41:09+00:00",
+        "battery_charging": false,
+        "driving": false,
+        "last_seen": "2025-10-29T10:12:07+00:00",
+        "place": "Home",
+        "speed": 0,
+        "wifi_on": true,
+        "attribution": "Data provided by life360.com",
+        "entity_picture": "https://www.life360.com/img/user_images/680c0fe7-897d-4e0f-be02-c00534b7807d/21114a36-e24d-442c-ae05-d50ae16439e7.jpeg?fd=2",
+        "friendly_name": "Life360 Edison Calderbank-Link"
+      },
+      "last_changed": "2025-10-29T09:32:45.616383+00:00",
+      "last_reported": "2025-10-29T10:12:10.560529+00:00",
+      "last_updated": "2025-10-29T10:12:10.560529+00:00",
+      "context": {
+        "id": "01K8QQ87P05ZTFE0MER7EJHJ3R",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "device_tracker.life360_alexia_calderbank_link",
+      "state": "home",
+      "attributes": {
+        "source_type": "gps",
+        "battery_level": 100,
+        "latitude": 52.698835,
+        "longitude": 1.675123,
+        "gps_accuracy": 15,
+        "address": "Mill Road, England",
+        "at_loc_since": "2025-10-28T21:33:27+00:00",
+        "battery_charging": false,
+        "driving": false,
+        "last_seen": "2025-10-29T10:18:10+00:00",
+        "place": "Home",
+        "speed": 0,
+        "wifi_on": true,
+        "attribution": "Data provided by life360.com",
+        "entity_picture": "https://www.life360.com/img/user_images/d91daa3b-4f70-45bc-affc-c7bb935a904c/9d025d3d-9d86-4e83-a34c-ede0dc7a1cf6.jpeg?fd=2",
+        "friendly_name": "Life360 Alexia Calderbank-Link"
+      },
+      "last_changed": "2025-10-29T09:32:45.616516+00:00",
+      "last_reported": "2025-10-29T10:18:15.623394+00:00",
+      "last_updated": "2025-10-29T10:18:15.623394+00:00",
+      "context": {
+        "id": "01K8QQKC67934ZNYGX97XEP6NY",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "device_tracker.life360_andrew_calderbank_link",
+      "state": "home",
+      "attributes": {
+        "source_type": "gps",
+        "battery_level": 90,
+        "latitude": 52.698802,
+        "longitude": 1.675058,
+        "gps_accuracy": 15,
+        "address": "Mill Road, England",
+        "at_loc_since": "2025-10-28T18:41:11+00:00",
+        "battery_charging": false,
+        "driving": false,
+        "last_seen": "2025-10-29T10:33:56+00:00",
+        "place": "Home",
+        "speed": 0,
+        "wifi_on": true,
+        "attribution": "Data provided by life360.com",
+        "entity_picture": "https://www.life360.com/img/user_images/b7bd3272-1773-4672-b07b-9ba5755d06d2/567fda83-6e82-4143-862f-974dbf00b737.jpeg?fd=2",
+        "friendly_name": "Life360 Andrew Calderbank-Link"
+      },
+      "last_changed": "2025-10-29T09:32:45.616621+00:00",
+      "last_reported": "2025-10-29T10:34:01.719870+00:00",
+      "last_updated": "2025-10-29T10:34:01.719870+00:00",
+      "context": {
+        "id": "01K8QRG83QBHY1HW4YN04188PH",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "device_tracker.life360_jenny_calderbank_link",
+      "state": "home",
+      "attributes": {
+        "source_type": "gps",
+        "battery_level": 60,
+        "latitude": 52.698816,
+        "longitude": 1.675007,
+        "gps_accuracy": 15,
+        "address": "Mill Road, England",
+        "at_loc_since": "2025-10-28T21:31:40+00:00",
+        "battery_charging": false,
+        "driving": false,
+        "last_seen": "2025-10-29T10:34:51+00:00",
+        "place": "Home",
+        "speed": 0,
+        "wifi_on": true,
+        "attribution": "Data provided by life360.com",
+        "entity_picture": "https://www.life360.com/img/user_images/11b6ca6c-a329-4e88-9ddb-68d7d45b3166/f46ef033-68d9-49a0-a2db-79454b2d8d43.jpeg?fd=2",
+        "friendly_name": "Life360 Jenny Calderbank-Link"
+      },
+      "last_changed": "2025-10-29T09:32:45.616717+00:00",
+      "last_reported": "2025-10-29T10:34:55.404443+00:00",
+      "last_updated": "2025-10-29T10:34:55.404443+00:00",
+      "context": {
+        "id": "01K8QRHWHCE75AEM9S9XB1WV5H",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "media_player.jennys_office",
+      "state": "idle",
+      "attributes": {
+        "group_members": ["media_player.jennys_office"],
+        "volume_level": 0.08,
+        "is_volume_muted": false,
+        "media_content_type": "music",
+        "shuffle": false,
+        "repeat": "off",
+        "device_class": "speaker",
+        "friendly_name": "Jennys Office",
+        "supported_features": 4127295
+      },
+      "last_changed": "2025-10-29T09:32:45.830007+00:00",
+      "last_reported": "2025-10-29T09:51:41.604662+00:00",
+      "last_updated": "2025-10-29T09:32:45.830007+00:00",
+      "context": {
+        "id": "01K8QN02C6R6DHBD97360HCS18",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.the_cat_flap_connectivity",
+      "state": "on",
+      "attributes": {
+        "device_rssi": -88,
+        "hub_rssi": -88,
+        "device_class": "connectivity",
+        "friendly_name": "the cat flap Connectivity"
+      },
+      "last_changed": "2025-10-29T09:45:19.125269+00:00",
+      "last_reported": "2025-10-29T10:25:26.055297+00:00",
+      "last_updated": "2025-10-29T10:25:26.055297+00:00",
+      "context": {
+        "id": "01K8QR0GH74XRTZRCT0HH56CTG",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.pet_lunatic",
+      "state": "on",
+      "attributes": {
+        "since": "2025-10-29T10:34:31+00:00",
+        "where": 1,
+        "id": 15589,
+        "name": "Lunatic",
+        "gender": 0,
+        "date_of_birth": "2016-07-19T00:00:00+00:00",
+        "comments": "Crazy cat",
+        "breed_id": 384,
+        "food_type_id": 3,
+        "household_id": 7967,
+        "photo_id": 787168,
+        "species_id": 1,
+        "spayed": 1,
+        "tag_id": 11407,
+        "version": 16,
+        "created_at": "2018-07-21T19:32:20+00:00",
+        "updated_at": "2024-12-27T22:21:41+00:00",
+        "photo": {
+          "id": 787168,
+          "location": "https://userimages.production.surehub.io/thm/10650/39DSeVv7I78dLSsIzdKtE7dZlRAEpmLRN2Pl3WxKQ.jpg",
+          "hash": "39DSeVv7I78dLSsIzdKtE7dZlRAEpmLRN2Pl3WxKQ",
+          "uploading_user_id": 10650,
+          "version": 0,
+          "created_at": "2024-10-17T08:14:20+00:00"
+        },
+        "conditions": [],
+        "tag": {
+          "id": 11407,
+          "tag": "981.000010028492",
+          "supported_product_ids": [3, 4, 6, 8, 10, 32],
+          "incompatible_product_ids": [],
+          "version": 328,
+          "created_at": "2018-07-21T19:32:20+00:00",
+          "updated_at": "2022-11-09T09:21:08+00:00"
+        },
+        "status": {
+          "activity": {
+            "id": 5183390172,
+            "pet_id": 15589,
+            "tag_id": 11407,
+            "device_id": 135853,
+            "where": 1,
+            "since": "2025-10-29T10:34:31+00:00"
+          }
+        },
+        "position": {
+          "id": 5183390172,
+          "pet_id": 15589,
+          "tag_id": 11407,
+          "device_id": 135853,
+          "where": 1,
+          "since": "2025-10-29T10:34:31+00:00"
+        },
+        "device_class": "presence",
+        "entity_picture": "https://userimages.production.surehub.io/thm/10650/39DSeVv7I78dLSsIzdKtE7dZlRAEpmLRN2Pl3WxKQ.jpg",
+        "friendly_name": "Pet Lunatic"
+      },
+      "last_changed": "2025-10-29T10:35:27.152256+00:00",
+      "last_reported": "2025-10-29T10:35:27.152256+00:00",
+      "last_updated": "2025-10-29T10:35:27.152256+00:00",
+      "context": {
+        "id": "01K8QRJVHGNCBFD5RSGSP9SYRM",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.pet_mittens",
+      "state": "off",
+      "attributes": {
+        "since": "2025-10-29T08:29:20+00:00",
+        "where": 2,
+        "id": 15590,
+        "name": "Mittens",
+        "gender": 0,
+        "date_of_birth": "2015-09-23T00:00:00+00:00",
+        "weight": "5000",
+        "comments": "Don’t judge a cat by her size.",
+        "breed_id": 384,
+        "breed_id2": 363,
+        "food_type_id": 3,
+        "household_id": 7967,
+        "photo_id": 24632,
+        "species_id": 1,
+        "spayed": 1,
+        "tag_id": 11408,
+        "version": 29,
+        "created_at": "2018-07-21T19:32:20+00:00",
+        "updated_at": "2024-12-27T22:21:06+00:00",
+        "photo": {
+          "id": 24632,
+          "title": "Mittens main photo",
+          "location": "https://userimages.production.surehub.io/thm/10650/PIo8dBykTzogqXFOzK3AKlxNn2x9BVMScmCwLBxUw.jpg",
+          "hash": "PIo8dBykTzogqXFOzK3AKlxNn2x9BVMScmCwLBxUw",
+          "uploading_user_id": 10650,
+          "version": 0,
+          "created_at": "2018-09-03T17:51:16+00:00",
+          "updated_at": "2018-09-03T17:51:16+00:00"
+        },
+        "conditions": [],
+        "tag": {
+          "id": 11408,
+          "tag": "953.010000735272",
+          "supported_product_ids": [3, 4, 6, 8, 10, 32],
+          "incompatible_product_ids": [],
+          "version": 98,
+          "created_at": "2018-07-21T19:32:20+00:00",
+          "updated_at": "2022-11-09T01:18:20+00:00"
+        },
+        "status": {
+          "activity": {
+            "id": 5183140245,
+            "pet_id": 15590,
+            "tag_id": 11408,
+            "device_id": 135853,
+            "where": 2,
+            "since": "2025-10-29T08:29:20+00:00"
+          }
+        },
+        "position": {
+          "id": 5183140245,
+          "pet_id": 15590,
+          "tag_id": 11408,
+          "device_id": 135853,
+          "where": 2,
+          "since": "2025-10-29T08:29:20+00:00"
+        },
+        "device_class": "presence",
+        "entity_picture": "https://userimages.production.surehub.io/thm/10650/PIo8dBykTzogqXFOzK3AKlxNn2x9BVMScmCwLBxUw.jpg",
+        "friendly_name": "Pet Mittens"
+      },
+      "last_changed": "2025-10-29T09:45:19.125559+00:00",
+      "last_reported": "2025-10-29T09:57:52.191787+00:00",
+      "last_updated": "2025-10-29T09:45:19.125559+00:00",
+      "context": {
+        "id": "01K8QNQ20NMEBPMAV01DJ81Q3S",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.pet_tabby",
+      "state": "on",
+      "attributes": {
+        "since": "2025-10-28T15:12:59+00:00",
+        "where": 1,
+        "id": 15591,
+        "name": "Tabby",
+        "gender": 0,
+        "date_of_birth": "2015-07-23T00:00:00+00:00",
+        "weight": "4000",
+        "comments": "Pukes. Everywhere.",
+        "breed_id": 384,
+        "food_type_id": 3,
+        "household_id": 7967,
+        "photo_id": 787164,
+        "species_id": 1,
+        "spayed": 1,
+        "tag_id": 11409,
+        "version": 16,
+        "created_at": "2018-07-21T19:32:20+00:00",
+        "updated_at": "2024-12-27T22:19:53+00:00",
+        "photo": {
+          "id": 787164,
+          "location": "https://userimages.production.surehub.io/thm/10650/FFazr2rbHa9P6IMentaMsGTW1fpmgfT1HM81K0sc.jpg",
+          "hash": "FFazr2rbHa9P6IMentaMsGTW1fpmgfT1HM81K0sc",
+          "uploading_user_id": 10650,
+          "version": 0,
+          "created_at": "2024-10-17T08:11:29+00:00"
+        },
+        "conditions": [],
+        "tag": {
+          "id": 11409,
+          "tag": "953.010002153956",
+          "supported_product_ids": [3, 4, 6, 8, 10, 32],
+          "incompatible_product_ids": [],
+          "version": 173,
+          "created_at": "2018-07-21T19:32:20+00:00",
+          "updated_at": "2022-11-09T07:15:27+00:00"
+        },
+        "status": {
+          "activity": {
+            "id": 5180929950,
+            "pet_id": 15591,
+            "tag_id": 11409,
+            "device_id": 135853,
+            "where": 1,
+            "since": "2025-10-28T15:12:59+00:00"
+          }
+        },
+        "position": {
+          "id": 5180929950,
+          "pet_id": 15591,
+          "tag_id": 11409,
+          "device_id": 135853,
+          "where": 1,
+          "since": "2025-10-28T15:12:59+00:00"
+        },
+        "device_class": "presence",
+        "entity_picture": "https://userimages.production.surehub.io/thm/10650/FFazr2rbHa9P6IMentaMsGTW1fpmgfT1HM81K0sc.jpg",
+        "friendly_name": "Pet Tabby"
+      },
+      "last_changed": "2025-10-29T09:45:19.125623+00:00",
+      "last_reported": "2025-10-29T09:57:52.191846+00:00",
+      "last_updated": "2025-10-29T09:45:19.125623+00:00",
+      "context": {
+        "id": "01K8QNQ20N1BGK5P2M733RZKSK",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.pet_teddy",
+      "state": "off",
+      "attributes": {
+        "since": "2025-10-29T10:25:45+00:00",
+        "where": 2,
+        "id": 93506,
+        "name": "Teddy",
+        "gender": 1,
+        "date_of_birth": "2015-09-04T00:00:00+00:00",
+        "weight": "4000",
+        "comments": "Goofy furball ",
+        "breed_id": 342,
+        "food_type_id": 3,
+        "household_id": 7967,
+        "photo_id": 787166,
+        "species_id": 1,
+        "spayed": 1,
+        "tag_id": 11406,
+        "version": 10,
+        "created_at": "2019-12-27T14:36:42+00:00",
+        "updated_at": "2024-12-27T22:19:20+00:00",
+        "photo": {
+          "id": 787166,
+          "location": "https://userimages.production.surehub.io/thm/10650/cqns0GcK1x2rYvoiSi8M7FsyxdkTmgwEkqHyLFDPCI.jpg",
+          "hash": "cqns0GcK1x2rYvoiSi8M7FsyxdkTmgwEkqHyLFDPCI",
+          "uploading_user_id": 10650,
+          "version": 0,
+          "created_at": "2024-10-17T08:13:10+00:00"
+        },
+        "conditions": [],
+        "tag": {
+          "id": 11406,
+          "tag": "952.000000955844",
+          "supported_product_ids": [3, 4, 6, 8, 10, 32],
+          "incompatible_product_ids": [],
+          "version": 485,
+          "created_at": "2018-07-21T19:32:20+00:00",
+          "updated_at": "2022-11-09T05:07:05+00:00"
+        },
+        "status": {
+          "activity": {
+            "id": 5183374656,
+            "pet_id": 93506,
+            "tag_id": 11406,
+            "device_id": 135853,
+            "where": 2,
+            "since": "2025-10-29T10:25:45+00:00"
+          }
+        },
+        "position": {
+          "id": 5183374656,
+          "pet_id": 93506,
+          "tag_id": 11406,
+          "device_id": 135853,
+          "where": 2,
+          "since": "2025-10-29T10:25:45+00:00"
+        },
+        "device_class": "presence",
+        "entity_picture": "https://userimages.production.surehub.io/thm/10650/cqns0GcK1x2rYvoiSi8M7FsyxdkTmgwEkqHyLFDPCI.jpg",
+        "friendly_name": "Pet Teddy"
+      },
+      "last_changed": "2025-10-29T10:27:56.099460+00:00",
+      "last_reported": "2025-10-29T10:27:56.099460+00:00",
+      "last_updated": "2025-10-29T10:27:56.099460+00:00",
+      "context": {
+        "id": "01K8QR5323MN22ZHKWM62XBBPC",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.pet_cozmo",
+      "state": "on",
+      "attributes": {
+        "since": "2025-10-29T07:57:10+00:00",
+        "where": 1,
+        "id": 112812,
+        "name": "Cozmo",
+        "gender": 1,
+        "comments": "Silly",
+        "breed_id": 342,
+        "food_type_id": 3,
+        "household_id": 7967,
+        "photo_id": 787172,
+        "species_id": 1,
+        "spayed": 1,
+        "tag_id": 38441,
+        "version": 13,
+        "created_at": "2020-04-04T15:25:30+00:00",
+        "updated_at": "2024-12-27T22:17:25+00:00",
+        "photo": {
+          "id": 787172,
+          "location": "https://userimages.production.surehub.io/thm/10650/VBZWZWMFRdMr2UoK0qBkCIBDxU4PSLEO1hkJfPzJBA.jpg",
+          "hash": "VBZWZWMFRdMr2UoK0qBkCIBDxU4PSLEO1hkJfPzJBA",
+          "uploading_user_id": 10650,
+          "version": 0,
+          "created_at": "2024-10-17T08:17:47+00:00"
+        },
+        "conditions": [],
+        "tag": {
+          "id": 38441,
+          "tag": "977.200009524563",
+          "supported_product_ids": [3, 4, 6, 8, 10, 32],
+          "incompatible_product_ids": [],
+          "version": 328,
+          "created_at": "2019-04-20T13:18:47+00:00",
+          "updated_at": "2022-11-09T09:13:54+00:00"
+        },
+        "status": {
+          "activity": {
+            "id": 5183064074,
+            "pet_id": 112812,
+            "tag_id": 38441,
+            "device_id": 135853,
+            "where": 1,
+            "since": "2025-10-29T07:57:10+00:00"
+          }
+        },
+        "position": {
+          "id": 5183064074,
+          "pet_id": 112812,
+          "tag_id": 38441,
+          "device_id": 135853,
+          "where": 1,
+          "since": "2025-10-29T07:57:10+00:00"
+        },
+        "device_class": "presence",
+        "entity_picture": "https://userimages.production.surehub.io/thm/10650/VBZWZWMFRdMr2UoK0qBkCIBDxU4PSLEO1hkJfPzJBA.jpg",
+        "friendly_name": "Pet Cozmo"
+      },
+      "last_changed": "2025-10-29T09:45:19.125725+00:00",
+      "last_reported": "2025-10-29T09:57:52.191942+00:00",
+      "last_updated": "2025-10-29T09:45:19.125725+00:00",
+      "context": {
+        "id": "01K8QNQ20NANCMQYX6TE5V70BE",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "device_tracker.pet_lunatic",
+      "state": "home",
+      "attributes": {
+        "source_type": "flap",
+        "since": "2025-10-29T10:34:31+00:00",
+        "where": 1,
+        "id": 15589,
+        "name": "Lunatic",
+        "gender": 0,
+        "date_of_birth": "2016-07-19T00:00:00+00:00",
+        "comments": "Crazy cat",
+        "breed_id": 384,
+        "food_type_id": 3,
+        "household_id": 7967,
+        "photo_id": 787168,
+        "species_id": 1,
+        "spayed": 1,
+        "tag_id": 11407,
+        "version": 16,
+        "created_at": "2018-07-21T19:32:20+00:00",
+        "updated_at": "2024-12-27T22:21:41+00:00",
+        "photo": {
+          "id": 787168,
+          "location": "https://userimages.production.surehub.io/thm/10650/39DSeVv7I78dLSsIzdKtE7dZlRAEpmLRN2Pl3WxKQ.jpg",
+          "hash": "39DSeVv7I78dLSsIzdKtE7dZlRAEpmLRN2Pl3WxKQ",
+          "uploading_user_id": 10650,
+          "version": 0,
+          "created_at": "2024-10-17T08:14:20+00:00"
+        },
+        "conditions": [],
+        "tag": {
+          "id": 11407,
+          "tag": "981.000010028492",
+          "supported_product_ids": [3, 4, 6, 8, 10, 32],
+          "incompatible_product_ids": [],
+          "version": 328,
+          "created_at": "2018-07-21T19:32:20+00:00",
+          "updated_at": "2022-11-09T09:21:08+00:00"
+        },
+        "status": {
+          "activity": {
+            "id": 5183390172,
+            "pet_id": 15589,
+            "tag_id": 11407,
+            "device_id": 135853,
+            "where": 1,
+            "since": "2025-10-29T10:34:31+00:00"
+          }
+        },
+        "position": {
+          "id": 5183390172,
+          "pet_id": 15589,
+          "tag_id": 11407,
+          "device_id": 135853,
+          "where": 1,
+          "since": "2025-10-29T10:34:31+00:00"
+        },
+        "entity_picture": "https://userimages.production.surehub.io/thm/10650/39DSeVv7I78dLSsIzdKtE7dZlRAEpmLRN2Pl3WxKQ.jpg",
+        "icon": "mdi:cat",
+        "friendly_name": "Pet Lunatic"
+      },
+      "last_changed": "2025-10-29T10:35:27.152993+00:00",
+      "last_reported": "2025-10-29T10:35:27.152993+00:00",
+      "last_updated": "2025-10-29T10:35:27.152993+00:00",
+      "context": {
+        "id": "01K8QRJVHG91E3ND94B46CTP24",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "device_tracker.pet_mittens",
+      "state": "not_home",
+      "attributes": {
+        "source_type": "flap",
+        "since": "2025-10-29T08:29:20+00:00",
+        "where": 2,
+        "id": 15590,
+        "name": "Mittens",
+        "gender": 0,
+        "date_of_birth": "2015-09-23T00:00:00+00:00",
+        "weight": "5000",
+        "comments": "Don’t judge a cat by her size.",
+        "breed_id": 384,
+        "breed_id2": 363,
+        "food_type_id": 3,
+        "household_id": 7967,
+        "photo_id": 24632,
+        "species_id": 1,
+        "spayed": 1,
+        "tag_id": 11408,
+        "version": 29,
+        "created_at": "2018-07-21T19:32:20+00:00",
+        "updated_at": "2024-12-27T22:21:06+00:00",
+        "photo": {
+          "id": 24632,
+          "title": "Mittens main photo",
+          "location": "https://userimages.production.surehub.io/thm/10650/PIo8dBykTzogqXFOzK3AKlxNn2x9BVMScmCwLBxUw.jpg",
+          "hash": "PIo8dBykTzogqXFOzK3AKlxNn2x9BVMScmCwLBxUw",
+          "uploading_user_id": 10650,
+          "version": 0,
+          "created_at": "2018-09-03T17:51:16+00:00",
+          "updated_at": "2018-09-03T17:51:16+00:00"
+        },
+        "conditions": [],
+        "tag": {
+          "id": 11408,
+          "tag": "953.010000735272",
+          "supported_product_ids": [3, 4, 6, 8, 10, 32],
+          "incompatible_product_ids": [],
+          "version": 98,
+          "created_at": "2018-07-21T19:32:20+00:00",
+          "updated_at": "2022-11-09T01:18:20+00:00"
+        },
+        "status": {
+          "activity": {
+            "id": 5183140245,
+            "pet_id": 15590,
+            "tag_id": 11408,
+            "device_id": 135853,
+            "where": 2,
+            "since": "2025-10-29T08:29:20+00:00"
+          }
+        },
+        "position": {
+          "id": 5183140245,
+          "pet_id": 15590,
+          "tag_id": 11408,
+          "device_id": 135853,
+          "where": 2,
+          "since": "2025-10-29T08:29:20+00:00"
+        },
+        "entity_picture": "https://userimages.production.surehub.io/thm/10650/PIo8dBykTzogqXFOzK3AKlxNn2x9BVMScmCwLBxUw.jpg",
+        "icon": "mdi:cat",
+        "friendly_name": "Pet Mittens"
+      },
+      "last_changed": "2025-10-29T09:45:19.125875+00:00",
+      "last_reported": "2025-10-29T09:57:52.192078+00:00",
+      "last_updated": "2025-10-29T09:45:19.125875+00:00",
+      "context": {
+        "id": "01K8QNQ20NW8NEB4DRPF857X5E",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "device_tracker.pet_tabby",
+      "state": "home",
+      "attributes": {
+        "source_type": "flap",
+        "since": "2025-10-28T15:12:59+00:00",
+        "where": 1,
+        "id": 15591,
+        "name": "Tabby",
+        "gender": 0,
+        "date_of_birth": "2015-07-23T00:00:00+00:00",
+        "weight": "4000",
+        "comments": "Pukes. Everywhere.",
+        "breed_id": 384,
+        "food_type_id": 3,
+        "household_id": 7967,
+        "photo_id": 787164,
+        "species_id": 1,
+        "spayed": 1,
+        "tag_id": 11409,
+        "version": 16,
+        "created_at": "2018-07-21T19:32:20+00:00",
+        "updated_at": "2024-12-27T22:19:53+00:00",
+        "photo": {
+          "id": 787164,
+          "location": "https://userimages.production.surehub.io/thm/10650/FFazr2rbHa9P6IMentaMsGTW1fpmgfT1HM81K0sc.jpg",
+          "hash": "FFazr2rbHa9P6IMentaMsGTW1fpmgfT1HM81K0sc",
+          "uploading_user_id": 10650,
+          "version": 0,
+          "created_at": "2024-10-17T08:11:29+00:00"
+        },
+        "conditions": [],
+        "tag": {
+          "id": 11409,
+          "tag": "953.010002153956",
+          "supported_product_ids": [3, 4, 6, 8, 10, 32],
+          "incompatible_product_ids": [],
+          "version": 173,
+          "created_at": "2018-07-21T19:32:20+00:00",
+          "updated_at": "2022-11-09T07:15:27+00:00"
+        },
+        "status": {
+          "activity": {
+            "id": 5180929950,
+            "pet_id": 15591,
+            "tag_id": 11409,
+            "device_id": 135853,
+            "where": 1,
+            "since": "2025-10-28T15:12:59+00:00"
+          }
+        },
+        "position": {
+          "id": 5180929950,
+          "pet_id": 15591,
+          "tag_id": 11409,
+          "device_id": 135853,
+          "where": 1,
+          "since": "2025-10-28T15:12:59+00:00"
+        },
+        "entity_picture": "https://userimages.production.surehub.io/thm/10650/FFazr2rbHa9P6IMentaMsGTW1fpmgfT1HM81K0sc.jpg",
+        "icon": "mdi:cat",
+        "friendly_name": "Pet Tabby"
+      },
+      "last_changed": "2025-10-29T09:45:19.125929+00:00",
+      "last_reported": "2025-10-29T09:57:52.192127+00:00",
+      "last_updated": "2025-10-29T09:45:19.125929+00:00",
+      "context": {
+        "id": "01K8QNQ20NRSCJEGM94716J0A8",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "device_tracker.pet_teddy",
+      "state": "not_home",
+      "attributes": {
+        "source_type": "flap",
+        "since": "2025-10-29T10:25:45+00:00",
+        "where": 2,
+        "id": 93506,
+        "name": "Teddy",
+        "gender": 1,
+        "date_of_birth": "2015-09-04T00:00:00+00:00",
+        "weight": "4000",
+        "comments": "Goofy furball ",
+        "breed_id": 342,
+        "food_type_id": 3,
+        "household_id": 7967,
+        "photo_id": 787166,
+        "species_id": 1,
+        "spayed": 1,
+        "tag_id": 11406,
+        "version": 10,
+        "created_at": "2019-12-27T14:36:42+00:00",
+        "updated_at": "2024-12-27T22:19:20+00:00",
+        "photo": {
+          "id": 787166,
+          "location": "https://userimages.production.surehub.io/thm/10650/cqns0GcK1x2rYvoiSi8M7FsyxdkTmgwEkqHyLFDPCI.jpg",
+          "hash": "cqns0GcK1x2rYvoiSi8M7FsyxdkTmgwEkqHyLFDPCI",
+          "uploading_user_id": 10650,
+          "version": 0,
+          "created_at": "2024-10-17T08:13:10+00:00"
+        },
+        "conditions": [],
+        "tag": {
+          "id": 11406,
+          "tag": "952.000000955844",
+          "supported_product_ids": [3, 4, 6, 8, 10, 32],
+          "incompatible_product_ids": [],
+          "version": 485,
+          "created_at": "2018-07-21T19:32:20+00:00",
+          "updated_at": "2022-11-09T05:07:05+00:00"
+        },
+        "status": {
+          "activity": {
+            "id": 5183374656,
+            "pet_id": 93506,
+            "tag_id": 11406,
+            "device_id": 135853,
+            "where": 2,
+            "since": "2025-10-29T10:25:45+00:00"
+          }
+        },
+        "position": {
+          "id": 5183374656,
+          "pet_id": 93506,
+          "tag_id": 11406,
+          "device_id": 135853,
+          "where": 2,
+          "since": "2025-10-29T10:25:45+00:00"
+        },
+        "entity_picture": "https://userimages.production.surehub.io/thm/10650/cqns0GcK1x2rYvoiSi8M7FsyxdkTmgwEkqHyLFDPCI.jpg",
+        "icon": "mdi:cat",
+        "friendly_name": "Pet Teddy"
+      },
+      "last_changed": "2025-10-29T10:27:56.100148+00:00",
+      "last_reported": "2025-10-29T10:27:56.100148+00:00",
+      "last_updated": "2025-10-29T10:27:56.100148+00:00",
+      "context": {
+        "id": "01K8QR5324WP898ZP8MTT2TC48",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "device_tracker.pet_cozmo",
+      "state": "home",
+      "attributes": {
+        "source_type": "flap",
+        "since": "2025-10-29T07:57:10+00:00",
+        "where": 1,
+        "id": 112812,
+        "name": "Cozmo",
+        "gender": 1,
+        "comments": "Silly",
+        "breed_id": 342,
+        "food_type_id": 3,
+        "household_id": 7967,
+        "photo_id": 787172,
+        "species_id": 1,
+        "spayed": 1,
+        "tag_id": 38441,
+        "version": 13,
+        "created_at": "2020-04-04T15:25:30+00:00",
+        "updated_at": "2024-12-27T22:17:25+00:00",
+        "photo": {
+          "id": 787172,
+          "location": "https://userimages.production.surehub.io/thm/10650/VBZWZWMFRdMr2UoK0qBkCIBDxU4PSLEO1hkJfPzJBA.jpg",
+          "hash": "VBZWZWMFRdMr2UoK0qBkCIBDxU4PSLEO1hkJfPzJBA",
+          "uploading_user_id": 10650,
+          "version": 0,
+          "created_at": "2024-10-17T08:17:47+00:00"
+        },
+        "conditions": [],
+        "tag": {
+          "id": 38441,
+          "tag": "977.200009524563",
+          "supported_product_ids": [3, 4, 6, 8, 10, 32],
+          "incompatible_product_ids": [],
+          "version": 328,
+          "created_at": "2019-04-20T13:18:47+00:00",
+          "updated_at": "2022-11-09T09:13:54+00:00"
+        },
+        "status": {
+          "activity": {
+            "id": 5183064074,
+            "pet_id": 112812,
+            "tag_id": 38441,
+            "device_id": 135853,
+            "where": 1,
+            "since": "2025-10-29T07:57:10+00:00"
+          }
+        },
+        "position": {
+          "id": 5183064074,
+          "pet_id": 112812,
+          "tag_id": 38441,
+          "device_id": 135853,
+          "where": 1,
+          "since": "2025-10-29T07:57:10+00:00"
+        },
+        "entity_picture": "https://userimages.production.surehub.io/thm/10650/VBZWZWMFRdMr2UoK0qBkCIBDxU4PSLEO1hkJfPzJBA.jpg",
+        "icon": "mdi:cat",
+        "friendly_name": "Pet Cozmo"
+      },
+      "last_changed": "2025-10-29T09:45:19.126027+00:00",
+      "last_reported": "2025-10-29T09:57:52.192214+00:00",
+      "last_updated": "2025-10-29T09:45:19.126027+00:00",
+      "context": {
+        "id": "01K8QNQ20PA6ZRSGC3CKRXKPR3",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.pet_flap_the_cat_flap",
+      "state": "curfew",
+      "attributes": {
+        "learn_mode": false,
+        "id": 135853,
+        "parent_device_id": 89237,
+        "product_id": 3,
+        "household_id": 7967,
+        "index": 0,
+        "name": "the cat flap",
+        "mac_address": "B4A323FEFFEC1054",
+        "version": 40635,
+        "created_at": "2018-07-21T19:32:12+00:00",
+        "updated_at": "2025-10-27T08:23:23+00:00",
+        "pairing_at": "2020-04-04T15:25:26+00:00",
+        "last_new_event_at": "2025-10-16T10:17:10+00:00",
+        "control": {
+          "curfew": {
+            "enabled": true,
+            "lock_time": "21:00",
+            "unlock_time": "07:00"
+          },
+          "fast_polling": true
+        },
+        "status": {
+          "battery": 5.302,
+          "learn_mode": false,
+          "locking": {
+            "mode": 4,
+            "curfew": {
+              "delay_time": 0,
+              "permission": 2,
+              "unlock_time": "07:00",
+              "lock_time": "21:00"
+            }
+          },
+          "signal": { "device_rssi": -88, "hub_rssi": -90 },
+          "version": {
+            "lcd": { "hardware": "1.0", "firmware": "1.0" },
+            "rf": { "hardware": "4.0", "firmware": "0.16" },
+            "device": { "hardware": "1.2", "firmware": "1.0" }
+          },
+          "online": true
+        },
+        "tags": [
+          {
+            "id": 11406,
+            "device_id": 135853,
+            "index": 2,
+            "profile": 2,
+            "version": 1,
+            "created_at": "2024-02-09T17:10:05+00:00",
+            "updated_at": "2024-02-09T17:10:05+00:00"
+          },
+          {
+            "id": 11407,
+            "device_id": 135853,
+            "index": 1,
+            "profile": 2,
+            "version": 1,
+            "created_at": "2024-02-09T17:10:04+00:00",
+            "updated_at": "2024-02-09T17:10:04+00:00"
+          },
+          {
+            "id": 11408,
+            "device_id": 135853,
+            "index": 5,
+            "profile": 2,
+            "version": 1,
+            "created_at": "2024-02-09T17:10:06+00:00",
+            "updated_at": "2024-02-09T17:10:06+00:00"
+          },
+          {
+            "id": 11409,
+            "device_id": 135853,
+            "index": 3,
+            "profile": 2,
+            "version": 1,
+            "created_at": "2025-10-27T08:23:35+00:00",
+            "updated_at": "2025-10-27T08:23:35+00:00"
+          },
+          {
+            "id": 38441,
+            "device_id": 135853,
+            "index": 0,
+            "profile": 2,
+            "version": 1,
+            "created_at": "2024-02-09T17:10:04+00:00",
+            "updated_at": "2024-02-09T17:10:04+00:00"
+          }
+        ],
+        "entity_picture": "https://surehub.io/assets/images/petdoor-left-menu.png",
+        "friendly_name": "Pet Flap The cat flap"
+      },
+      "last_changed": "2025-10-29T09:45:19.126094+00:00",
+      "last_reported": "2025-10-29T09:57:52.192276+00:00",
+      "last_updated": "2025-10-29T09:45:19.126094+00:00",
+      "context": {
+        "id": "01K8QNQ20P2JCGPWF3CGFKSKF4",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.pet_flap_the_cat_flap_battery_level",
+      "state": "21",
+      "attributes": {
+        "battery_level": 31,
+        "voltage": "5.30",
+        "voltage_per_battery": "1.33",
+        "unit_of_measurement": "%",
+        "device_class": "battery",
+        "friendly_name": "Pet Flap The cat flap Battery Level"
+      },
+      "last_changed": "2025-10-29T09:45:19.126203+00:00",
+      "last_reported": "2025-10-29T09:57:52.192380+00:00",
+      "last_updated": "2025-10-29T09:45:19.126203+00:00",
+      "context": {
+        "id": "01K8QNQ20PQ0NBM6ZGTTA39SJ5",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.jennys_office_crossfade",
+      "state": "off",
+      "attributes": { "friendly_name": "Jennys Office Crossfade" },
+      "last_changed": "2025-10-29T09:32:46.001715+00:00",
+      "last_reported": "2025-10-29T09:51:41.604748+00:00",
+      "last_updated": "2025-10-29T09:32:46.001715+00:00",
+      "context": {
+        "id": "01K8QN02HHRK8C55VKFCEX3JBG",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.jennys_office_loudness",
+      "state": "on",
+      "attributes": { "friendly_name": "Jennys Office Loudness" },
+      "last_changed": "2025-10-29T09:32:46.002013+00:00",
+      "last_reported": "2025-10-29T09:51:41.604783+00:00",
+      "last_updated": "2025-10-29T09:32:46.002013+00:00",
+      "context": {
+        "id": "01K8QN02HJJBPWQP7A5NWMAYMV",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "number.jennys_office_bass",
+      "state": "0",
+      "attributes": {
+        "min": -10,
+        "max": 10,
+        "step": 1,
+        "mode": "auto",
+        "friendly_name": "Jennys Office Bass"
+      },
+      "last_changed": "2025-10-29T09:32:46.011780+00:00",
+      "last_reported": "2025-10-29T09:51:41.604847+00:00",
+      "last_updated": "2025-10-29T09:32:46.011780+00:00",
+      "context": {
+        "id": "01K8QN02HV2VGC9M5BBCR8MK7V",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "number.jennys_office_balance",
+      "state": "0",
+      "attributes": {
+        "min": -100,
+        "max": 100,
+        "step": 1,
+        "mode": "auto",
+        "friendly_name": "Jennys Office Balance"
+      },
+      "last_changed": "2025-10-29T09:32:46.012096+00:00",
+      "last_reported": "2025-10-29T09:51:41.604896+00:00",
+      "last_updated": "2025-10-29T09:32:46.012096+00:00",
+      "context": {
+        "id": "01K8QN02HWK680YNKZFHJXA2Q8",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "number.jennys_office_treble",
+      "state": "0",
+      "attributes": {
+        "min": -10,
+        "max": 10,
+        "step": 1,
+        "mode": "auto",
+        "friendly_name": "Jennys Office Treble"
+      },
+      "last_changed": "2025-10-29T09:32:46.012332+00:00",
+      "last_reported": "2025-10-29T09:51:41.604925+00:00",
+      "last_updated": "2025-10-29T09:32:46.012332+00:00",
+      "context": {
+        "id": "01K8QN02HWC4AV81T8HEHR2XBJ",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.dcc_sourced_smart_electricity_meter_usage_today",
+      "state": "4.82",
+      "attributes": {
+        "state_class": "total_increasing",
+        "unit_of_measurement": "kWh",
+        "device_class": "energy",
+        "friendly_name": "DCC Sourced smart electricity meter Usage (today)"
+      },
+      "last_changed": "2025-10-29T09:32:51.158724+00:00",
+      "last_reported": "2025-10-29T09:47:51.678105+00:00",
+      "last_updated": "2025-10-29T09:32:51.158724+00:00",
+      "context": {
+        "id": "01K8QN07JP03DFVRTNV39HDPEF",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.dcc_sourced_smart_electricity_meter_rate",
+      "state": "0.3006",
+      "attributes": {
+        "unit_of_measurement": "GBP/kWh",
+        "icon": "mdi:cash-multiple",
+        "friendly_name": "DCC Sourced smart electricity meter Rate"
+      },
+      "last_changed": "2025-10-29T09:32:51.280287+00:00",
+      "last_reported": "2025-10-29T09:32:51.280287+00:00",
+      "last_updated": "2025-10-29T09:32:51.280287+00:00",
+      "context": {
+        "id": "01K8QN07PGT2YFNSS1TV9HBK9B",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.dcc_sourced_smart_electricity_meter_cost_today",
+      "state": "1.32",
+      "attributes": {
+        "state_class": "total",
+        "unit_of_measurement": "GBP",
+        "device_class": "monetary",
+        "friendly_name": "DCC Sourced smart electricity meter Cost (today)"
+      },
+      "last_changed": "2025-10-29T09:32:51.491031+00:00",
+      "last_reported": "2025-10-29T09:47:51.581448+00:00",
+      "last_updated": "2025-10-29T09:32:51.491031+00:00",
+      "context": {
+        "id": "01K8QN07X34BEE24QM5EX9N3PX",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "media_player.kitchen",
+      "state": "paused",
+      "attributes": {
+        "group_members": ["media_player.kitchen"],
+        "volume_level": 0.22,
+        "is_volume_muted": false,
+        "media_content_id": "x-sonos-spotify:spotify%3atrack%3a0ZEeEZnZ496lE6kN7bmSrp?sid=9&flags=8232&sn=9",
+        "media_content_type": "music",
+        "media_duration": 252,
+        "media_position": 186,
+        "media_position_updated_at": "2025-10-29T09:32:46.008657+00:00",
+        "media_title": "Until The End",
+        "media_artist": "Breaking Benjamin",
+        "media_album_name": "Phobia (Explicit Version)",
+        "shuffle": false,
+        "repeat": "off",
+        "queue_position": 6,
+        "queue_size": 13,
+        "device_class": "speaker",
+        "entity_picture": "/api/media_player_proxy/media_player.kitchen?token=24c8087aa6cb88749d782554dad0fc63a7a4977ebfd775d503bd06c1bb0d2df1&cache=433089d578944662",
+        "friendly_name": "Kitchen",
+        "supported_features": 4127295
+      },
+      "last_changed": "2025-10-29T09:32:46.026965+00:00",
+      "last_reported": "2025-10-29T09:51:41.500387+00:00",
+      "last_updated": "2025-10-29T09:32:46.190363+00:00",
+      "context": {
+        "id": "01K8QN02QE8FRGZH3T39PE4EJE",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.kitchen_crossfade",
+      "state": "off",
+      "attributes": { "friendly_name": "Kitchen Crossfade" },
+      "last_changed": "2025-10-29T09:32:46.095504+00:00",
+      "last_reported": "2025-10-29T09:51:41.500571+00:00",
+      "last_updated": "2025-10-29T09:32:46.095504+00:00",
+      "context": {
+        "id": "01K8QN02MFDCE7ZS85N70V58G9",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.kitchen_loudness",
+      "state": "on",
+      "attributes": { "friendly_name": "Kitchen Loudness" },
+      "last_changed": "2025-10-29T09:32:46.095987+00:00",
+      "last_reported": "2025-10-29T09:51:41.500614+00:00",
+      "last_updated": "2025-10-29T09:32:46.095987+00:00",
+      "context": {
+        "id": "01K8QN02MF5K8NR633SE0SEJX6",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "number.kitchen_bass",
+      "state": "0",
+      "attributes": {
+        "min": -10,
+        "max": 10,
+        "step": 1,
+        "mode": "auto",
+        "friendly_name": "Kitchen Bass"
+      },
+      "last_changed": "2025-10-29T09:32:46.131284+00:00",
+      "last_reported": "2025-10-29T09:51:41.500681+00:00",
+      "last_updated": "2025-10-29T09:32:46.131284+00:00",
+      "context": {
+        "id": "01K8QN02NKX2XH17RDC21GQJDX",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "number.kitchen_balance",
+      "state": "0",
+      "attributes": {
+        "min": -100,
+        "max": 100,
+        "step": 1,
+        "mode": "auto",
+        "friendly_name": "Kitchen Balance"
+      },
+      "last_changed": "2025-10-29T09:32:46.131837+00:00",
+      "last_reported": "2025-10-29T09:51:41.500739+00:00",
+      "last_updated": "2025-10-29T09:32:46.131837+00:00",
+      "context": {
+        "id": "01K8QN02NK6QVKQWVW8CJYTY7R",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "number.kitchen_treble",
+      "state": "0",
+      "attributes": {
+        "min": -10,
+        "max": 10,
+        "step": 1,
+        "mode": "auto",
+        "friendly_name": "Kitchen Treble"
+      },
+      "last_changed": "2025-10-29T09:32:46.132245+00:00",
+      "last_reported": "2025-10-29T09:51:41.500781+00:00",
+      "last_updated": "2025-10-29T09:32:46.132245+00:00",
+      "context": {
+        "id": "01K8QN02NMTSPVNM5Y2XJVQ1ZJ",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.zigbee2mqtt_bridge_connection_state",
+      "state": "on",
+      "attributes": {
+        "device_class": "connectivity",
+        "friendly_name": "Zigbee2MQTT Bridge Connection state"
+      },
+      "last_changed": "2025-10-29T09:32:46.714058+00:00",
+      "last_reported": "2025-10-29T09:32:46.714058+00:00",
+      "last_updated": "2025-10-29T09:32:46.714058+00:00",
+      "context": {
+        "id": "01K8QN037TVKR28H3ESA5Z4X4S",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "button.zigbee2mqtt_bridge_restart",
+      "state": "2025-10-24T19:37:28.012658+00:00",
+      "attributes": {
+        "device_class": "restart",
+        "friendly_name": "Zigbee2MQTT Bridge Restart"
+      },
+      "last_changed": "2025-10-29T09:32:46.714226+00:00",
+      "last_reported": "2025-10-29T09:32:46.714226+00:00",
+      "last_updated": "2025-10-29T09:32:46.714226+00:00",
+      "context": {
+        "id": "01K8QN037TKX29V1W40WY4R95E",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "light.office_1",
+      "state": "off",
+      "attributes": {
+        "min_color_temp_kelvin": 2020,
+        "max_color_temp_kelvin": 6329,
+        "min_mireds": 158,
+        "max_mireds": 495,
+        "supported_color_modes": ["color_temp", "xy"],
+        "color_mode": null,
+        "brightness": null,
+        "color_temp_kelvin": null,
+        "color_temp": null,
+        "hs_color": null,
+        "rgb_color": null,
+        "xy_color": null,
+        "friendly_name": "Office_1",
+        "supported_features": 40
+      },
+      "last_changed": "2025-10-29T09:33:27.197131+00:00",
+      "last_reported": "2025-10-29T09:33:27.197131+00:00",
+      "last_updated": "2025-10-29T09:33:27.197131+00:00",
+      "context": {
+        "id": "01K8QN1ARXQV6XEBE4919T3K7B",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "light.office_5",
+      "state": "off",
+      "attributes": {
+        "min_color_temp_kelvin": 2020,
+        "max_color_temp_kelvin": 6329,
+        "min_mireds": 158,
+        "max_mireds": 495,
+        "supported_color_modes": ["color_temp", "xy"],
+        "color_mode": null,
+        "brightness": null,
+        "color_temp_kelvin": null,
+        "color_temp": null,
+        "hs_color": null,
+        "rgb_color": null,
+        "xy_color": null,
+        "friendly_name": "Office_5",
+        "supported_features": 40
+      },
+      "last_changed": "2025-10-29T09:33:27.197810+00:00",
+      "last_reported": "2025-10-29T09:33:27.197810+00:00",
+      "last_updated": "2025-10-29T09:33:27.197810+00:00",
+      "context": {
+        "id": "01K8QN1ARXEC7ZWFJMS45A1PXQ",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "light.office_2",
+      "state": "off",
+      "attributes": {
+        "min_color_temp_kelvin": 2020,
+        "max_color_temp_kelvin": 6329,
+        "min_mireds": 158,
+        "max_mireds": 495,
+        "supported_color_modes": ["color_temp", "xy"],
+        "color_mode": null,
+        "brightness": null,
+        "color_temp_kelvin": null,
+        "color_temp": null,
+        "hs_color": null,
+        "rgb_color": null,
+        "xy_color": null,
+        "friendly_name": "Office_2",
+        "supported_features": 40
+      },
+      "last_changed": "2025-10-29T09:33:27.199470+00:00",
+      "last_reported": "2025-10-29T09:33:27.199470+00:00",
+      "last_updated": "2025-10-29T09:33:27.199470+00:00",
+      "context": {
+        "id": "01K8QN1ARZV91B5PKKZ80FH9H1",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "light.office_6",
+      "state": "off",
+      "attributes": {
+        "min_color_temp_kelvin": 2020,
+        "max_color_temp_kelvin": 6329,
+        "min_mireds": 158,
+        "max_mireds": 495,
+        "supported_color_modes": ["color_temp", "xy"],
+        "color_mode": null,
+        "brightness": null,
+        "color_temp_kelvin": null,
+        "color_temp": null,
+        "hs_color": null,
+        "rgb_color": null,
+        "xy_color": null,
+        "friendly_name": "Office_6",
+        "supported_features": 40
+      },
+      "last_changed": "2025-10-29T09:33:27.201591+00:00",
+      "last_reported": "2025-10-29T09:33:27.201591+00:00",
+      "last_updated": "2025-10-29T09:33:27.201591+00:00",
+      "context": {
+        "id": "01K8QN1AS1WKRA99K5Y8GSQ8N5",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "light.office_3",
+      "state": "off",
+      "attributes": {
+        "min_color_temp_kelvin": 2020,
+        "max_color_temp_kelvin": 6329,
+        "min_mireds": 158,
+        "max_mireds": 495,
+        "supported_color_modes": ["color_temp", "xy"],
+        "color_mode": null,
+        "brightness": null,
+        "color_temp_kelvin": null,
+        "color_temp": null,
+        "hs_color": null,
+        "rgb_color": null,
+        "xy_color": null,
+        "friendly_name": "Office_3",
+        "supported_features": 40
+      },
+      "last_changed": "2025-10-29T09:33:27.195516+00:00",
+      "last_reported": "2025-10-29T09:33:27.195516+00:00",
+      "last_updated": "2025-10-29T09:33:27.195516+00:00",
+      "context": {
+        "id": "01K8QN1ARV20JVAJG84H3KYR2V",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "light.office_4",
+      "state": "off",
+      "attributes": {
+        "min_color_temp_kelvin": 2020,
+        "max_color_temp_kelvin": 6329,
+        "min_mireds": 158,
+        "max_mireds": 495,
+        "supported_color_modes": ["color_temp", "xy"],
+        "color_mode": null,
+        "brightness": null,
+        "color_temp_kelvin": null,
+        "color_temp": null,
+        "hs_color": null,
+        "rgb_color": null,
+        "xy_color": null,
+        "friendly_name": "Office_4",
+        "supported_features": 40
+      },
+      "last_changed": "2025-10-29T09:33:27.196357+00:00",
+      "last_reported": "2025-10-29T09:33:27.196357+00:00",
+      "last_updated": "2025-10-29T09:33:27.196357+00:00",
+      "context": {
+        "id": "01K8QN1ARW7MQZ13VF9S8D4Z8F",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "select.zigbee2mqtt_bridge_log_level",
+      "state": "debug",
+      "attributes": {
+        "options": ["error", "warning", "info", "debug"],
+        "friendly_name": "Zigbee2MQTT Bridge Log level"
+      },
+      "last_changed": "2025-10-29T09:32:46.715060+00:00",
+      "last_reported": "2025-10-29T09:32:46.715060+00:00",
+      "last_updated": "2025-10-29T09:32:46.715060+00:00",
+      "context": {
+        "id": "01K8QN037V8BSKTXG1F93CJRCM",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "select.office_switch_power_on_behavior",
+      "state": "off",
+      "attributes": {
+        "options": ["off", "on", "toggle", "previous"],
+        "icon": "mdi:power-settings",
+        "friendly_name": "Office_Switch Power-on behavior"
+      },
+      "last_changed": "2025-10-29T09:33:27.192881+00:00",
+      "last_reported": "2025-10-29T09:33:27.192881+00:00",
+      "last_updated": "2025-10-29T09:33:27.192881+00:00",
+      "context": {
+        "id": "01K8QN1ARRWS7KCGHA29WQHDT7",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "select.office_1_power_on_behavior",
+      "state": "unknown",
+      "attributes": {
+        "options": ["off", "on", "toggle", "previous"],
+        "icon": "mdi:power-settings",
+        "friendly_name": "Office_1 Power-on behavior"
+      },
+      "last_changed": "2025-10-29T09:32:46.714342+00:00",
+      "last_reported": "2025-10-29T09:32:46.714342+00:00",
+      "last_updated": "2025-10-29T09:32:46.714342+00:00",
+      "context": {
+        "id": "01K8QN037TS8AECV9C8A08DQ0W",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "select.office_5_power_on_behavior",
+      "state": "unknown",
+      "attributes": {
+        "options": ["off", "on", "toggle", "previous"],
+        "icon": "mdi:power-settings",
+        "friendly_name": "Office_5 Power-on behavior"
+      },
+      "last_changed": "2025-10-29T09:32:46.713898+00:00",
+      "last_reported": "2025-10-29T09:32:46.713898+00:00",
+      "last_updated": "2025-10-29T09:32:46.713898+00:00",
+      "context": {
+        "id": "01K8QN037SNSTZNK2CD1S1AR4Z",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "select.office_2_power_on_behavior",
+      "state": "unknown",
+      "attributes": {
+        "options": ["off", "on", "toggle", "previous"],
+        "icon": "mdi:power-settings",
+        "friendly_name": "Office_2 Power-on behavior"
+      },
+      "last_changed": "2025-10-29T09:32:46.714128+00:00",
+      "last_reported": "2025-10-29T09:32:46.714128+00:00",
+      "last_updated": "2025-10-29T09:32:46.714128+00:00",
+      "context": {
+        "id": "01K8QN037TCPH25FKAJ4MNV76M",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "select.office_6_power_on_behavior",
+      "state": "unknown",
+      "attributes": {
+        "options": ["off", "on", "toggle", "previous"],
+        "icon": "mdi:power-settings",
+        "friendly_name": "Office_6 Power-on behavior"
+      },
+      "last_changed": "2025-10-29T09:32:46.714277+00:00",
+      "last_reported": "2025-10-29T09:32:46.714277+00:00",
+      "last_updated": "2025-10-29T09:32:46.714277+00:00",
+      "context": {
+        "id": "01K8QN037T9279GVMN0S52R8WB",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "select.office_3_power_on_behavior",
+      "state": "unknown",
+      "attributes": {
+        "options": ["off", "on", "toggle", "previous"],
+        "icon": "mdi:power-settings",
+        "friendly_name": "Office_3 Power-on behavior"
+      },
+      "last_changed": "2025-10-29T09:32:46.714037+00:00",
+      "last_reported": "2025-10-29T09:32:46.714037+00:00",
+      "last_updated": "2025-10-29T09:32:46.714037+00:00",
+      "context": {
+        "id": "01K8QN037T1ZZ5DC1S9Q82WP1B",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "select.office_4_power_on_behavior",
+      "state": "unknown",
+      "attributes": {
+        "options": ["off", "on", "toggle", "previous"],
+        "icon": "mdi:power-settings",
+        "friendly_name": "Office_4 Power-on behavior"
+      },
+      "last_changed": "2025-10-29T09:32:46.714330+00:00",
+      "last_reported": "2025-10-29T09:32:46.714330+00:00",
+      "last_updated": "2025-10-29T09:32:46.714330+00:00",
+      "context": {
+        "id": "01K8QN037TPV71VN02GXK0T04E",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.zigbee2mqtt_bridge_version",
+      "state": "2.6.1",
+      "attributes": {
+        "icon": "mdi:zigbee",
+        "friendly_name": "Zigbee2MQTT Bridge Version"
+      },
+      "last_changed": "2025-10-29T09:32:46.715014+00:00",
+      "last_reported": "2025-10-29T09:32:46.715014+00:00",
+      "last_updated": "2025-10-29T09:32:46.715014+00:00",
+      "context": {
+        "id": "01K8QN037VTAXHW4ZBNF7GFFFM",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.zigbee2mqtt_bridge_permit_join",
+      "state": "off",
+      "attributes": {
+        "icon": "mdi:human-greeting-proximity",
+        "friendly_name": "Zigbee2MQTT Bridge Permit join"
+      },
+      "last_changed": "2025-10-29T09:32:46.715043+00:00",
+      "last_reported": "2025-10-29T09:32:46.715043+00:00",
+      "last_updated": "2025-10-29T09:32:46.715043+00:00",
+      "context": {
+        "id": "01K8QN037VXH58TJ6J8KFM18JD",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.office_switch",
+      "state": "on",
+      "attributes": { "friendly_name": "Office_Switch" },
+      "last_changed": "2025-10-29T09:33:27.192645+00:00",
+      "last_reported": "2025-10-29T09:33:27.192645+00:00",
+      "last_updated": "2025-10-29T09:33:27.192645+00:00",
+      "context": {
+        "id": "01K8QN1ARR5Z4XAYG480VCQBN8",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "update.office_switch",
+      "state": "off",
+      "attributes": {
+        "auto_update": false,
+        "display_precision": 0,
+        "installed_version": "4110",
+        "in_progress": false,
+        "latest_version": "4110",
+        "release_summary": null,
+        "release_url": null,
+        "skipped_version": null,
+        "title": null,
+        "update_percentage": null,
+        "device_class": "firmware",
+        "entity_picture": "https://github.com/Koenkk/zigbee2mqtt/raw/master/images/logo.png",
+        "friendly_name": "Office_Switch",
+        "supported_features": 5
+      },
+      "last_changed": "2025-10-29T09:33:27.193092+00:00",
+      "last_reported": "2025-10-29T09:33:27.193092+00:00",
+      "last_updated": "2025-10-29T09:33:27.193092+00:00",
+      "context": {
+        "id": "01K8QN1ARSB3PSQGEYCRPYPZC1",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.hub_home",
+      "state": "on",
+      "attributes": {
+        "led_mode": 4,
+        "pairing_mode": false,
+        "device_class": "connectivity",
+        "friendly_name": "Hub Home"
+      },
+      "last_changed": "2025-10-29T09:45:19.126267+00:00",
+      "last_reported": "2025-10-29T09:57:52.192438+00:00",
+      "last_updated": "2025-10-29T09:45:19.126267+00:00",
+      "context": {
+        "id": "01K8QNQ20PZ32Y6VFS0CDKR2AH",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.meteobridge_is_freezing",
+      "state": "off",
+      "attributes": {
+        "attribution": "Powered by Meteobridge",
+        "device_class": "cold",
+        "icon": "mdi:snowflake-alert",
+        "friendly_name": "Meteobridge Is Freezing"
+      },
+      "last_changed": "2025-10-29T09:32:48.563194+00:00",
+      "last_reported": "2025-10-29T09:59:12.011613+00:00",
+      "last_updated": "2025-10-29T09:32:48.563194+00:00",
+      "context": {
+        "id": "01K8QN051K0XA1SGWG4QPRH8CV",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.meteobridge_is_raining",
+      "state": "off",
+      "attributes": {
+        "attribution": "Powered by Meteobridge",
+        "icon": "mdi:water-alert",
+        "friendly_name": "Meteobridge Is Raining"
+      },
+      "last_changed": "2025-10-29T09:32:48.563631+00:00",
+      "last_reported": "2025-10-29T09:59:12.011689+00:00",
+      "last_updated": "2025-10-29T09:32:48.563631+00:00",
+      "context": {
+        "id": "01K8QN051KPDRYR24YT2R56QW0",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.meteobridge_rain_sensor_battery_status",
+      "state": "off",
+      "attributes": {
+        "attribution": "Powered by Meteobridge",
+        "device_class": "battery",
+        "friendly_name": "Meteobridge Rain sensor battery status"
+      },
+      "last_changed": "2025-10-29T09:32:48.563924+00:00",
+      "last_reported": "2025-10-29T09:59:12.011721+00:00",
+      "last_updated": "2025-10-29T09:32:48.563924+00:00",
+      "context": {
+        "id": "01K8QN051K8W4D7FAJ1CADKG6K",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.meteobridge_th_sensor_battery_status",
+      "state": "off",
+      "attributes": {
+        "attribution": "Powered by Meteobridge",
+        "device_class": "battery",
+        "friendly_name": "Meteobridge TH sensor battery status"
+      },
+      "last_changed": "2025-10-29T09:32:48.564173+00:00",
+      "last_reported": "2025-10-29T09:59:12.011745+00:00",
+      "last_updated": "2025-10-29T09:32:48.564173+00:00",
+      "context": {
+        "id": "01K8QN051MY04124A8VCFG87T5",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.meteobridge_wind_sensor_battery_status",
+      "state": "off",
+      "attributes": {
+        "attribution": "Powered by Meteobridge",
+        "device_class": "battery",
+        "friendly_name": "Meteobridge Wind sensor battery status"
+      },
+      "last_changed": "2025-10-29T09:32:48.564406+00:00",
+      "last_reported": "2025-10-29T09:59:12.011764+00:00",
+      "last_updated": "2025-10-29T09:32:48.564406+00:00",
+      "context": {
+        "id": "01K8QN051MKR4EAF1XMNW1XZH6",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_air_temperature",
+      "state": "10.6",
+      "attributes": {
+        "state_class": "measurement",
+        "attribution": "Powered by Meteobridge",
+        "unit_of_measurement": "°C",
+        "device_class": "temperature",
+        "friendly_name": "Meteobridge Air Temperature"
+      },
+      "last_changed": "2025-10-29T10:35:19.579276+00:00",
+      "last_reported": "2025-10-29T10:35:19.579276+00:00",
+      "last_updated": "2025-10-29T10:35:19.579276+00:00",
+      "context": {
+        "id": "01K8QRJM4V4D0QSS3J1CF8G3JA",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_sea_level_pressure",
+      "state": "1001.1",
+      "attributes": {
+        "state_class": "measurement",
+        "attribution": "Powered by Meteobridge",
+        "unit_of_measurement": "hPa",
+        "device_class": "atmospheric_pressure",
+        "friendly_name": "Meteobridge Sea Level Pressure"
+      },
+      "last_changed": "2025-10-29T10:35:19.579649+00:00",
+      "last_reported": "2025-10-29T10:35:19.579649+00:00",
+      "last_updated": "2025-10-29T10:35:19.579649+00:00",
+      "context": {
+        "id": "01K8QRJM4VDR4CWH3WDW74CWPR",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_station_pressure",
+      "state": "999.9",
+      "attributes": {
+        "state_class": "measurement",
+        "attribution": "Powered by Meteobridge",
+        "unit_of_measurement": "hPa",
+        "device_class": "atmospheric_pressure",
+        "friendly_name": "Meteobridge Station Pressure"
+      },
+      "last_changed": "2025-10-29T10:35:19.579864+00:00",
+      "last_reported": "2025-10-29T10:35:19.579864+00:00",
+      "last_updated": "2025-10-29T10:35:19.579864+00:00",
+      "context": {
+        "id": "01K8QRJM4VPWMHGY8WS5ZMMRF2",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_relative_humidity",
+      "state": "90",
+      "attributes": {
+        "state_class": "measurement",
+        "attribution": "Powered by Meteobridge",
+        "unit_of_measurement": "%",
+        "device_class": "humidity",
+        "friendly_name": "Meteobridge Relative Humidity"
+      },
+      "last_changed": "2025-10-29T10:29:07.673151+00:00",
+      "last_reported": "2025-10-29T10:29:07.673151+00:00",
+      "last_updated": "2025-10-29T10:29:07.673151+00:00",
+      "context": {
+        "id": "01K8QR78YSWBPZRSEMYGG0YGAR",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_precipitation_rate",
+      "state": "0.0",
+      "attributes": {
+        "state_class": "measurement",
+        "attribution": "Powered by Meteobridge",
+        "unit_of_measurement": "mm/h",
+        "device_class": "precipitation_intensity",
+        "icon": "mdi:weather-pouring",
+        "friendly_name": "Meteobridge Precipitation Rate"
+      },
+      "last_changed": "2025-10-29T09:32:48.569074+00:00",
+      "last_reported": "2025-10-29T09:59:12.012223+00:00",
+      "last_updated": "2025-10-29T09:32:48.569074+00:00",
+      "context": {
+        "id": "01K8QN051SNM06NRJBB9GZ256G",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_precipitation_today",
+      "state": "0.0",
+      "attributes": {
+        "state_class": "measurement",
+        "attribution": "Powered by Meteobridge",
+        "unit_of_measurement": "mm",
+        "device_class": "precipitation",
+        "icon": "mdi:weather-rainy",
+        "friendly_name": "Meteobridge Precipitation Today"
+      },
+      "last_changed": "2025-10-29T09:32:48.569447+00:00",
+      "last_reported": "2025-10-29T09:59:12.012258+00:00",
+      "last_updated": "2025-10-29T09:32:48.569447+00:00",
+      "context": {
+        "id": "01K8QN051SKHCVCGZM5V8XVTKB",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_precipitation_last_24_hours",
+      "state": "0.0",
+      "attributes": {
+        "state_class": "measurement",
+        "attribution": "Powered by Meteobridge",
+        "unit_of_measurement": "mm",
+        "device_class": "precipitation",
+        "icon": "mdi:weather-rainy",
+        "friendly_name": "Meteobridge Precipitation Last 24 hours"
+      },
+      "last_changed": "2025-10-29T09:32:48.569808+00:00",
+      "last_reported": "2025-10-29T09:59:12.012291+00:00",
+      "last_updated": "2025-10-29T09:32:48.569808+00:00",
+      "context": {
+        "id": "01K8QN051S1WQR3NDYDD3P6GZ8",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_precipitation_current_month",
+      "state": "67.0",
+      "attributes": {
+        "attribution": "Powered by Meteobridge",
+        "unit_of_measurement": "mm",
+        "device_class": "precipitation",
+        "icon": "mdi:weather-rainy",
+        "friendly_name": "Meteobridge Precipitation Current Month"
+      },
+      "last_changed": "2025-10-29T09:32:48.570151+00:00",
+      "last_reported": "2025-10-29T09:59:12.012323+00:00",
+      "last_updated": "2025-10-29T09:32:48.570151+00:00",
+      "context": {
+        "id": "01K8QN051TTQZ88369X1FD26K2",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_precipitation_current_year",
+      "state": "487.2",
+      "attributes": {
+        "attribution": "Powered by Meteobridge",
+        "unit_of_measurement": "mm",
+        "device_class": "precipitation",
+        "icon": "mdi:weather-rainy",
+        "friendly_name": "Meteobridge Precipitation Current Year"
+      },
+      "last_changed": "2025-10-29T09:32:48.570477+00:00",
+      "last_reported": "2025-10-29T09:59:12.012353+00:00",
+      "last_updated": "2025-10-29T09:32:48.570477+00:00",
+      "context": {
+        "id": "01K8QN051TAGGP7CTF1MZGDPE1",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_wind_speed",
+      "state": "0.72",
+      "attributes": {
+        "state_class": "measurement",
+        "attribution": "Powered by Meteobridge",
+        "unit_of_measurement": "km/h",
+        "device_class": "wind_speed",
+        "icon": "mdi:weather-windy-variant",
+        "friendly_name": "Meteobridge Wind Speed"
+      },
+      "last_changed": "2025-10-29T10:34:25.602064+00:00",
+      "last_reported": "2025-10-29T10:34:25.602064+00:00",
+      "last_updated": "2025-10-29T10:34:25.602064+00:00",
+      "context": {
+        "id": "01K8QRGZE216SS1818G4T2B622",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_wind_direction",
+      "state": "206",
+      "attributes": {
+        "state_class": "measurement",
+        "attribution": "Powered by Meteobridge",
+        "unit_of_measurement": "°",
+        "icon": "mdi:compass",
+        "friendly_name": "Meteobridge Wind Direction"
+      },
+      "last_changed": "2025-10-29T10:35:59.709990+00:00",
+      "last_reported": "2025-10-29T10:35:59.709990+00:00",
+      "last_updated": "2025-10-29T10:35:59.709990+00:00",
+      "context": {
+        "id": "01K8QRKVAXRCVHFD4JZ22E10JK",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_wind_gust",
+      "state": "0.0",
+      "attributes": {
+        "state_class": "measurement",
+        "attribution": "Powered by Meteobridge",
+        "unit_of_measurement": "km/h",
+        "device_class": "wind_speed",
+        "icon": "mdi:weather-windy",
+        "friendly_name": "Meteobridge Wind Gust"
+      },
+      "last_changed": "2025-10-29T10:35:59.710287+00:00",
+      "last_reported": "2025-10-29T10:35:59.710287+00:00",
+      "last_updated": "2025-10-29T10:35:59.710287+00:00",
+      "context": {
+        "id": "01K8QRKVAYRM8P29BQQHANV6EX",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_beaufort",
+      "state": "0",
+      "attributes": {
+        "state_class": "measurement",
+        "attribution": "Powered by Meteobridge",
+        "unit_of_measurement": "Bft",
+        "icon": "mdi:windsock",
+        "friendly_name": "Meteobridge Beaufort"
+      },
+      "last_changed": "2025-10-29T10:29:20.498314+00:00",
+      "last_reported": "2025-10-29T10:29:20.498314+00:00",
+      "last_updated": "2025-10-29T10:29:20.498314+00:00",
+      "context": {
+        "id": "01K8QR7NFJ2G187A7D3B4XYN9J",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_feels_like_temperature",
+      "state": "10.3",
+      "attributes": {
+        "state_class": "measurement",
+        "attribution": "Powered by Meteobridge",
+        "unit_of_measurement": "°C",
+        "device_class": "temperature",
+        "friendly_name": "Meteobridge Feels Like Temperature"
+      },
+      "last_changed": "2025-10-29T10:35:59.710504+00:00",
+      "last_reported": "2025-10-29T10:35:59.710504+00:00",
+      "last_updated": "2025-10-29T10:35:59.710504+00:00",
+      "context": {
+        "id": "01K8QRKVAYYDA3VGERQQAJNGE6",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_heat_index",
+      "state": "10.6",
+      "attributes": {
+        "state_class": "measurement",
+        "attribution": "Powered by Meteobridge",
+        "unit_of_measurement": "°C",
+        "device_class": "temperature",
+        "friendly_name": "Meteobridge Heat Index"
+      },
+      "last_changed": "2025-10-29T10:35:19.580801+00:00",
+      "last_reported": "2025-10-29T10:35:19.580801+00:00",
+      "last_updated": "2025-10-29T10:35:19.580801+00:00",
+      "context": {
+        "id": "01K8QRJM4WHE9VR2Y3BB3TRD2Z",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_wind_chill",
+      "state": "10.6",
+      "attributes": {
+        "state_class": "measurement",
+        "attribution": "Powered by Meteobridge",
+        "unit_of_measurement": "°C",
+        "device_class": "temperature",
+        "friendly_name": "Meteobridge Wind Chill"
+      },
+      "last_changed": "2025-10-29T10:35:19.580935+00:00",
+      "last_reported": "2025-10-29T10:35:19.580935+00:00",
+      "last_updated": "2025-10-29T10:35:19.580935+00:00",
+      "context": {
+        "id": "01K8QRJM4WWBZFNY7HCQC01N60",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_dewpoint",
+      "state": "9.0",
+      "attributes": {
+        "state_class": "measurement",
+        "attribution": "Powered by Meteobridge",
+        "unit_of_measurement": "°C",
+        "device_class": "temperature",
+        "friendly_name": "Meteobridge Dewpoint"
+      },
+      "last_changed": "2025-10-29T10:35:19.581122+00:00",
+      "last_reported": "2025-10-29T10:35:19.581122+00:00",
+      "last_updated": "2025-10-29T10:35:19.581122+00:00",
+      "context": {
+        "id": "01K8QRJM4XNTWWZM0X4RJNDQ7X",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_visibility",
+      "state": "0.7",
+      "attributes": {
+        "state_class": "measurement",
+        "attribution": "Powered by Meteobridge",
+        "unit_of_measurement": "km",
+        "device_class": "distance",
+        "icon": "mdi:eye",
+        "friendly_name": "Meteobridge Visibility"
+      },
+      "last_changed": "2025-10-29T10:29:07.674083+00:00",
+      "last_reported": "2025-10-29T10:29:07.674083+00:00",
+      "last_updated": "2025-10-29T10:29:07.674083+00:00",
+      "context": {
+        "id": "01K8QR78YTM3AQKPBE68X34K45",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_temperature_trend",
+      "state": "rising",
+      "attributes": {
+        "attribution": "Powered by Meteobridge",
+        "icon": "mdi:trending-up",
+        "friendly_name": "Meteobridge Temperature Trend"
+      },
+      "last_changed": "2025-10-29T10:32:40.990639+00:00",
+      "last_reported": "2025-10-29T10:32:40.990639+00:00",
+      "last_updated": "2025-10-29T10:32:40.990639+00:00",
+      "context": {
+        "id": "01K8QRDS8YQE8BQD80F2J592V2",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_pressure_trend",
+      "state": "falling",
+      "attributes": {
+        "attribution": "Powered by Meteobridge",
+        "icon": "mdi:trending-up",
+        "friendly_name": "Meteobridge Pressure Trend"
+      },
+      "last_changed": "2025-10-29T10:27:22.537123+00:00",
+      "last_reported": "2025-10-29T10:27:22.537123+00:00",
+      "last_updated": "2025-10-29T10:27:22.537123+00:00",
+      "context": {
+        "id": "01K8QR4299G2TZV8BES58X4JQS",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_wind_cardinal",
+      "state": "ssw",
+      "attributes": {
+        "attribution": "Powered by Meteobridge",
+        "icon": "mdi:compass",
+        "friendly_name": "Meteobridge Wind Cardinal"
+      },
+      "last_changed": "2025-10-29T10:35:46.175907+00:00",
+      "last_reported": "2025-10-29T10:35:46.175907+00:00",
+      "last_updated": "2025-10-29T10:35:46.175907+00:00",
+      "context": {
+        "id": "01K8QRKE3ZB87TKA5N1PWMTPRX",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_beaufort_description",
+      "state": "calm",
+      "attributes": {
+        "attribution": "Powered by Meteobridge",
+        "icon": "mdi:windsock",
+        "friendly_name": "Meteobridge Beaufort Description"
+      },
+      "last_changed": "2025-10-29T10:29:20.498775+00:00",
+      "last_reported": "2025-10-29T10:29:20.498775+00:00",
+      "last_updated": "2025-10-29T10:29:20.498775+00:00",
+      "context": {
+        "id": "01K8QR7NFJ9SRJAK6GK94P1JJ0",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_indoor_temperature",
+      "state": "16.2",
+      "attributes": {
+        "state_class": "measurement",
+        "attribution": "Powered by Meteobridge",
+        "unit_of_measurement": "°C",
+        "device_class": "temperature",
+        "friendly_name": "Meteobridge Indoor Temperature"
+      },
+      "last_changed": "2025-10-29T10:35:19.581425+00:00",
+      "last_reported": "2025-10-29T10:35:19.581425+00:00",
+      "last_updated": "2025-10-29T10:35:19.581425+00:00",
+      "context": {
+        "id": "01K8QRJM4XD4FBG5EFZXSQVA9B",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_indoor_humidity",
+      "state": "29",
+      "attributes": {
+        "state_class": "measurement",
+        "attribution": "Powered by Meteobridge",
+        "unit_of_measurement": "%",
+        "device_class": "humidity",
+        "friendly_name": "Meteobridge Indoor Humidity"
+      },
+      "last_changed": "2025-10-29T09:32:48.574719+00:00",
+      "last_reported": "2025-10-29T09:59:12.013014+00:00",
+      "last_updated": "2025-10-29T09:32:48.574719+00:00",
+      "context": {
+        "id": "01K8QN051YXHRDJ9V8W3S8DXV1",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_air_density",
+      "state": "1.23",
+      "attributes": {
+        "state_class": "measurement",
+        "attribution": "Powered by Meteobridge",
+        "unit_of_measurement": "kg/m^3",
+        "icon": "mdi:weight",
+        "friendly_name": "Meteobridge Air Density"
+      },
+      "last_changed": "2025-10-29T09:32:48.574918+00:00",
+      "last_reported": "2025-10-29T09:59:12.013047+00:00",
+      "last_updated": "2025-10-29T09:32:48.574918+00:00",
+      "context": {
+        "id": "01K8QN051YH7PRPAEYQNZB34CX",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_wet_bulb_temperature",
+      "state": "9.7",
+      "attributes": {
+        "state_class": "measurement",
+        "attribution": "Powered by Meteobridge",
+        "unit_of_measurement": "°C",
+        "device_class": "temperature",
+        "friendly_name": "Meteobridge Wet Bulb Temperature"
+      },
+      "last_changed": "2025-10-29T10:35:19.581719+00:00",
+      "last_reported": "2025-10-29T10:35:19.581719+00:00",
+      "last_updated": "2025-10-29T10:35:19.581719+00:00",
+      "context": {
+        "id": "01K8QRJM4XMP6121074GN6MJEF",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_air_temperature_day_min",
+      "state": "9.1",
+      "attributes": {
+        "state_class": "measurement",
+        "attribution": "Powered by Meteobridge",
+        "meassure_time": "2025-10-29T02:40:40+00:00",
+        "unit_of_measurement": "°C",
+        "device_class": "temperature",
+        "friendly_name": "Meteobridge Air Temperature Day Min"
+      },
+      "last_changed": "2025-10-29T09:32:48.575341+00:00",
+      "last_reported": "2025-10-29T09:59:12.013113+00:00",
+      "last_updated": "2025-10-29T09:32:48.575341+00:00",
+      "context": {
+        "id": "01K8QN051ZMYHSTVVSVSZ9012V",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_air_temperature_day_max",
+      "state": "11.4",
+      "attributes": {
+        "state_class": "measurement",
+        "attribution": "Powered by Meteobridge",
+        "meassure_time": "2025-10-29T07:05:06+00:00",
+        "unit_of_measurement": "°C",
+        "device_class": "temperature",
+        "friendly_name": "Meteobridge Air Temperature Day Max"
+      },
+      "last_changed": "2025-10-29T09:32:48.575570+00:00",
+      "last_reported": "2025-10-29T09:59:12.013147+00:00",
+      "last_updated": "2025-10-29T09:32:48.575570+00:00",
+      "context": {
+        "id": "01K8QN051ZDNWFFDBQ7FBG8MVY",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_air_temperature_month_min",
+      "state": "3.7",
+      "attributes": {
+        "state_class": "measurement",
+        "attribution": "Powered by Meteobridge",
+        "meassure_time": "2025-10-26T02:25:01+00:00",
+        "unit_of_measurement": "°C",
+        "device_class": "temperature",
+        "friendly_name": "Meteobridge Air Temperature Month Min"
+      },
+      "last_changed": "2025-10-29T09:32:48.575797+00:00",
+      "last_reported": "2025-10-29T09:59:12.013177+00:00",
+      "last_updated": "2025-10-29T09:32:48.575797+00:00",
+      "context": {
+        "id": "01K8QN051ZBJMC9WJB4NB33P6H",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_air_temperature_month_max",
+      "state": "21.9",
+      "attributes": {
+        "state_class": "measurement",
+        "attribution": "Powered by Meteobridge",
+        "meassure_time": "2025-10-01T09:00:24+00:00",
+        "unit_of_measurement": "°C",
+        "device_class": "temperature",
+        "friendly_name": "Meteobridge Air Temperature Month Max"
+      },
+      "last_changed": "2025-10-29T09:32:48.575993+00:00",
+      "last_reported": "2025-10-29T09:59:12.013205+00:00",
+      "last_updated": "2025-10-29T09:32:48.575993+00:00",
+      "context": {
+        "id": "01K8QN051ZAY903GEAW6VXMZ8S",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_air_temperature_year_min",
+      "state": "-2.6",
+      "attributes": {
+        "state_class": "measurement",
+        "attribution": "Powered by Meteobridge",
+        "meassure_time": "2025-01-10T08:20:19+00:00",
+        "unit_of_measurement": "°C",
+        "device_class": "temperature",
+        "friendly_name": "Meteobridge Air Temperature Year Min"
+      },
+      "last_changed": "2025-10-29T09:32:48.576189+00:00",
+      "last_reported": "2025-10-29T09:59:12.013235+00:00",
+      "last_updated": "2025-10-29T09:32:48.576189+00:00",
+      "context": {
+        "id": "01K8QN0520GA6CBCGTQ2DKTAF6",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.meteobridge_air_temperature_year_max",
+      "state": "31.2",
+      "attributes": {
+        "state_class": "measurement",
+        "attribution": "Powered by Meteobridge",
+        "meassure_time": "2025-06-28T16:54:03+00:00",
+        "unit_of_measurement": "°C",
+        "device_class": "temperature",
+        "friendly_name": "Meteobridge Air Temperature Year Max"
+      },
+      "last_changed": "2025-10-29T09:32:48.576377+00:00",
+      "last_reported": "2025-10-29T09:59:12.013264+00:00",
+      "last_updated": "2025-10-29T09:32:48.576377+00:00",
+      "context": {
+        "id": "01K8QN05202GJWP6JV6W5G9QAY",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.edgerouter_poe_5_port_cpu_usage",
+      "state": "5",
+      "attributes": {
+        "state_class": "measurement",
+        "unit_of_measurement": "%",
+        "icon": "mdi:chip",
+        "friendly_name": "EDGEROUTER-POE-5-PORT CPU Usage"
+      },
+      "last_changed": "2025-10-29T10:36:06.263952+00:00",
+      "last_reported": "2025-10-29T10:36:06.263952+00:00",
+      "last_updated": "2025-10-29T10:36:06.263952+00:00",
+      "context": {
+        "id": "01K8QRM1QQ8Z01FCRNFEFJVPKT",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.edgerouter_poe_5_port_ram_usage",
+      "state": "22",
+      "attributes": {
+        "state_class": "measurement",
+        "unit_of_measurement": "%",
+        "icon": "mdi:memory",
+        "friendly_name": "EDGEROUTER-POE-5-PORT RAM Usage"
+      },
+      "last_changed": "2025-10-29T10:35:42.263413+00:00",
+      "last_reported": "2025-10-29T10:35:42.263413+00:00",
+      "last_updated": "2025-10-29T10:35:42.263413+00:00",
+      "context": {
+        "id": "01K8QRKA9QEBQGRGCN8Q3DPWEQ",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.edgerouter_poe_5_port_last_restart",
+      "state": "2025-10-27T08:17:22+00:00",
+      "attributes": {
+        "device_class": "timestamp",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Last Restart"
+      },
+      "last_changed": "2025-10-29T09:59:45.263648+00:00",
+      "last_reported": "2025-10-29T09:59:45.263648+00:00",
+      "last_updated": "2025-10-29T09:59:45.263648+00:00",
+      "context": {
+        "id": "01K8QPHFVFYJ9JXXQK944JPCMX",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.edgerouter_poe_5_port_unknown_devices",
+      "state": "35",
+      "attributes": {
+        "state_class": "measurement",
+        "192.168.1.192": "f0:f5:bd:fc:d9:c4 (espressif)",
+        "192.168.1.169": "32:7e:e7:e5:41:89",
+        "192.168.1.68": "90:6a:eb:96:a0:1f (XBOX)",
+        "192.168.1.230": "40:a2:db:7b:d6:17 (amazon-3a1e94666)",
+        "192.168.1.191": "14:0a:c5:b3:db:63 (amazon-ecd91f497)",
+        "192.168.1.42": "f0:f5:bd:fc:cc:b0 (espressif)",
+        "192.168.1.209": "00:17:88:ac:98:8b (001788ac988b)",
+        "192.168.1.176": "f0:f5:bd:fc:d8:b8 (espressif)",
+        "192.168.1.226": "88:71:e5:d7:05:d1",
+        "192.168.1.140": "f4:92:bf:60:99:b8 (Snug-AP)",
+        "192.168.1.187": "c4:23:60:61:f5:e9 (Tallulah)",
+        "192.168.1.39": "74:83:c2:2c:f6:bf (Office-AP)",
+        "192.168.1.152": "f6:bb:2f:fe:3e:a2 (Watch)",
+        "192.168.1.43": "14:2d:27:52:84:d7 (tv6ef4781e1164)",
+        "192.168.1.215": "5c:aa:fd:2e:d0:9a (SonosZP)",
+        "192.168.1.95": "e0:63:da:86:52:5d (Alexia-AP)",
+        "192.168.1.197": "5c:aa:fd:9a:f8:28 (SonosZP)",
+        "192.168.1.153": "5c:aa:fd:2e:d2:0c (SonosZP)",
+        "192.168.1.66": "04:d4:c4:54:d1:49 (archdesktop)",
+        "192.168.1.150": "18:e8:29:29:42:6d (front-room-switch)",
+        "192.168.1.142": "d0:58:fc:fc:65:ba",
+        "192.168.1.200": "46:5f:f8:33:75:35 (iPhone)",
+        "192.168.1.229": "30:c9:22:d1:94:f8 (plant-monitor)",
+        "192.168.1.189": "6e:d3:26:e9:2a:1f (iPhone)",
+        "192.168.1.207": "d4:da:cd:93:6b:ca",
+        "192.168.1.179": "a0:02:dc:e2:9f:53",
+        "192.168.1.46": "80:1f:12:1c:eb:2e",
+        "192.168.1.184": "d4:da:cd:8c:f9:7a",
+        "192.168.1.125": "fc:f1:36:11:56:c3 (localhost)",
+        "192.168.1.45": "74:ac:b9:18:78:8d (UCK-G2)",
+        "192.168.1.227": "ba:0b:de:3e:24:6a (iPhone)",
+        "192.168.1.198": "0a:a6:84:f4:50:38 (iPad)",
+        "192.168.1.147": "90:02:18:f3:05:91",
+        "192.168.1.96": "74:83:c2:2c:f3:39 (Kitchen-AP)",
+        "192.168.1.243": "3e:73:4b:85:49:15 (iPhone)",
+        "unit_of_measurement": "Devices",
+        "icon": "mdi:help-network-outline",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Unknown Devices"
+      },
+      "last_changed": "2025-10-29T09:32:58.305989+00:00",
+      "last_reported": "2025-10-29T09:32:58.305989+00:00",
+      "last_updated": "2025-10-29T09:32:58.305989+00:00",
+      "context": {
+        "id": "01K8QN0EJ1NV0K4VQAFGGSBHJR",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.edgerouter_poe_5_port_firmware_upgrade",
+      "state": "on",
+      "attributes": {
+        "url": "https://fw-download.ubnt.com/data/e100/ba62-edgerouter-3.0.0-c47bcd62-08fd-474b-bc85-607b504c4b32.tar",
+        "version": "v3.0.0",
+        "device_class": "update",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Firmware Upgrade"
+      },
+      "last_changed": "2025-10-29T09:32:58.306171+00:00",
+      "last_reported": "2025-10-29T09:32:58.306171+00:00",
+      "last_updated": "2025-10-29T09:32:58.306171+00:00",
+      "context": {
+        "id": "01K8QN0EJ29HHS1WCNQP4XZEF0",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_log_incoming_messages",
+      "state": "off",
+      "attributes": {
+        "icon": "mdi:math-log",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Log Incoming Messages"
+      },
+      "last_changed": "2025-10-29T09:32:58.306299+00:00",
+      "last_reported": "2025-10-29T09:32:58.306299+00:00",
+      "last_updated": "2025-10-29T09:32:58.306299+00:00",
+      "context": {
+        "id": "01K8QN0EJ2W14N4D6BTJKSM9K6",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "number.edgerouter_poe_5_port_consider_away_interval",
+      "state": "180",
+      "attributes": {
+        "min": 0,
+        "max": 600,
+        "step": 1,
+        "mode": "auto",
+        "unit_of_measurement": "s",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Consider Away Interval"
+      },
+      "last_changed": "2025-10-29T09:32:58.306433+00:00",
+      "last_reported": "2025-10-29T09:32:58.306433+00:00",
+      "last_updated": "2025-10-29T09:32:58.306433+00:00",
+      "context": {
+        "id": "01K8QN0EJ2VX9JD6JCVD1HD9R0",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "number.edgerouter_poe_5_port_update_entities_interval",
+      "state": "1",
+      "attributes": {
+        "min": 0,
+        "max": 600,
+        "step": 1,
+        "mode": "auto",
+        "unit_of_measurement": "s",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Update Entities Interval"
+      },
+      "last_changed": "2025-10-29T09:32:58.306541+00:00",
+      "last_reported": "2025-10-29T09:32:58.306541+00:00",
+      "last_updated": "2025-10-29T09:32:58.306541+00:00",
+      "context": {
+        "id": "01K8QN0EJ2VTDCT4JQ7NK770MD",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "number.edgerouter_poe_5_port_update_api_interval",
+      "state": "60",
+      "attributes": {
+        "min": 0,
+        "max": 600,
+        "step": 1,
+        "mode": "auto",
+        "unit_of_measurement": "s",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Update API Interval"
+      },
+      "last_changed": "2025-10-29T09:32:58.306616+00:00",
+      "last_reported": "2025-10-29T09:32:58.306616+00:00",
+      "last_updated": "2025-10-29T09:32:58.306616+00:00",
+      "context": {
+        "id": "01K8QN0EJ2XRQ3BS78TFDDT178",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "select.edgerouter_poe_5_port_unit",
+      "state": "kb",
+      "attributes": {
+        "options": ["b", "kb", "mb"],
+        "friendly_name": "EDGEROUTER-POE-5-PORT Unit"
+      },
+      "last_changed": "2025-10-29T09:32:58.306706+00:00",
+      "last_reported": "2025-10-29T09:32:58.306706+00:00",
+      "last_updated": "2025-10-29T09:32:58.306706+00:00",
+      "context": {
+        "id": "01K8QN0EJ2KM0F4WRSKGJBH78V",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.edgerouter_poe_5_port_interface_eth1_connected",
+      "state": "off",
+      "attributes": {
+        "device_class": "connectivity",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface ETH1 Connected"
+      },
+      "last_changed": "2025-10-29T09:32:58.308103+00:00",
+      "last_reported": "2025-10-29T09:32:58.308103+00:00",
+      "last_updated": "2025-10-29T09:32:58.308103+00:00",
+      "context": {
+        "id": "01K8QN0EJ4Y8V1NAT33F3DAPW0",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_interface_eth1_monitored",
+      "state": "off",
+      "attributes": {
+        "icon": "mdi:monitor-eye",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface ETH1 Monitored"
+      },
+      "last_changed": "2025-10-29T09:32:58.308177+00:00",
+      "last_reported": "2025-10-29T09:32:58.308177+00:00",
+      "last_updated": "2025-10-29T09:32:58.308177+00:00",
+      "context": {
+        "id": "01K8QN0EJ48KHDSXP584C9J489",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_interface_eth1_status",
+      "state": "on",
+      "attributes": {
+        "name": "eth1",
+        "description": "Local",
+        "type": "ethernet",
+        "duplex": "auto",
+        "speed": "auto",
+        "address": ["192.168.2.1/24"],
+        "stp": false,
+        "multicast": 0,
+        "icon": "mdi:ethernet",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface ETH1 Status"
+      },
+      "last_changed": "2025-10-29T09:32:58.308283+00:00",
+      "last_reported": "2025-10-29T09:32:58.308283+00:00",
+      "last_updated": "2025-10-29T09:32:58.308283+00:00",
+      "context": {
+        "id": "01K8QN0EJ4GYG7KJGTQX8MR9Y2",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.edgerouter_poe_5_port_interface_eth2_connected",
+      "state": "on",
+      "attributes": {
+        "device_class": "connectivity",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface ETH2 Connected"
+      },
+      "last_changed": "2025-10-29T09:32:58.308371+00:00",
+      "last_reported": "2025-10-29T09:32:58.308371+00:00",
+      "last_updated": "2025-10-29T09:32:58.308371+00:00",
+      "context": {
+        "id": "01K8QN0EJ4J0S4P5AX55NZQ050",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_interface_eth2_monitored",
+      "state": "off",
+      "attributes": {
+        "icon": "mdi:monitor-eye",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface ETH2 Monitored"
+      },
+      "last_changed": "2025-10-29T09:32:58.308418+00:00",
+      "last_reported": "2025-10-29T09:32:58.308418+00:00",
+      "last_updated": "2025-10-29T09:32:58.308418+00:00",
+      "context": {
+        "id": "01K8QN0EJ45XCC6M83EJBS1BBR",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_interface_eth2_status",
+      "state": "on",
+      "attributes": {
+        "name": "eth2",
+        "description": "Local 2",
+        "type": "ethernet",
+        "duplex": "auto",
+        "speed": "auto",
+        "address": [],
+        "stp": false,
+        "multicast": 0,
+        "icon": "mdi:ethernet",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface ETH2 Status"
+      },
+      "last_changed": "2025-10-29T09:32:58.308440+00:00",
+      "last_reported": "2025-10-29T09:32:58.308440+00:00",
+      "last_updated": "2025-10-29T09:32:58.308440+00:00",
+      "context": {
+        "id": "01K8QN0EJ4B4CT2156Z7DVSBC4",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.edgerouter_poe_5_port_interface_eth3_connected",
+      "state": "off",
+      "attributes": {
+        "device_class": "connectivity",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface ETH3 Connected"
+      },
+      "last_changed": "2025-10-29T09:32:58.308466+00:00",
+      "last_reported": "2025-10-29T09:32:58.308466+00:00",
+      "last_updated": "2025-10-29T09:32:58.308466+00:00",
+      "context": {
+        "id": "01K8QN0EJ4E1XM51VMREXKKW20",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_interface_eth3_monitored",
+      "state": "off",
+      "attributes": {
+        "icon": "mdi:monitor-eye",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface ETH3 Monitored"
+      },
+      "last_changed": "2025-10-29T09:32:58.308481+00:00",
+      "last_reported": "2025-10-29T09:32:58.308481+00:00",
+      "last_updated": "2025-10-29T09:32:58.308481+00:00",
+      "context": {
+        "id": "01K8QN0EJ4CVSZ1E38K802SC7S",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_interface_eth3_status",
+      "state": "on",
+      "attributes": {
+        "name": "eth3",
+        "description": "Local 2",
+        "type": "ethernet",
+        "duplex": "auto",
+        "speed": "auto",
+        "address": [],
+        "stp": false,
+        "multicast": 0,
+        "icon": "mdi:ethernet",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface ETH3 Status"
+      },
+      "last_changed": "2025-10-29T09:32:58.308501+00:00",
+      "last_reported": "2025-10-29T09:32:58.308501+00:00",
+      "last_updated": "2025-10-29T09:32:58.308501+00:00",
+      "context": {
+        "id": "01K8QN0EJ4HV316ZYK9FXG35JD",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.edgerouter_poe_5_port_interface_eth4_connected",
+      "state": "off",
+      "attributes": {
+        "device_class": "connectivity",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface ETH4 Connected"
+      },
+      "last_changed": "2025-10-29T09:32:58.308520+00:00",
+      "last_reported": "2025-10-29T09:32:58.308520+00:00",
+      "last_updated": "2025-10-29T09:32:58.308520+00:00",
+      "context": {
+        "id": "01K8QN0EJ4ARRR6ZHHYNJWYE9R",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_interface_eth4_monitored",
+      "state": "off",
+      "attributes": {
+        "icon": "mdi:monitor-eye",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface ETH4 Monitored"
+      },
+      "last_changed": "2025-10-29T09:32:58.308535+00:00",
+      "last_reported": "2025-10-29T09:32:58.308535+00:00",
+      "last_updated": "2025-10-29T09:32:58.308535+00:00",
+      "context": {
+        "id": "01K8QN0EJ4DK36NZPXH251M6ZM",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_interface_eth4_status",
+      "state": "on",
+      "attributes": {
+        "name": "eth4",
+        "description": "Local 2",
+        "type": "ethernet",
+        "duplex": "auto",
+        "speed": "auto",
+        "address": [],
+        "stp": false,
+        "multicast": 0,
+        "icon": "mdi:ethernet",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface ETH4 Status"
+      },
+      "last_changed": "2025-10-29T09:32:58.308556+00:00",
+      "last_reported": "2025-10-29T09:32:58.308556+00:00",
+      "last_updated": "2025-10-29T09:32:58.308556+00:00",
+      "context": {
+        "id": "01K8QN0EJ4ZKV15DKQEJ88T60C",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_device_alexia_sky_monitored",
+      "state": "off",
+      "attributes": {
+        "hostname": "Alexia-Sky",
+        "ip": "192.168.1.183",
+        "mac": "b0:3e:51:7e:52:2a",
+        "domain": null,
+        "leased": false,
+        "icon": "mdi:monitor-eye",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Device Alexia-Sky Monitored"
+      },
+      "last_changed": "2025-10-29T09:32:58.308803+00:00",
+      "last_reported": "2025-10-29T09:32:58.308803+00:00",
+      "last_updated": "2025-10-29T09:32:58.308803+00:00",
+      "context": {
+        "id": "01K8QN0EJ4V9R5WAYWS9C5Q3RK",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_device_elgato_left_monitored",
+      "state": "off",
+      "attributes": {
+        "hostname": "Elgato_Left",
+        "ip": "192.168.1.231",
+        "mac": "3c:6a:9d:15:3f:56",
+        "domain": null,
+        "leased": false,
+        "icon": "mdi:monitor-eye",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Device Elgato_Left Monitored"
+      },
+      "last_changed": "2025-10-29T09:32:58.308823+00:00",
+      "last_reported": "2025-10-29T09:32:58.308823+00:00",
+      "last_updated": "2025-10-29T09:32:58.308823+00:00",
+      "context": {
+        "id": "01K8QN0EJ4C3YSKP6DWZ9XPM9H",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_device_elgato_right_monitored",
+      "state": "off",
+      "attributes": {
+        "hostname": "Elgato_Right",
+        "ip": "192.168.1.40",
+        "mac": "3c:6a:9d:15:3f:57",
+        "domain": null,
+        "leased": false,
+        "icon": "mdi:monitor-eye",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Device Elgato_Right Monitored"
+      },
+      "last_changed": "2025-10-29T09:32:58.308841+00:00",
+      "last_reported": "2025-10-29T09:32:58.308841+00:00",
+      "last_updated": "2025-10-29T09:32:58.308841+00:00",
+      "context": {
+        "id": "01K8QN0EJ4DDFN8ZXBQNMJF733",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_device_eufy_monitored",
+      "state": "off",
+      "attributes": {
+        "hostname": "Eufy",
+        "ip": "192.168.1.65",
+        "mac": "04:17:b6:96:b7:1d",
+        "domain": null,
+        "leased": false,
+        "icon": "mdi:monitor-eye",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Device Eufy Monitored"
+      },
+      "last_changed": "2025-10-29T09:32:58.308857+00:00",
+      "last_reported": "2025-10-29T09:32:58.308857+00:00",
+      "last_updated": "2025-10-29T09:32:58.308857+00:00",
+      "context": {
+        "id": "01K8QN0EJ432FF26VXSQS9X4BJ",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_device_petcam_monitored",
+      "state": "off",
+      "attributes": {
+        "hostname": "Petcam",
+        "ip": "192.168.1.178",
+        "mac": "0c:a6:4c:d5:74:5a",
+        "domain": null,
+        "leased": false,
+        "icon": "mdi:monitor-eye",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Device Petcam Monitored"
+      },
+      "last_changed": "2025-10-29T09:32:58.308874+00:00",
+      "last_reported": "2025-10-29T09:32:58.308874+00:00",
+      "last_updated": "2025-10-29T09:32:58.308874+00:00",
+      "context": {
+        "id": "01K8QN0EJ4WQD7WZRYZ70321W7",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_device_vim4_monitored",
+      "state": "off",
+      "attributes": {
+        "hostname": "VIM4",
+        "ip": "192.168.1.196",
+        "mac": "c8:63:14:74:21:05",
+        "domain": null,
+        "leased": false,
+        "icon": "mdi:monitor-eye",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Device VIM4 Monitored"
+      },
+      "last_changed": "2025-10-29T09:32:58.308890+00:00",
+      "last_reported": "2025-10-29T09:32:58.308890+00:00",
+      "last_updated": "2025-10-29T09:32:58.308890+00:00",
+      "context": {
+        "id": "01K8QN0EJ4V2HE1WN0P22ZRQ5R",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_device_driveway_cctv_monitored",
+      "state": "off",
+      "attributes": {
+        "hostname": "driveway_cctv",
+        "ip": "192.168.1.190",
+        "mac": "c0:99:2d:d6:ea:ab",
+        "domain": null,
+        "leased": false,
+        "icon": "mdi:monitor-eye",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Device driveway_cctv Monitored"
+      },
+      "last_changed": "2025-10-29T09:32:58.308905+00:00",
+      "last_reported": "2025-10-29T09:32:58.308905+00:00",
+      "last_updated": "2025-10-29T09:32:58.308905+00:00",
+      "context": {
+        "id": "01K8QN0EJ4CAR66A65BP6WTXT3",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_device_frigate_monitored",
+      "state": "off",
+      "attributes": {
+        "hostname": "frigate",
+        "ip": "192.168.1.168",
+        "mac": "98:3b:8f:9b:3d:bd",
+        "domain": null,
+        "leased": false,
+        "icon": "mdi:monitor-eye",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Device frigate Monitored"
+      },
+      "last_changed": "2025-10-29T09:32:58.308921+00:00",
+      "last_reported": "2025-10-29T09:32:58.308921+00:00",
+      "last_updated": "2025-10-29T09:32:58.308921+00:00",
+      "context": {
+        "id": "01K8QN0EJ4WCS6DSC2BB2A8YT8",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_device_iphone_monitored",
+      "state": "off",
+      "attributes": {
+        "hostname": "iPhone",
+        "ip": "192.168.1.250",
+        "mac": "c2:a7:11:9b:4f:4a",
+        "domain": null,
+        "leased": false,
+        "icon": "mdi:monitor-eye",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Device iPhone Monitored"
+      },
+      "last_changed": "2025-10-29T09:32:58.308939+00:00",
+      "last_reported": "2025-10-29T09:32:58.308939+00:00",
+      "last_updated": "2025-10-29T09:32:58.308939+00:00",
+      "context": {
+        "id": "01K8QN0EJ49TTRH686WSGVCDYW",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_device_layla_monitored",
+      "state": "off",
+      "attributes": {
+        "hostname": "layla",
+        "ip": "192.168.1.234",
+        "mac": "28:d2:44:d1:6a:c9",
+        "domain": null,
+        "leased": false,
+        "icon": "mdi:monitor-eye",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Device layla Monitored"
+      },
+      "last_changed": "2025-10-29T09:32:58.308954+00:00",
+      "last_reported": "2025-10-29T09:32:58.308954+00:00",
+      "last_updated": "2025-10-29T09:32:58.308954+00:00",
+      "context": {
+        "id": "01K8QN0EJ46MQEDWY03R9NGNTQ",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_device_meteobridge_monitored",
+      "state": "off",
+      "attributes": {
+        "hostname": "meteobridge",
+        "ip": "192.168.1.216",
+        "mac": "c4:93:00:10:11:f5",
+        "domain": null,
+        "leased": false,
+        "icon": "mdi:monitor-eye",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Device meteobridge Monitored"
+      },
+      "last_changed": "2025-10-29T09:32:58.308973+00:00",
+      "last_reported": "2025-10-29T09:32:58.308973+00:00",
+      "last_updated": "2025-10-29T09:32:58.308973+00:00",
+      "context": {
+        "id": "01K8QN0EJ4TWP80G2PX42BYDDH",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_device_yoda_monitored",
+      "state": "off",
+      "attributes": {
+        "hostname": "yoda",
+        "ip": "192.168.1.181",
+        "mac": "60:cf:84:a8:03:50",
+        "domain": null,
+        "leased": false,
+        "icon": "mdi:monitor-eye",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Device yoda Monitored"
+      },
+      "last_changed": "2025-10-29T09:32:58.308989+00:00",
+      "last_reported": "2025-10-29T09:32:58.308989+00:00",
+      "last_updated": "2025-10-29T09:32:58.308989+00:00",
+      "context": {
+        "id": "01K8QN0EJ4KNKM384D5QC9QMSX",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.edgerouter_poe_5_port_interface_pppoe0_connected",
+      "state": "on",
+      "attributes": {
+        "device_class": "connectivity",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface PPPOE0 Connected"
+      },
+      "last_changed": "2025-10-29T09:32:58.309004+00:00",
+      "last_reported": "2025-10-29T09:32:58.309004+00:00",
+      "last_updated": "2025-10-29T09:32:58.309004+00:00",
+      "context": {
+        "id": "01K8QN0EJ5BWRHMD78HPNP2Q2Q",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_interface_pppoe0_monitored",
+      "state": "off",
+      "attributes": {
+        "icon": "mdi:monitor-eye",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface PPPOE0 Monitored"
+      },
+      "last_changed": "2025-10-29T09:32:58.309018+00:00",
+      "last_reported": "2025-10-29T09:32:58.309018+00:00",
+      "last_updated": "2025-10-29T09:32:58.309018+00:00",
+      "context": {
+        "id": "01K8QN0EJ5SPTRXSA52WGZZTAE",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_interface_pppoe0_status",
+      "state": "on",
+      "attributes": {
+        "name": "pppoe0",
+        "type": "dynamic",
+        "address": ["84.68.179.105/32"],
+        "stp": false,
+        "multicast": 0,
+        "icon": "mdi:ethernet",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface PPPOE0 Status"
+      },
+      "last_changed": "2025-10-29T09:32:58.309037+00:00",
+      "last_reported": "2025-10-29T09:32:58.309037+00:00",
+      "last_updated": "2025-10-29T09:32:58.309037+00:00",
+      "context": {
+        "id": "01K8QN0EJ5V37Q4BWSWMAPNTRN",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.edgerouter_poe_5_port_interface_eth0_received_dropped",
+      "state": "794",
+      "attributes": {
+        "state_class": "measurement",
+        "unit_of_measurement": "Dropped",
+        "icon": "mdi:package-variant-minus",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface ETH0 Received Dropped"
+      },
+      "last_changed": "2025-10-29T09:32:58.306819+00:00",
+      "last_reported": "2025-10-29T09:32:58.306819+00:00",
+      "last_updated": "2025-10-29T09:32:58.306819+00:00",
+      "context": {
+        "id": "01K8QN0EJ2Y6YEXAPGSJGRV7KN",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.edgerouter_poe_5_port_interface_eth0_sent_dropped",
+      "state": "0",
+      "attributes": {
+        "state_class": "measurement",
+        "unit_of_measurement": "Dropped",
+        "icon": "mdi:package-variant-minus",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface ETH0 Sent Dropped"
+      },
+      "last_changed": "2025-10-29T09:32:58.306914+00:00",
+      "last_reported": "2025-10-29T09:32:58.306914+00:00",
+      "last_updated": "2025-10-29T09:32:58.306914+00:00",
+      "context": {
+        "id": "01K8QN0EJ2NCX5N9P93344ZPFN",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.edgerouter_poe_5_port_interface_eth0_received_errors",
+      "state": "0",
+      "attributes": {
+        "state_class": "measurement",
+        "unit_of_measurement": "Errors",
+        "icon": "mdi:timeline-alert",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface ETH0 Received Errors"
+      },
+      "last_changed": "2025-10-29T09:32:58.306994+00:00",
+      "last_reported": "2025-10-29T09:32:58.306994+00:00",
+      "last_updated": "2025-10-29T09:32:58.306994+00:00",
+      "context": {
+        "id": "01K8QN0EJ245XXJMVVDT288QH3",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.edgerouter_poe_5_port_interface_eth0_sent_errors",
+      "state": "0",
+      "attributes": {
+        "state_class": "measurement",
+        "unit_of_measurement": "Errors",
+        "icon": "mdi:timeline-alert",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface ETH0 Sent Errors"
+      },
+      "last_changed": "2025-10-29T09:32:58.307074+00:00",
+      "last_reported": "2025-10-29T09:32:58.307074+00:00",
+      "last_updated": "2025-10-29T09:32:58.307074+00:00",
+      "context": {
+        "id": "01K8QN0EJ3K3N1HYRQ7HMSTGK6",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.edgerouter_poe_5_port_interface_eth0_received_packets",
+      "state": "199585605",
+      "attributes": {
+        "state_class": "measurement",
+        "unit_of_measurement": "Packets",
+        "icon": "mdi:package-up",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface ETH0 Received Packets"
+      },
+      "last_changed": "2025-10-29T10:36:05.263177+00:00",
+      "last_reported": "2025-10-29T10:36:05.263177+00:00",
+      "last_updated": "2025-10-29T10:36:05.263177+00:00",
+      "context": {
+        "id": "01K8QRM0RFKBZ6JRJWCK6325BB",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.edgerouter_poe_5_port_interface_eth0_sent_packets",
+      "state": "103892745",
+      "attributes": {
+        "state_class": "measurement",
+        "unit_of_measurement": "Packets",
+        "icon": "mdi:package-up",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface ETH0 Sent Packets"
+      },
+      "last_changed": "2025-10-29T10:36:05.263581+00:00",
+      "last_reported": "2025-10-29T10:36:05.263581+00:00",
+      "last_updated": "2025-10-29T10:36:05.263581+00:00",
+      "context": {
+        "id": "01K8QRM0RF96XN698CX0BPD41F",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.edgerouter_poe_5_port_interface_eth0_received_rate",
+      "state": "6678.2",
+      "attributes": {
+        "state_class": "measurement",
+        "unit_of_measurement": "kbit/s",
+        "device_class": "data_rate",
+        "icon": "mdi:download-network-outline",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface ETH0 Received Rate"
+      },
+      "last_changed": "2025-10-29T10:36:05.263808+00:00",
+      "last_reported": "2025-10-29T10:36:05.263808+00:00",
+      "last_updated": "2025-10-29T10:36:05.263808+00:00",
+      "context": {
+        "id": "01K8QRM0RFE0STWRF0FHTMQ161",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.edgerouter_poe_5_port_interface_eth0_sent_rate",
+      "state": "287.76",
+      "attributes": {
+        "state_class": "measurement",
+        "unit_of_measurement": "kbit/s",
+        "device_class": "data_rate",
+        "icon": "mdi:upload-network-outline",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface ETH0 Sent Rate"
+      },
+      "last_changed": "2025-10-29T10:36:05.263991+00:00",
+      "last_reported": "2025-10-29T10:36:05.263991+00:00",
+      "last_updated": "2025-10-29T10:36:05.263991+00:00",
+      "context": {
+        "id": "01K8QRM0RF8277VWN29BKAHQ8C",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.edgerouter_poe_5_port_interface_eth0_received_traffic",
+      "state": "235962579.534",
+      "attributes": {
+        "state_class": "total_increasing",
+        "unit_of_measurement": "kB",
+        "device_class": "data_size",
+        "icon": "mdi:download-network-outline",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface ETH0 Received Traffic"
+      },
+      "last_changed": "2025-10-29T10:36:05.264158+00:00",
+      "last_reported": "2025-10-29T10:36:05.264158+00:00",
+      "last_updated": "2025-10-29T10:36:05.264158+00:00",
+      "context": {
+        "id": "01K8QRM0RGJ3Y9K8VRAV0M1KPE",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.edgerouter_poe_5_port_interface_eth0_sent_traffic",
+      "state": "52173155.441",
+      "attributes": {
+        "state_class": "total_increasing",
+        "unit_of_measurement": "kB",
+        "device_class": "data_size",
+        "icon": "mdi:upload-network-outline",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface ETH0 Sent Traffic"
+      },
+      "last_changed": "2025-10-29T10:36:05.264307+00:00",
+      "last_reported": "2025-10-29T10:36:05.264307+00:00",
+      "last_updated": "2025-10-29T10:36:05.264307+00:00",
+      "context": {
+        "id": "01K8QRM0RG3X0E0S574VF16EP2",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.edgerouter_poe_5_port_interface_eth0_connected",
+      "state": "on",
+      "attributes": {
+        "device_class": "connectivity",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface ETH0 Connected"
+      },
+      "last_changed": "2025-10-29T09:32:58.307747+00:00",
+      "last_reported": "2025-10-29T09:32:58.307747+00:00",
+      "last_updated": "2025-10-29T09:32:58.307747+00:00",
+      "context": {
+        "id": "01K8QN0EJ37FCVGM7ARACC9207",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_interface_eth0_monitored",
+      "state": "on",
+      "attributes": {
+        "icon": "mdi:monitor-eye",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface ETH0 Monitored"
+      },
+      "last_changed": "2025-10-29T09:32:58.307834+00:00",
+      "last_reported": "2025-10-29T09:32:58.307834+00:00",
+      "last_updated": "2025-10-29T09:32:58.307834+00:00",
+      "context": {
+        "id": "01K8QN0EJ33FCWAZX1CFQF1ADN",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_interface_eth0_status",
+      "state": "on",
+      "attributes": {
+        "name": "eth0",
+        "description": "Internet (PPPoE)",
+        "type": "ethernet",
+        "duplex": "auto",
+        "speed": "auto",
+        "address": [],
+        "stp": false,
+        "multicast": 0,
+        "icon": "mdi:ethernet",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface ETH0 Status"
+      },
+      "last_changed": "2025-10-29T09:32:58.307997+00:00",
+      "last_reported": "2025-10-29T09:32:58.307997+00:00",
+      "last_updated": "2025-10-29T09:32:58.307997+00:00",
+      "context": {
+        "id": "01K8QN0EJ3S03BZKTTNAK6SGRN",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.edgerouter_poe_5_port_interface_switch0_received_dropped",
+      "state": "193",
+      "attributes": {
+        "state_class": "measurement",
+        "unit_of_measurement": "Dropped",
+        "icon": "mdi:package-variant-minus",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface SWITCH0 Received Dropped"
+      },
+      "last_changed": "2025-10-29T09:32:58.308584+00:00",
+      "last_reported": "2025-10-29T09:32:58.308584+00:00",
+      "last_updated": "2025-10-29T09:32:58.308584+00:00",
+      "context": {
+        "id": "01K8QN0EJ4QW2YECTXDA3Z0192",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.edgerouter_poe_5_port_interface_switch0_sent_dropped",
+      "state": "0",
+      "attributes": {
+        "state_class": "measurement",
+        "unit_of_measurement": "Dropped",
+        "icon": "mdi:package-variant-minus",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface SWITCH0 Sent Dropped"
+      },
+      "last_changed": "2025-10-29T09:32:58.308602+00:00",
+      "last_reported": "2025-10-29T09:32:58.308602+00:00",
+      "last_updated": "2025-10-29T09:32:58.308602+00:00",
+      "context": {
+        "id": "01K8QN0EJ4NY4TA0WXM1F1N2KK",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.edgerouter_poe_5_port_interface_switch0_received_errors",
+      "state": "0",
+      "attributes": {
+        "state_class": "measurement",
+        "unit_of_measurement": "Errors",
+        "icon": "mdi:timeline-alert",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface SWITCH0 Received Errors"
+      },
+      "last_changed": "2025-10-29T09:32:58.308618+00:00",
+      "last_reported": "2025-10-29T09:32:58.308618+00:00",
+      "last_updated": "2025-10-29T09:32:58.308618+00:00",
+      "context": {
+        "id": "01K8QN0EJ4RVX41V5SKYJNNKDH",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.edgerouter_poe_5_port_interface_switch0_sent_errors",
+      "state": "0",
+      "attributes": {
+        "state_class": "measurement",
+        "unit_of_measurement": "Errors",
+        "icon": "mdi:timeline-alert",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface SWITCH0 Sent Errors"
+      },
+      "last_changed": "2025-10-29T09:32:58.308633+00:00",
+      "last_reported": "2025-10-29T09:32:58.308633+00:00",
+      "last_updated": "2025-10-29T09:32:58.308633+00:00",
+      "context": {
+        "id": "01K8QN0EJ4GCK355FHKQEEGFVW",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.edgerouter_poe_5_port_interface_switch0_received_packets",
+      "state": "105280964",
+      "attributes": {
+        "state_class": "measurement",
+        "unit_of_measurement": "Packets",
+        "icon": "mdi:package-up",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface SWITCH0 Received Packets"
+      },
+      "last_changed": "2025-10-29T10:36:05.264718+00:00",
+      "last_reported": "2025-10-29T10:36:05.264718+00:00",
+      "last_updated": "2025-10-29T10:36:05.264718+00:00",
+      "context": {
+        "id": "01K8QRM0RGDC655SH55BYWVDFW",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.edgerouter_poe_5_port_interface_switch0_sent_packets",
+      "state": "200694813",
+      "attributes": {
+        "state_class": "measurement",
+        "unit_of_measurement": "Packets",
+        "icon": "mdi:package-up",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface SWITCH0 Sent Packets"
+      },
+      "last_changed": "2025-10-29T10:36:05.264889+00:00",
+      "last_reported": "2025-10-29T10:36:05.264889+00:00",
+      "last_updated": "2025-10-29T10:36:05.264889+00:00",
+      "context": {
+        "id": "01K8QRM0RGDZD2MQ3BRJS71R1Z",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.edgerouter_poe_5_port_interface_switch0_received_rate",
+      "state": "36.739",
+      "attributes": {
+        "state_class": "measurement",
+        "unit_of_measurement": "kB/s",
+        "device_class": "data_rate",
+        "icon": "mdi:download-network-outline",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface SWITCH0 Received Rate"
+      },
+      "last_changed": "2025-10-29T10:36:05.265046+00:00",
+      "last_reported": "2025-10-29T10:36:05.265046+00:00",
+      "last_updated": "2025-10-29T10:36:05.265046+00:00",
+      "context": {
+        "id": "01K8QRM0RH6FFZZG854JME3BFK",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.edgerouter_poe_5_port_interface_switch0_sent_rate",
+      "state": "843.909",
+      "attributes": {
+        "state_class": "measurement",
+        "unit_of_measurement": "kB/s",
+        "device_class": "data_rate",
+        "icon": "mdi:upload-network-outline",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface SWITCH0 Sent Rate"
+      },
+      "last_changed": "2025-10-29T10:36:05.265204+00:00",
+      "last_reported": "2025-10-29T10:36:05.265204+00:00",
+      "last_updated": "2025-10-29T10:36:05.265204+00:00",
+      "context": {
+        "id": "01K8QRM0RH69PZ19KT5HPA5WJZ",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.edgerouter_poe_5_port_interface_switch0_received_traffic",
+      "state": "51890683.018",
+      "attributes": {
+        "state_class": "total_increasing",
+        "unit_of_measurement": "kB",
+        "device_class": "data_size",
+        "icon": "mdi:download-network-outline",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface SWITCH0 Received Traffic"
+      },
+      "last_changed": "2025-10-29T10:36:05.265354+00:00",
+      "last_reported": "2025-10-29T10:36:05.265354+00:00",
+      "last_updated": "2025-10-29T10:36:05.265354+00:00",
+      "context": {
+        "id": "01K8QRM0RHAN2WDBTE74ZA425X",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.edgerouter_poe_5_port_interface_switch0_sent_traffic",
+      "state": "234452287.384",
+      "attributes": {
+        "state_class": "total_increasing",
+        "unit_of_measurement": "kB",
+        "device_class": "data_size",
+        "icon": "mdi:upload-network-outline",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface SWITCH0 Sent Traffic"
+      },
+      "last_changed": "2025-10-29T10:36:05.265498+00:00",
+      "last_reported": "2025-10-29T10:36:05.265498+00:00",
+      "last_updated": "2025-10-29T10:36:05.265498+00:00",
+      "context": {
+        "id": "01K8QRM0RHDRBEW5R3XWEEE4ZZ",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "binary_sensor.edgerouter_poe_5_port_interface_switch0_connected",
+      "state": "on",
+      "attributes": {
+        "device_class": "connectivity",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface SWITCH0 Connected"
+      },
+      "last_changed": "2025-10-29T09:32:58.308742+00:00",
+      "last_reported": "2025-10-29T09:32:58.308742+00:00",
+      "last_updated": "2025-10-29T09:32:58.308742+00:00",
+      "context": {
+        "id": "01K8QN0EJ444NP78QVZDJDWV2C",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_interface_switch0_monitored",
+      "state": "on",
+      "attributes": {
+        "icon": "mdi:monitor-eye",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface SWITCH0 Monitored"
+      },
+      "last_changed": "2025-10-29T09:32:58.308755+00:00",
+      "last_reported": "2025-10-29T09:32:58.308755+00:00",
+      "last_updated": "2025-10-29T09:32:58.308755+00:00",
+      "context": {
+        "id": "01K8QN0EJ45EE6MRSQ7XA4Y22N",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "switch.edgerouter_poe_5_port_interface_switch0_status",
+      "state": "on",
+      "attributes": {
+        "name": "switch0",
+        "description": "Local 2",
+        "type": "switch",
+        "address": ["192.168.1.1/24"],
+        "stp": false,
+        "multicast": 36510,
+        "icon": "mdi:ethernet",
+        "friendly_name": "EDGEROUTER-POE-5-PORT Interface SWITCH0 Status"
+      },
+      "last_changed": "2025-10-29T09:32:58.308776+00:00",
+      "last_reported": "2025-10-29T10:36:05.265723+00:00",
+      "last_updated": "2025-10-29T10:36:05.265723+00:00",
+      "context": {
+        "id": "01K8QRM0RHRS62Y0A5KQGQ9HSB",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.21_mill_road_general_waste",
+      "state": "In 7 days",
+      "attributes": {
+        "colour": "black",
+        "next_collection": "05/11/2025",
+        "days": 7,
+        "device_class": "bin_collection_schedule",
+        "icon": "mdi:trash-can",
+        "friendly_name": "21 Mill Road General Waste"
+      },
+      "last_changed": "2025-10-29T09:48:46.824018+00:00",
+      "last_reported": "2025-10-29T09:49:09.261622+00:00",
+      "last_updated": "2025-10-29T09:48:46.824018+00:00",
+      "context": {
+        "id": "01K8QNXCV82879W3J9NXH0E9HH",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.21_mill_road_general_waste_colour",
+      "state": "black",
+      "attributes": {
+        "colour": "black",
+        "next_collection": "2025-11-05",
+        "icon": "mdi:trash-can",
+        "friendly_name": "21 Mill Road General Waste Colour"
+      },
+      "last_changed": "2025-10-29T09:48:46.825121+00:00",
+      "last_reported": "2025-10-29T09:49:09.261676+00:00",
+      "last_updated": "2025-10-29T09:48:46.825121+00:00",
+      "context": {
+        "id": "01K8QNXCV94DPCW1DT1SZGTHT9",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.21_mill_road_general_waste_next_collection_human_readable",
+      "state": "In 7 days",
+      "attributes": {
+        "colour": "black",
+        "next_collection": "2025-11-05",
+        "icon": "mdi:trash-can",
+        "friendly_name": "21 Mill Road General Waste Next Collection Human Readable"
+      },
+      "last_changed": "2025-10-29T09:48:46.826137+00:00",
+      "last_reported": "2025-10-29T09:49:09.261707+00:00",
+      "last_updated": "2025-10-29T09:48:46.826137+00:00",
+      "context": {
+        "id": "01K8QNXCVAE43Z73TF7H541WS2",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.21_mill_road_general_waste_days_until_collection",
+      "state": "7",
+      "attributes": {
+        "colour": "black",
+        "next_collection": "2025-11-05",
+        "icon": "mdi:trash-can",
+        "friendly_name": "21 Mill Road General Waste Days Until Collection"
+      },
+      "last_changed": "2025-10-29T09:48:46.826965+00:00",
+      "last_reported": "2025-10-29T09:49:09.261729+00:00",
+      "last_updated": "2025-10-29T09:48:46.826965+00:00",
+      "context": {
+        "id": "01K8QNXCVA3P5CJF5CXAEB23NJ",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.21_mill_road_general_waste_bin_type",
+      "state": "General Waste",
+      "attributes": {
+        "colour": "black",
+        "next_collection": "2025-11-05",
+        "icon": "mdi:trash-can",
+        "friendly_name": "21 Mill Road General Waste Bin Type"
+      },
+      "last_changed": "2025-10-29T09:48:46.827668+00:00",
+      "last_reported": "2025-10-29T09:49:09.261744+00:00",
+      "last_updated": "2025-10-29T09:48:46.827668+00:00",
+      "context": {
+        "id": "01K8QNXCVB01KN8RTYHMJX8VVQ",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.21_mill_road_general_waste_next_collection_date",
+      "state": "05/11/2025",
+      "attributes": {
+        "colour": "black",
+        "next_collection": "2025-11-05",
+        "icon": "mdi:trash-can",
+        "friendly_name": "21 Mill Road General Waste Next Collection Date"
+      },
+      "last_changed": "2025-10-29T09:48:46.829156+00:00",
+      "last_reported": "2025-10-29T09:49:09.261769+00:00",
+      "last_updated": "2025-10-29T09:48:46.829156+00:00",
+      "context": {
+        "id": "01K8QNXCVDMD77PD4PJYBK144P",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.21_mill_road_bulky_collection",
+      "state": "In 9 days",
+      "attributes": {
+        "colour": "black",
+        "next_collection": "07/11/2025",
+        "days": 9,
+        "device_class": "bin_collection_schedule",
+        "icon": "mdi:delete",
+        "friendly_name": "21 Mill Road Bulky Collection"
+      },
+      "last_changed": "2025-10-29T09:48:46.830015+00:00",
+      "last_reported": "2025-10-29T09:49:09.261808+00:00",
+      "last_updated": "2025-10-29T09:48:46.830015+00:00",
+      "context": {
+        "id": "01K8QNXCVEG0W8Z48NPK94RGG0",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.21_mill_road_bulky_collection_colour",
+      "state": "black",
+      "attributes": {
+        "colour": "black",
+        "next_collection": "2025-11-07",
+        "icon": "mdi:delete",
+        "friendly_name": "21 Mill Road Bulky Collection Colour"
+      },
+      "last_changed": "2025-10-29T09:48:46.830618+00:00",
+      "last_reported": "2025-10-29T09:49:09.261826+00:00",
+      "last_updated": "2025-10-29T09:48:46.830618+00:00",
+      "context": {
+        "id": "01K8QNXCVEFW3W1HNAHY5K29FD",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.21_mill_road_bulky_collection_next_collection_human_readable",
+      "state": "In 9 days",
+      "attributes": {
+        "colour": "black",
+        "next_collection": "2025-11-07",
+        "icon": "mdi:delete",
+        "friendly_name": "21 Mill Road Bulky Collection Next Collection Human Readable"
+      },
+      "last_changed": "2025-10-29T09:48:46.831143+00:00",
+      "last_reported": "2025-10-29T09:49:09.261841+00:00",
+      "last_updated": "2025-10-29T09:48:46.831143+00:00",
+      "context": {
+        "id": "01K8QNXCVFXSKX8FGVEYW2BG55",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.21_mill_road_bulky_collection_days_until_collection",
+      "state": "9",
+      "attributes": {
+        "colour": "black",
+        "next_collection": "2025-11-07",
+        "icon": "mdi:delete",
+        "friendly_name": "21 Mill Road Bulky Collection Days Until Collection"
+      },
+      "last_changed": "2025-10-29T09:48:46.831638+00:00",
+      "last_reported": "2025-10-29T09:49:09.261856+00:00",
+      "last_updated": "2025-10-29T09:48:46.831638+00:00",
+      "context": {
+        "id": "01K8QNXCVFTKQF466YD7BP50ZF",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.21_mill_road_bulky_collection_bin_type",
+      "state": "Bulky Collection",
+      "attributes": {
+        "colour": "black",
+        "next_collection": "2025-11-07",
+        "icon": "mdi:delete",
+        "friendly_name": "21 Mill Road Bulky Collection Bin Type"
+      },
+      "last_changed": "2025-10-29T09:48:46.832091+00:00",
+      "last_reported": "2025-10-29T09:49:09.261868+00:00",
+      "last_updated": "2025-10-29T09:48:46.832091+00:00",
+      "context": {
+        "id": "01K8QNXCVGJZBKFT88F0E0N6JM",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.21_mill_road_bulky_collection_next_collection_date",
+      "state": "07/11/2025",
+      "attributes": {
+        "colour": "black",
+        "next_collection": "2025-11-07",
+        "icon": "mdi:delete",
+        "friendly_name": "21 Mill Road Bulky Collection Next Collection Date"
+      },
+      "last_changed": "2025-10-29T09:48:46.832499+00:00",
+      "last_reported": "2025-10-29T09:49:09.261887+00:00",
+      "last_updated": "2025-10-29T09:48:46.832499+00:00",
+      "context": {
+        "id": "01K8QNXCVG6C5MXKM86YG1AWGZ",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.21_mill_road_recycling",
+      "state": "In 14 days",
+      "attributes": {
+        "colour": "black",
+        "next_collection": "12/11/2025",
+        "days": 14,
+        "device_class": "bin_collection_schedule",
+        "icon": "mdi:recycle",
+        "friendly_name": "21 Mill Road Recycling"
+      },
+      "last_changed": "2025-10-29T09:48:46.833058+00:00",
+      "last_reported": "2025-10-29T09:49:09.261915+00:00",
+      "last_updated": "2025-10-29T09:48:46.833058+00:00",
+      "context": {
+        "id": "01K8QNXCVHXC5RBYGXXWP4M539",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.21_mill_road_recycling_colour",
+      "state": "black",
+      "attributes": {
+        "colour": "black",
+        "next_collection": "2025-11-12",
+        "icon": "mdi:recycle",
+        "friendly_name": "21 Mill Road Recycling Colour"
+      },
+      "last_changed": "2025-10-29T09:48:46.833476+00:00",
+      "last_reported": "2025-10-29T09:49:09.261929+00:00",
+      "last_updated": "2025-10-29T09:48:46.833476+00:00",
+      "context": {
+        "id": "01K8QNXCVHSZ9Z4DNDG748CD6Q",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.21_mill_road_recycling_next_collection_human_readable",
+      "state": "In 14 days",
+      "attributes": {
+        "colour": "black",
+        "next_collection": "2025-11-12",
+        "icon": "mdi:recycle",
+        "friendly_name": "21 Mill Road Recycling Next Collection Human Readable"
+      },
+      "last_changed": "2025-10-29T09:48:46.833855+00:00",
+      "last_reported": "2025-10-29T09:49:09.261943+00:00",
+      "last_updated": "2025-10-29T09:48:46.833855+00:00",
+      "context": {
+        "id": "01K8QNXCVHVCP0S0EXXHQBJTKN",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.21_mill_road_recycling_days_until_collection",
+      "state": "14",
+      "attributes": {
+        "colour": "black",
+        "next_collection": "2025-11-12",
+        "icon": "mdi:recycle",
+        "friendly_name": "21 Mill Road Recycling Days Until Collection"
+      },
+      "last_changed": "2025-10-29T09:48:46.834200+00:00",
+      "last_reported": "2025-10-29T09:49:09.261956+00:00",
+      "last_updated": "2025-10-29T09:48:46.834200+00:00",
+      "context": {
+        "id": "01K8QNXCVJ12XHHTHFRF7QHTR7",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.21_mill_road_recycling_bin_type",
+      "state": "Recycling",
+      "attributes": {
+        "colour": "black",
+        "next_collection": "2025-11-12",
+        "icon": "mdi:recycle",
+        "friendly_name": "21 Mill Road Recycling Bin Type"
+      },
+      "last_changed": "2025-10-29T09:48:46.835104+00:00",
+      "last_reported": "2025-10-29T09:49:09.261966+00:00",
+      "last_updated": "2025-10-29T09:48:46.835104+00:00",
+      "context": {
+        "id": "01K8QNXCVKVBVHAD28PN59T5E2",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.21_mill_road_recycling_next_collection_date",
+      "state": "12/11/2025",
+      "attributes": {
+        "colour": "black",
+        "next_collection": "2025-11-12",
+        "icon": "mdi:recycle",
+        "friendly_name": "21 Mill Road Recycling Next Collection Date"
+      },
+      "last_changed": "2025-10-29T09:48:46.835423+00:00",
+      "last_reported": "2025-10-29T09:49:09.261986+00:00",
+      "last_updated": "2025-10-29T09:48:46.835423+00:00",
+      "context": {
+        "id": "01K8QNXCVKYJNK0Z3JERQMQVQ2",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.01k8qnwwtbexdrsm6v3byfrwfn_raw_json",
+      "state": "{\"General Waste\": \"05/11/2025\", \"Bulky Collection\": \"07/11/2025\", \"Recycling\": \"12/11/2025\"}",
+      "attributes": {
+        "raw_data": {
+          "General Waste": "2025-11-05",
+          "Bulky Collection": "2025-11-07",
+          "Recycling": "2025-11-12"
+        },
+        "friendly_name": "01K8QNWWTBEXDRSM6V3BYFRWFN Raw JSON"
+      },
+      "last_changed": "2025-10-29T09:48:46.835817+00:00",
+      "last_reported": "2025-10-29T09:49:09.262057+00:00",
+      "last_updated": "2025-10-29T09:48:46.835817+00:00",
+      "context": {
+        "id": "01K8QNXCVK1HR745VJ2KQT846S",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "calendar.21_mill_road_general_waste_calendar",
+      "state": "off",
+      "attributes": {
+        "message": "General Waste Collection",
+        "all_day": true,
+        "start_time": "2025-11-05 00:00:00",
+        "end_time": "2025-11-06 00:00:00",
+        "location": "",
+        "description": "",
+        "friendly_name": "21 Mill Road General Waste Calendar"
+      },
+      "last_changed": "2025-10-29T09:49:09.263184+00:00",
+      "last_reported": "2025-10-29T09:49:09.263646+00:00",
+      "last_updated": "2025-10-29T09:49:09.263184+00:00",
+      "context": {
+        "id": "01K8QNY2RF0JFC6CDBMCABGR50",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "calendar.21_mill_road_bulky_collection_calendar",
+      "state": "off",
+      "attributes": {
+        "message": "Bulky Collection Collection",
+        "all_day": true,
+        "start_time": "2025-11-07 00:00:00",
+        "end_time": "2025-11-08 00:00:00",
+        "location": "",
+        "description": "",
+        "friendly_name": "21 Mill Road Bulky Collection Calendar"
+      },
+      "last_changed": "2025-10-29T09:49:09.264935+00:00",
+      "last_reported": "2025-10-29T09:49:09.265350+00:00",
+      "last_updated": "2025-10-29T09:49:09.264935+00:00",
+      "context": {
+        "id": "01K8QNY2RG9CFS3YNW408FXV9E",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "calendar.21_mill_road_recycling_calendar",
+      "state": "off",
+      "attributes": {
+        "message": "Recycling Collection",
+        "all_day": true,
+        "start_time": "2025-11-12 00:00:00",
+        "end_time": "2025-11-13 00:00:00",
+        "location": "",
+        "description": "",
+        "friendly_name": "21 Mill Road Recycling Calendar"
+      },
+      "last_changed": "2025-10-29T09:49:09.266637+00:00",
+      "last_reported": "2025-10-29T09:49:09.267117+00:00",
+      "last_updated": "2025-10-29T09:49:09.266637+00:00",
+      "context": {
+        "id": "01K8QNY2RJ8NQ6HKS0WY322Z4J",
+        "parent_id": null,
+        "user_id": null
+      }
+    }
+  ]
+}

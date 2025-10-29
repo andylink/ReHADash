@@ -39,8 +39,13 @@ export function StackCard({
             : { colSpan: 1, rowSpan: 2 }; // default to sm
 
         // Calculate height and width
+        // Use 24px gap to match exact card height of 159px (desktop grid gap-6)
+        const gapSize = 24;
+        const gaps = sizeObj.rowSpan > 1 ? (sizeObj.rowSpan - 1) * gapSize : 0;
         const height =
-          direction === "vertical" ? `${sizeObj.rowSpan * 67.5}px` : "100%";
+          direction === "vertical"
+            ? `${sizeObj.rowSpan * 67.5 + gaps}px`
+            : "100%";
         const width =
           direction === "horizontal" ? `${sizeObj.colSpan * 100}%` : "100%";
         return (
