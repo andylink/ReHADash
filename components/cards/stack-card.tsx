@@ -10,14 +10,11 @@ export function StackCard({
   items,
   direction = "vertical",
   size,
-  noGap = false,
 }: {
   items: CardConfig[];
   direction?: "vertical" | "horizontal";
   size?: keyof typeof CARD_SIZES;
-  noGap?: boolean;
 }) {
-  // Use noGap prop directly
   // Use size prop for parent card size, fallback to md
   const parentSizeObj =
     size && CARD_SIZES[size] ? CARD_SIZES[size] : { colSpan: 1, rowSpan: 2 };
@@ -40,44 +37,25 @@ export function StackCard({
 
   return (
     <div
-      className={`flex ${direction === "vertical" ? "flex-col" : "flex-row"} ${
-        noGap && direction === "horizontal"
-          ? "gap-0"
-          : noGap
-          ? "gap-0"
-          : "gap-6"
-      } w-full h-full`}
+      className={`flex ${
+        direction === "vertical" ? "flex-col" : "flex-row"
+      } gap-6 w-full h-full`}
       style={{
         height:
           direction === "vertical"
             ? `${
-                parentSizeObj.rowSpan * 67.5 +
-                (parentSizeObj.rowSpan - 1) * (noGap ? 0 : 24)
+                parentSizeObj.rowSpan * 67.5 + (parentSizeObj.rowSpan - 1) * 24
               }px`
             : "100%",
         width: "100%",
       }}
     >
       {items.map((item, idx) => {
-        let rounded: "default" | "top" | "bottom" | "left" | "right" | "none" =
-          "default";
-        if (noGap) {
-          if (direction === "vertical") {
-            if (idx === 0) rounded = "top";
-            else if (idx === items.length - 1) rounded = "bottom";
-            else rounded = "none";
-          } else {
-            if (idx === 0) rounded = "left";
-            else if (idx === items.length - 1) rounded = "right";
-            else rounded = "none";
-          }
-        }
-
         const sizeObj =
           item.size && CARD_SIZES[item.size]
             ? CARD_SIZES[item.size]
             : { colSpan: 1, rowSpan: 2 };
-        const gapSize = noGap ? 0 : 24;
+        const gapSize = 24;
         const gaps = sizeObj.rowSpan > 1 ? (sizeObj.rowSpan - 1) * gapSize : 0;
         const height =
           direction === "vertical"
@@ -86,12 +64,7 @@ export function StackCard({
         // For horizontal, width is proportional to colSpan/totalColSpan
         let width;
         if (direction === "horizontal" && totalColSpan > 0) {
-          if (noGap) {
-            // Remove gap and make cards fill container equally
-            width = `${(sizeObj.colSpan / totalColSpan) * 100}%`;
-          } else {
-            width = `${(sizeObj.colSpan / totalColSpan) * 93}%`;
-          }
+          width = `${(sizeObj.colSpan / totalColSpan) * 93}%`;
         } else if (direction === "vertical") {
           width = "100%";
         } else {
@@ -104,25 +77,17 @@ export function StackCard({
             style={{
               height,
               width,
-              flex: noGap && direction === "horizontal" ? "1 1 0" : undefined,
             }}
             className="flex-shrink-0"
           >
-            {item.type === "entity-card" && (
-              <EntityCard config={item} rounded={rounded} />
-            )}
-            {item.type === "custom-card" && (
-              <CustomCard config={item} rounded={rounded} />
-            )}
-            {item.type === "person-card" && (
-              <PersonCard config={item} rounded={rounded} />
-            )}
+            {item.type === "entity-card" && <EntityCard config={item} />}
+            {item.type === "custom-card" && <CustomCard config={item} />}
+            {item.type === "person-card" && <PersonCard config={item} />}
             {item.type === "stack-card" && (
               <StackCard
                 items={(item as any).items}
                 direction={(item as any).direction}
                 size={item.size}
-                noGap={item.noGap}
               />
             )}
             {/* Add other card types here as needed */}

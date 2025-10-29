@@ -106,7 +106,6 @@ export interface StackCardConfig extends BaseCardConfig {
   type: "stack-card";
   direction?: "vertical" | "horizontal";
   items: CardConfig[];
-  noGap?: boolean;
 }
 
 export interface PersonCardConfig extends BaseCardConfig {
